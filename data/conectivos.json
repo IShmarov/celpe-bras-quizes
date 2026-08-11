@@ -54,5 +54,189 @@
     "answer": 0,
     "explanation": "«Por exemplo» вводит иллюстрацию. Рядом: «A título de exemplo», «Como no caso de».",
     "tags": ["exemplo"]
+  },
+  {
+    "id": "con-008",
+    "prompt": "Первый довод уже назван. Чем открыть второй?",
+    "options": ["Em segundo lugar,", "Em suma,", "Ou seja,", "Por exemplo,"],
+    "answer": 0,
+    "explanation": "Перечисление идёт цепочкой: «Em primeiro lugar» → «Em segundo lugar» → «Por último». Не путать с «em segundo plano» — это «на втором плане», то есть неважно.",
+    "tags": ["ordem"]
+  },
+  {
+    "id": "con-009",
+    "prompt": "Называешь последний пункт перечисления, но текст на этом не заканчиваешь.",
+    "options": ["Por último,", "Em suma,", "Além disso,", "No entanto,"],
+    "answer": 0,
+    "explanation": "«Por último» и «Finalmente» закрывают список. «Em suma» подводит итог всему тексту — это другой ход, и ставить его в середине рано.",
+    "tags": ["ordem"]
+  },
+  {
+    "id": "con-010",
+    "prompt": "Добавляешь довод в официальном письме. Какая связка уместнее в письменной части?",
+    "options": ["Ademais,", "E também,", "Fora isso,", "Aí,"],
+    "answer": 0,
+    "explanation": "«Ademais» — книжный синоним «Além disso». «E também», «fora isso», «aí» — разговорные, в формальном тексте их лучше избегать.",
+    "tags": ["adição", "registro"]
+  },
+  {
+    "id": "con-011",
+    "prompt": "Признаёшь факт, но говоришь, что вывод от него не меняется.",
+    "options": ["Apesar disso,", "Ou seja,", "Por isso,", "Portanto,"],
+    "answer": 0,
+    "explanation": "«Apesar disso», «Mesmo assim», «Ainda assim» — уступка: факт принят, вывод остался. «Por isso» и «Portanto» наоборот выводят следствие из факта.",
+    "tags": ["oposição"]
+  },
+  {
+    "id": "con-012",
+    "prompt": "Сопоставляешь две стороны вопроса: сначала одну, потом другую.",
+    "options": ["Por outro lado,", "Além disso,", "Em suma,", "Isto é,"],
+    "answer": 0,
+    "explanation": "Рамка «Por um lado… por outro lado…» держит абзац с двумя точками зрения. «Além disso» присоединяет однородный довод, а не противоположный.",
+    "tags": ["oposição"]
+  },
+  {
+    "id": "con-013",
+    "prompt": "___ o governo invista em educação, os resultados demoram a aparecer.",
+    "options": ["Embora", "Porque", "Portanto", "Já que"],
+    "answer": 0,
+    "explanation": "«Embora» — уступка и требует subjuntivo: invista, а не investe. «Porque» и «já que» вводят причину и идут с indicativo.",
+    "tags": ["concessão", "subjuntivo"]
+  },
+  {
+    "id": "con-014",
+    "prompt": "Вводишь причину, которая читателю уже известна.",
+    "options": ["Já que", "A fim de que", "Para que", "Caso"],
+    "answer": 0,
+    "explanation": "«Já que» и «uma vez que» подают причину как известную. «A fim de que» и «para que» вводят цель, «caso» — условие.",
+    "tags": ["causa"]
+  },
+  {
+    "id": "con-015",
+    "prompt": "___ a demanda cresceu, os preços subiram.",
+    "options": ["Uma vez que", "Portanto", "Ou seja", "Além disso"],
+    "answer": 0,
+    "explanation": "«Uma vez que» = «поскольку», книжная причина в начале фразы. Остальные три вводят не причину, а следствие, пояснение и добавление.",
+    "tags": ["causa"]
+  },
+  {
+    "id": "con-016",
+    "prompt": "Ele não veio à aula, ___ estava doente.",
+    "options": ["pois", "portanto", "logo", "por isso"],
+    "answer": 0,
+    "explanation": "«Pois» вводит причину и всегда стоит после главной части. «Portanto», «logo», «por isso» вводят следствие — с ними получилось бы, что болезнь наступила от прогула.",
+    "tags": ["causa"]
+  },
+  {
+    "id": "con-017",
+    "prompt": "Вводишь вывод, но «portanto» в тексте уже было — нужна замена.",
+    "options": ["Dessa forma,", "Por outro lado,", "Em primeiro lugar,", "Aliás,"],
+    "answer": 0,
+    "explanation": "«Dessa forma», «Desse modo», «Assim», «Logo», «Por conseguinte» — тот же ход, что «Portanto». Повтор одной связки на весь текст снижает оценку за coesão.",
+    "tags": ["conclusão"]
+  },
+  {
+    "id": "con-018",
+    "prompt": "___ evitar mal-entendidos, o texto deve ser claro.",
+    "options": ["A fim de", "A fim de que", "Por causa de", "Apesar de"],
+    "answer": 0,
+    "explanation": "«A fim de» ставится перед инфинитивом (evitar). «A fim de que» требует придаточного с subjuntivo: a fim de que se evitem mal-entendidos.",
+    "tags": ["finalidade"]
+  },
+  {
+    "id": "con-019",
+    "prompt": "Escrevo devagar ___ todos entendam.",
+    "options": ["para que", "para", "porque", "por isso"],
+    "answer": 0,
+    "explanation": "Подлежащие разные (eu / todos), поэтому нужна «para que» + subjuntivo: entendam. При одном подлежащем было бы «para entender».",
+    "tags": ["finalidade", "subjuntivo"]
+  },
+  {
+    "id": "con-020",
+    "prompt": "___ haja tempo, faremos a revisão.",
+    "options": ["Caso", "Porque", "Portanto", "Embora"],
+    "answer": 0,
+    "explanation": "«Caso» = «если» и требует subjuntivo: haja. Тот же смысл даёт «Se houver tempo».",
+    "tags": ["condição", "subjuntivo"]
+  },
+  {
+    "id": "con-021",
+    "prompt": "Aceito a proposta, ___ o prazo seja ampliado.",
+    "options": ["desde que", "ainda que", "visto que", "de modo que"],
+    "answer": 0,
+    "explanation": "«Desde que» = «при условии что» + subjuntivo. «Ainda que» — уступка («даже если»), «visto que» — причина, «de modo que» — следствие.",
+    "tags": ["condição"]
+  },
+  {
+    "id": "con-022",
+    "prompt": "Вводишь собственное мнение в формальном письме.",
+    "options": ["A meu ver,", "Ou seja,", "Por exemplo,", "Em suma,"],
+    "answer": 0,
+    "explanation": "«A meu ver», «Na minha opinião», «Do meu ponto de vista». Разговорного «eu acho que» в письменной части лучше избегать.",
+    "tags": ["opinião"]
+  },
+  {
+    "id": "con-023",
+    "prompt": "Из перечисленного выделяешь самое важное.",
+    "options": ["Sobretudo,", "Aliás,", "Ou seja,", "Portanto,"],
+    "answer": 0,
+    "explanation": "«Sobretudo», «Principalmente», «Em especial» ставят акцент на одном пункте списка.",
+    "tags": ["ênfase"]
+  },
+  {
+    "id": "con-024",
+    "prompt": "Обращаешь внимание читателя на важный факт.",
+    "options": ["Cabe ressaltar que", "Em contrapartida,", "Por último,", "Isto é,"],
+    "answer": 0,
+    "explanation": "«Cabe ressaltar que», «Vale destacar que», «É importante notar que» — формулы выделения, типичные для аргументированного текста.",
+    "tags": ["ênfase"]
+  },
+  {
+    "id": "con-025",
+    "prompt": "Открываешь текст описанием нынешнего положения дел.",
+    "options": ["Atualmente,", "Antigamente,", "Em suma,", "Portanto,"],
+    "answer": 0,
+    "explanation": "«Atualmente», «Hoje em dia», «Nos dias de hoje» — стандартное начало introdução. «Antigamente» отправило бы в прошлое.",
+    "tags": ["tempo"]
+  },
+  {
+    "id": "con-026",
+    "prompt": "Показываешь, что в другой сфере происходит то же самое.",
+    "options": ["Da mesma forma,", "Em contrapartida,", "No entanto,", "Apesar disso,"],
+    "answer": 0,
+    "explanation": "«Da mesma forma», «Do mesmo modo», «Assim como», «Igualmente» проводят параллель. Три других варианта, наоборот, противопоставляют.",
+    "tags": ["comparação"]
+  },
+  {
+    "id": "con-027",
+    "prompt": "Называешь выгоду, а следом — её оборотную сторону.",
+    "options": ["Em contrapartida,", "Da mesma forma,", "Ou seja,", "Além disso,"],
+    "answer": 0,
+    "explanation": "«Em contrapartida» = «зато, взамен»: вводит цену или обратную сторону сказанного. «Além disso» добавило бы ещё один плюс.",
+    "tags": ["oposição"]
+  },
+  {
+    "id": "con-028",
+    "prompt": "Добавляешь попутное замечание, которое усиливает сказанное.",
+    "options": ["Aliás,", "Em suma,", "Por outro lado,", "Isto é,"],
+    "answer": 0,
+    "explanation": "«Aliás» = «кстати, и вообще» — попутное усиление. «Isto é» переформулирует ту же мысль, «Em suma» итожит текст.",
+    "tags": ["adição"]
+  },
+  {
+    "id": "con-029",
+    "prompt": "Ссылаешься на источник, пересказывая чужую мысль.",
+    "options": ["Segundo o autor,", "Ou seja,", "Portanto,", "Além disso,"],
+    "answer": 0,
+    "explanation": "«Segundo o autor», «De acordo com o texto», «Conforme o gráfico». Правильно «de acordo com», а не «de acordo a».",
+    "tags": ["citação"]
+  },
+  {
+    "id": "con-030",
+    "prompt": "Заканчиваешь письмо: собираешь сказанное и предлагаешь решение.",
+    "options": ["Diante do exposto,", "Em primeiro lugar,", "Por exemplo,", "Ou seja,"],
+    "answer": 0,
+    "explanation": "«Diante do exposto» и «Tendo em vista o exposto» открывают заключение с предложением. В начале текста они бессмысленны: ссылаться ещё не на что.",
+    "tags": ["conclusão"]
   }
 ]

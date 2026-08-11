@@ -8,14 +8,6 @@
     "tags": ["países"]
   },
   {
-    "id": "art-002",
-    "prompt": "Моя подруга живёт в Португалии. Как это сказать?",
-    "options": ["Minha amiga mora em Portugal.", "Minha amiga mora no Portugal.", "Minha amiga mora na Portugal.", "Minha amiga mora ao Portugal."],
-    "answer": 0,
-    "explanation": "Portugal — исключение, оно идёт без артикля. Так же ведут себя Angola, Moçambique, Israel, Cabo Verde. Отсюда «em Portugal», а не «no Portugal».",
-    "tags": ["países", "исключения"]
-  },
-  {
     "id": "art-003",
     "prompt": "___ Estados Unidos ficam na América do Norte.",
     "options": ["Os", "O", "As", "—"],
@@ -62,5 +54,749 @@
     "answer": 0,
     "explanation": "Большинство городов идут без артикля: em São Paulo, em Lisboa, em Brasília. Сравни с городами-исключениями: no Rio, no Porto.",
     "tags": ["города"]
+  },
+  {
+    "id": "art-009",
+    "prompt": "___ tema da redação foi a educação pública.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "Греческие слова на -ma мужского рода: o tema, o problema, o sistema. Окончание -a здесь ничего не решает.",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-010",
+    "prompt": "___ sistema de transporte público melhorou muito.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "o sistema — из того же греческого списка, что o problema и o tema.",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-011",
+    "prompt": "___ programa de TV começa às nove.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "o programa — мужской род. Осторожно: a programação (на -ção) уже женского рода.",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-012",
+    "prompt": "___ clima do Nordeste é quente o ano todo.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "o clima — мужской род, как и o dia, o mapa, o planeta.",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-013",
+    "prompt": "___ idioma português tem duas normas principais.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "o idioma — мужской род (греческое -ma). Синоним a língua, наоборот, женского рода.",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-014",
+    "prompt": "___ paisagem da serra é impressionante.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "Всё на -agem женского рода: a paisagem, a viagem, a coragem, a garagem.",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-015",
+    "prompt": "___ mensagem chegou tarde demais.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "a mensagem — окончание -agem всегда женского рода.",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-016",
+    "prompt": "___ coragem dela impressionou todo mundo.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "a coragem — снова -agem. Русское «мужество» тут сбивает: род в португальском свой.",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-017",
+    "prompt": "___ informação está no site oficial.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "Существительные на -ção женского рода: a informação, a estação, a educação, a situação.",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-018",
+    "prompt": "___ decisão do júri foi unânime.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "Окончание -são тоже женское: a decisão, a televisão, a profissão, a discussão.",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-019",
+    "prompt": "___ estação de trem fica a dois quarteirões daqui.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "a estação — -ção. Это же слово значит и «время года»: a estação chuvosa.",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-020",
+    "prompt": "___ liberdade de imprensa é um direito básico.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "Абстрактные существительные на -dade женского рода: a liberdade, a cidade, a verdade, a universidade.",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-021",
+    "prompt": "___ rapidez do atendimento me surpreendeu.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "Окончание -ez/-eza женского рода: a rapidez, a timidez, a beleza, a natureza.",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-022",
+    "prompt": "___ calor de janeiro é insuportável.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "Существительные на -or обычно мужского рода: o calor, o amor, o valor, o sabor.",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-023",
+    "prompt": "___ cor da parede não combina com o sofá.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "Исключения из правила «-or мужского рода»: a cor, a dor, a flor. Их проще запомнить троицей.",
+    "tags": ["род", "исключения"]
+  },
+  {
+    "id": "art-024",
+    "prompt": "___ dor de cabeça não passou com o remédio.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "a dor — одно из трёх женских слов на -or: a cor, a dor, a flor.",
+    "tags": ["род", "исключения"]
+  },
+  {
+    "id": "art-025",
+    "prompt": "___ pão da padaria da esquina é o melhor do bairro.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "Слова на -ão без суффиксов -ção/-são обычно мужского рода: o pão, o irmão, o coração, o chão.",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-026",
+    "prompt": "___ razão do atraso foi o trânsito.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "a razão — женского рода, хотя и на -ão. Женских слов с таким окончанием немного, их учат списком: a mão, a razão, a opinião, a região.",
+    "tags": ["род", "исключения"]
+  },
+  {
+    "id": "art-027",
+    "prompt": "___ dia está lindo hoje.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "o dia — мужского рода, несмотря на -a. Та же ловушка: o mapa, o sofá, o planeta, o guaraná.",
+    "tags": ["род", "исключения"]
+  },
+  {
+    "id": "art-028",
+    "prompt": "___ mapa do metrô fica na parede da estação.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "o mapa — мужской род при окончании -a, как o dia и o planeta.",
+    "tags": ["род", "исключения"]
+  },
+  {
+    "id": "art-029",
+    "prompt": "___ foto do casamento ficou ótima.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "a foto — сокращение от a fotografia, поэтому род остаётся женским, хотя слово кончается на -o. Так же a moto (a motocicleta).",
+    "tags": ["род", "исключения"]
+  },
+  {
+    "id": "art-030",
+    "prompt": "___ moto dele quebrou na estrada.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "a moto — от a motocicleta. Сокращения сохраняют род полного слова.",
+    "tags": ["род", "исключения"]
+  },
+  {
+    "id": "art-031",
+    "prompt": "___ tribo indígena vive perto do rio.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "a tribo — женского рода, хотя кончается на -o. Такие слова надо просто помнить.",
+    "tags": ["род", "исключения"]
+  },
+  {
+    "id": "art-032",
+    "prompt": "___ ponte está interditada para obras.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "Слова на -e рода не показывают, их учат со словарём: a ponte, a noite, a gente — но o leite, o bilhete, o filme.",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-033",
+    "prompt": "___ leite acabou de novo.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "o leite — мужского рода, в отличие от a ponte и a noite. Окончание -e не подсказывает ничего.",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-034",
+    "prompt": "___ crise econômica atingiu todo mundo.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "Слова греческого происхождения на -ise женского рода: a crise, a análise, a síntese. Здесь окончание, в отличие от -ma, работает в пользу женского рода.",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-035",
+    "prompt": "___ análise do texto já está pronta.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "a análise — женского рода, как и a crise. Пригодится в письменной части: «a análise do gráfico mostra…».",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-036",
+    "prompt": "___ imagem do cartaz ficou borrada.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "Существительные на -em женского рода: a imagem, a ordem, a nuvem, a viagem.",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-037",
+    "prompt": "___ ordem chegou da diretoria.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "a ordem — окончание -em. Ловушка для русскоязычных: «приказ» мужского рода, «ordem» — женского.",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-038",
+    "prompt": "___ lápis está em cima da mesa.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "o lápis — мужского рода, форма единственного и множественного числа совпадает: o lápis / os lápis. Артикль и есть единственный указатель числа.",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-039",
+    "prompt": "___ capital do Brasil é Brasília.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "Артикль меняет смысл: a capital — столица, o capital — капитал, деньги.",
+    "tags": ["род", "сложные случаи"]
+  },
+  {
+    "id": "art-040",
+    "prompt": "___ grama do jardim precisa ser cortada.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "a grama — трава (на это же указывает cortada), o grama — грамм, единица веса.",
+    "tags": ["род", "сложные случаи"]
+  },
+  {
+    "id": "art-041",
+    "prompt": "___ guia nos levou até o museu.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "o guia — экскурсовод, a guia — путеводитель или накладная. Здесь «повёл нас», значит человек.",
+    "tags": ["род", "сложные случаи"]
+  },
+  {
+    "id": "art-042",
+    "prompt": "___ caixa do supermercado já estava fechado.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "o caixa — касса или кассир, a caixa — коробка. Форма fechado (мужского рода) подтверждает выбор.",
+    "tags": ["род", "сложные случаи"]
+  },
+  {
+    "id": "art-043",
+    "prompt": "___ cabeça dele dói desde ontem.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "a cabeça — голова, o cabeça — главарь, вожак (o cabeça do grupo).",
+    "tags": ["род", "сложные случаи"]
+  },
+  {
+    "id": "art-044",
+    "prompt": "___ verão no Rio é abafado.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "Времена года мужского рода, кроме одного: o verão, o inverno, o outono — но a primavera.",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-045",
+    "prompt": "___ primavera começa em setembro no hemisfério sul.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "a primavera — единственное время года женского рода.",
+    "tags": ["род", "исключения"]
+  },
+  {
+    "id": "art-046",
+    "prompt": "___ cantar dos pássaros me acordou cedo.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "Инфинитив в роли существительного всегда идёт с артиклем мужского рода: o cantar, o olhar, o jantar.",
+    "tags": ["род", "сложные случаи"]
+  },
+  {
+    "id": "art-047",
+    "prompt": "___ Tejo passa por Lisboa.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "Названия рек идут с артиклем мужского рода: o Tejo, o Amazonas, o Nilo, o São Francisco.",
+    "tags": ["род", "сложные случаи"]
+  },
+  {
+    "id": "art-048",
+    "prompt": "___ Atlântico separa a África da América.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "Океаны и моря — с артиклем: o Atlântico, o Pacífico, o Mediterrâneo.",
+    "tags": ["сложные случаи"]
+  },
+  {
+    "id": "art-049",
+    "prompt": "___ Alpes ficam entre a França e a Itália.",
+    "options": ["Os", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "Горные цепи идут с артиклем множественного числа: os Alpes, os Andes, os Pireneus.",
+    "tags": ["сложные случаи"]
+  },
+  {
+    "id": "art-050",
+    "prompt": "___ Açores ficam no meio do Atlântico.",
+    "options": ["Os", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "Архипелаги — с артиклем множественного числа: os Açores, as Canárias, as Maldivas.",
+    "tags": ["сложные случаи"]
+  },
+  {
+    "id": "art-051",
+    "prompt": "___ França é famosa pela gastronomia.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "Страны на -a обычно женского рода: a França, a Itália, a Espanha, a Alemanha, a Rússia.",
+    "tags": ["países"]
+  },
+  {
+    "id": "art-052",
+    "prompt": "___ Japão fica na Ásia.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "o Japão — мужской род, как o Brasil, o Chile, o Peru, o México.",
+    "tags": ["países"]
+  },
+  {
+    "id": "art-053",
+    "prompt": "___ Rússia é o maior país do mundo.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "a Rússia — женского рода, окончание -ia. Так же a Itália, a Colômbia, a Bolívia.",
+    "tags": ["países"]
+  },
+  {
+    "id": "art-054",
+    "prompt": "___ Canadá tem dois idiomas oficiais.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "o Canadá — мужского рода, хотя кончается на -á. Артикль остаётся: «Vou ao Canadá».",
+    "tags": ["países"]
+  },
+  {
+    "id": "art-055",
+    "prompt": "___ Índia tem mais de um bilhão de habitantes.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "a Índia — женского рода. Пригодится в слитных формах: na Índia, da Índia.",
+    "tags": ["países"]
+  },
+  {
+    "id": "art-056",
+    "prompt": "___ Peru tem uma culinária premiada.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "o Peru — мужского рода. Отсюда «no Peru», «do Peru».",
+    "tags": ["países"]
+  },
+  {
+    "id": "art-057",
+    "prompt": "___ China cresceu muito nas últimas décadas.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "a China — женского рода: na China, da China.",
+    "tags": ["países"]
+  },
+  {
+    "id": "art-058",
+    "prompt": "___ Países Baixos são conhecidos pelas bicicletas.",
+    "options": ["Os", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "Страны во множественном числе: os Países Baixos, os Estados Unidos, os Emirados Árabes. Глагол тоже во множественном: são.",
+    "tags": ["países"]
+  },
+  {
+    "id": "art-059",
+    "prompt": "___ Filipinas ficam no Sudeste Asiático.",
+    "options": ["As", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "as Filipinas — множественное число женского рода, поэтому «nas Filipinas», «das Filipinas».",
+    "tags": ["países"]
+  },
+  {
+    "id": "art-060",
+    "prompt": "___ Cabo Verde fica no oceano Atlântico.",
+    "options": ["—", "O", "A", "Os"],
+    "answer": 0,
+    "explanation": "Страны-исключения идут без артикля: Portugal, Angola, Moçambique, Cabo Verde, Israel, Cuba.",
+    "tags": ["países", "исключения"]
+  },
+  {
+    "id": "art-061",
+    "prompt": "___ Timor-Leste tem o português como língua oficial.",
+    "options": ["—", "O", "A", "Os"],
+    "answer": 0,
+    "explanation": "Timor-Leste, как и São Tomé e Príncipe, употребляется без артикля.",
+    "tags": ["países", "исключения"]
+  },
+  {
+    "id": "art-062",
+    "prompt": "Ela mora ___ Portugal desde 2019.",
+    "options": ["em", "no", "na", "ao"],
+    "answer": 0,
+    "explanation": "Portugal идёт без артикля, поэтому слияния не происходит: em Portugal, а не «no Portugal».",
+    "tags": ["países", "исключения"]
+  },
+  {
+    "id": "art-063",
+    "prompt": "Eu nasci ___ Angola.",
+    "options": ["em", "na", "no", "à"],
+    "answer": 0,
+    "explanation": "Angola — без артикля, как Moçambique и Cabo Verde: em Angola, de Angola.",
+    "tags": ["países", "исключения"]
+  },
+  {
+    "id": "art-064",
+    "prompt": "Meu colega é ___ Moçambique.",
+    "options": ["de", "do", "da", "dos"],
+    "answer": 0,
+    "explanation": "Без артикля предлог de ни с чем не сливается: de Moçambique. Сравни: do Brasil, da França.",
+    "tags": ["países", "исключения"]
+  },
+  {
+    "id": "art-065",
+    "prompt": "Nunca estive ___ Israel.",
+    "options": ["em", "no", "na", "ao"],
+    "answer": 0,
+    "explanation": "Israel — из списка стран без артикля: em Israel.",
+    "tags": ["países", "исключения"]
+  },
+  {
+    "id": "art-066",
+    "prompt": "Ele foi ___ Chile de carro.",
+    "options": ["ao", "a", "no", "em"],
+    "answer": 0,
+    "explanation": "o Chile идёт с артиклем, а предлог a сливается с ним: a + o = ao Chile.",
+    "tags": ["países", "слитные формы"]
+  },
+  {
+    "id": "art-067",
+    "prompt": "Moramos ___ Alemanha há três anos.",
+    "options": ["na", "em", "no", "à"],
+    "answer": 0,
+    "explanation": "a Alemanha с артиклем, поэтому em + a = na Alemanha.",
+    "tags": ["países", "слитные формы"]
+  },
+  {
+    "id": "art-068",
+    "prompt": "Ela é ___ Estados Unidos.",
+    "options": ["dos", "de", "do", "das"],
+    "answer": 0,
+    "explanation": "de + os = dos Estados Unidos. Множественное число страны тянет за собой множественный артикль.",
+    "tags": ["países", "слитные формы"]
+  },
+  {
+    "id": "art-069",
+    "prompt": "Este queijo veio ___ França.",
+    "options": ["da", "de", "do", "das"],
+    "answer": 0,
+    "explanation": "de + a = da França.",
+    "tags": ["países", "слитные формы"]
+  },
+  {
+    "id": "art-070",
+    "prompt": "Vamos ___ Argentina em janeiro.",
+    "options": ["à", "a", "na", "ao"],
+    "answer": 0,
+    "explanation": "a + a = à Argentina. Знак над à (crase) как раз и показывает слияние предлога с артиклем.",
+    "tags": ["países", "слитные формы"]
+  },
+  {
+    "id": "art-071",
+    "prompt": "Vou passar as férias ___ México.",
+    "options": ["no", "em", "na", "ao"],
+    "answer": 0,
+    "explanation": "em + o = no México.",
+    "tags": ["países", "слитные формы"]
+  },
+  {
+    "id": "art-072",
+    "prompt": "___ Rio de Janeiro tem as praias mais famosas do país.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "Города с артиклем — редкость, но Rio de Janeiro в их числе: обычно это названия, у которых есть смысл нарицательного слова (rio — река).",
+    "tags": ["города"]
+  },
+  {
+    "id": "art-073",
+    "prompt": "___ Porto fica no norte de Portugal.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "o Porto — «порт», отсюда и артикль. Сравни: no Porto, do Porto.",
+    "tags": ["города"]
+  },
+  {
+    "id": "art-074",
+    "prompt": "___ Cairo fica às margens do Nilo.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "o Cairo — ещё один город с артиклем, как o Rio, o Porto, o Havre.",
+    "tags": ["города"]
+  },
+  {
+    "id": "art-075",
+    "prompt": "___ Recife é cortado por rios e pontes.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "o Recife — от нарицательного «recife» (риф), поэтому артикль сохраняется: no Recife.",
+    "tags": ["города"]
+  },
+  {
+    "id": "art-076",
+    "prompt": "___ Bahia tem uma cultura afro-brasileira muito forte.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "Большинство бразильских штатов идут с артиклем: a Bahia, o Ceará, o Amazonas, o Paraná.",
+    "tags": ["города"]
+  },
+  {
+    "id": "art-077",
+    "prompt": "___ Amazonas é o maior estado do Brasil.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "o Amazonas — мужского рода, несмотря на -s: no Amazonas, do Amazonas.",
+    "tags": ["города"]
+  },
+  {
+    "id": "art-078",
+    "prompt": "Passei uma semana ___ Lisboa.",
+    "options": ["em", "na", "no", "à"],
+    "answer": 0,
+    "explanation": "Lisboa — без артикля, как и большинство городов: em Lisboa, de Lisboa.",
+    "tags": ["города"]
+  },
+  {
+    "id": "art-079",
+    "prompt": "Ele nasceu ___ Salvador.",
+    "options": ["em", "no", "na", "ao"],
+    "answer": 0,
+    "explanation": "Salvador идёт без артикля: em Salvador. А вот штат — «na Bahia».",
+    "tags": ["города"]
+  },
+  {
+    "id": "art-080",
+    "prompt": "Voltei ___ Rio ontem à noite.",
+    "options": ["do", "de", "da", "no"],
+    "answer": 0,
+    "explanation": "de + o = do Rio, потому что город идёт с артиклем.",
+    "tags": ["города", "слитные формы"]
+  },
+  {
+    "id": "art-081",
+    "prompt": "Moro ___ Rio há dez anos.",
+    "options": ["no", "em", "na", "ao"],
+    "answer": 0,
+    "explanation": "em + o = no Rio. Сравни с «em São Paulo», где артикля нет.",
+    "tags": ["города", "слитные формы"]
+  },
+  {
+    "id": "art-082",
+    "prompt": "Meus avós vivem ___ Bahia.",
+    "options": ["na", "em", "no", "à"],
+    "answer": 0,
+    "explanation": "em + a = na Bahia. Штат женского рода тянет за собой a.",
+    "tags": ["города", "слитные формы"]
+  },
+  {
+    "id": "art-083",
+    "prompt": "Ele trabalha ___ Minas Gerais.",
+    "options": ["em", "no", "na", "nos"],
+    "answer": 0,
+    "explanation": "Несколько штатов идут без артикля: Minas Gerais, Pernambuco, Sergipe, Alagoas, Goiás. Отсюда «em Minas Gerais».",
+    "tags": ["города", "исключения"]
+  },
+  {
+    "id": "art-084",
+    "prompt": "Quebrei ___ perna jogando futebol.",
+    "options": ["a", "uma", "as", "—"],
+    "answer": 0,
+    "explanation": "С частями тела португальский ставит определённый артикль там, где русский обошёлся бы притяжательным: «quebrei a perna», а не «minha perna».",
+    "tags": ["сложные случаи"]
+  },
+  {
+    "id": "art-085",
+    "prompt": "Ele lavou ___ mãos antes do almoço.",
+    "options": ["as", "a", "os", "—"],
+    "answer": 0,
+    "explanation": "Части тела — с определённым артиклем: lavar as mãos, escovar os dentes.",
+    "tags": ["сложные случаи"]
+  },
+  {
+    "id": "art-086",
+    "prompt": "A aula começa ___ oito horas.",
+    "options": ["às", "as", "a", "na"],
+    "answer": 0,
+    "explanation": "Время идёт с артиклем женского рода (подразумевается «horas»), а предлог a сливается с ним: às oito, às duas.",
+    "tags": ["слитные формы"]
+  },
+  {
+    "id": "art-087",
+    "prompt": "O voo chega ___ meia-noite.",
+    "options": ["à", "a", "na", "ao"],
+    "answer": 0,
+    "explanation": "à meia-noite, à uma hora — единственное число, поэтому à, а не às. Но «ao meio-dia» — мужской род.",
+    "tags": ["слитные формы"]
+  },
+  {
+    "id": "art-088",
+    "prompt": "Ele é ___ engenheiro.",
+    "options": ["—", "um", "o", "uma"],
+    "answer": 0,
+    "explanation": "Профессия после ser идёт без артикля: ele é engenheiro, ela é professora. Артикль появляется только с определением: «ele é um engenheiro excelente».",
+    "tags": ["сложные случаи"]
+  },
+  {
+    "id": "art-089",
+    "prompt": "Ela é ___ melhor aluna da turma.",
+    "options": ["a", "uma", "—", "as"],
+    "answer": 0,
+    "explanation": "Превосходная степень требует определённого артикля: a melhor, o pior, o mais caro.",
+    "tags": ["сложные случаи"]
+  },
+  {
+    "id": "art-090",
+    "prompt": "___ Maria ligou de manhã.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "В бразильской разговорной норме перед именами знакомых людей ставят артикль: a Maria, o Pedro. В официальном письме его опускают.",
+    "tags": ["имена"]
+  },
+  {
+    "id": "art-091",
+    "prompt": "Bom dia, ___ dona Rita!",
+    "options": ["—", "a", "o", "uma"],
+    "answer": 0,
+    "explanation": "При прямом обращении артикль не ставится: «Bom dia, dona Rita». Но в рассказе о ней — «a dona Rita mora ao lado».",
+    "tags": ["имена", "сложные случаи"]
+  },
+  {
+    "id": "art-092",
+    "prompt": "___ gente vai ao cinema hoje.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "Оборот «a gente» (= nós) всегда идёт с артиклем женского рода и глаголом в третьем лице единственного числа.",
+    "tags": ["сложные случаи"]
+  },
+  {
+    "id": "art-093",
+    "prompt": "Fiquei ___ casa o dia todo.",
+    "options": ["em", "na", "a", "à"],
+    "answer": 0,
+    "explanation": "«Em casa» — устойчивый оборот без артикля, когда речь о своём доме. Артикль возвращается с определением: «na casa da minha avó».",
+    "tags": ["устойчивые обороты"]
+  },
+  {
+    "id": "art-094",
+    "prompt": "As crianças já estão ___ escola.",
+    "options": ["na", "em", "a", "à"],
+    "answer": 0,
+    "explanation": "В отличие от «em casa», школа идёт с артиклем: na escola, no trabalho, no hospital.",
+    "tags": ["устойчивые обороты"]
+  },
+  {
+    "id": "art-095",
+    "prompt": "Vou ___ padaria comprar pão.",
+    "options": ["à", "a", "na", "para"],
+    "answer": 0,
+    "explanation": "a + a padaria = à padaria. С мужским родом было бы «ao mercado».",
+    "tags": ["слитные формы"]
+  },
+  {
+    "id": "art-096",
+    "prompt": "Ele voltou ___ trabalho muito tarde.",
+    "options": ["do", "de", "da", "no"],
+    "answer": 0,
+    "explanation": "de + o trabalho = do trabalho. «Voltar de» требует артикля, потому что o trabalho его сохраняет.",
+    "tags": ["слитные формы"]
+  },
+  {
+    "id": "art-097",
+    "prompt": "Ela escreveu o bilhete ___ mão.",
+    "options": ["à", "a", "na", "de"],
+    "answer": 0,
+    "explanation": "Устойчивый оборот «à mão» (от руки) идёт с crase, как «à noite», «às vezes», «à toa».",
+    "tags": ["устойчивые обороты"]
+  },
+  {
+    "id": "art-098",
+    "prompt": "Ele veio ___ pé até aqui.",
+    "options": ["a", "à", "ao", "no"],
+    "answer": 0,
+    "explanation": "«A pé» пишется без crase: слово мужского рода, артикля нет. Сравни с «à mão», где артикль женского рода есть.",
+    "tags": ["устойчивые обороты", "исключения"]
+  },
+  {
+    "id": "art-099",
+    "prompt": "___ português é língua oficial de nove países.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "Названия языков мужского рода и берут артикль, когда стоят в роли подлежащего: o português, o inglês, o russo.",
+    "tags": ["сложные случаи"]
+  },
+  {
+    "id": "art-100",
+    "prompt": "Ele comprou ___ carro novo no mês passado.",
+    "options": ["um", "uma", "o", "—"],
+    "answer": 0,
+    "explanation": "Неопределённый артикль вводит предмет впервые: um carro. Определённый (o carro) означал бы, что собеседник уже знает, о какой машине речь.",
+    "tags": ["сложные случаи"]
+  },
+  {
+    "id": "art-101",
+    "prompt": "Meu carro quebrou; ___ seu está na garagem.",
+    "options": ["o", "—", "um", "a"],
+    "answer": 0,
+    "explanation": "Когда притяжательное стоит без существительного, артикль обязателен: «o seu», «a minha». С существительным он необязателен: «(o) meu carro».",
+    "tags": ["сложные случаи"]
   }
 ]

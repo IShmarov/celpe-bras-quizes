@@ -62,5 +62,741 @@
     "answer": 0,
     "explanation": "Благодарность — «por»: por + a ajuda = pela ajuda. Форма «por a» не существует, слияние обязательно.",
     "tags": ["contração", "por"]
+  },
+  {
+    "id": "prep-009",
+    "prompt": "A reunião é ___ segunda-feira, ___ dez horas.",
+    "options": ["na … às", "em … em", "na … em", "no … às"],
+    "answer": 0,
+    "explanation": "Дни недели идут с артиклем: em + a segunda-feira = na segunda-feira. Точное время — через «a»: a + as dez = às dez.",
+    "tags": ["tempo", "contração"]
+  },
+  {
+    "id": "prep-010",
+    "prompt": "Ele nasceu ___ 1998, ___ dia 12 de maio.",
+    "options": ["em … no", "no … em", "em … em", "no … no"],
+    "answer": 0,
+    "explanation": "Годы идут без артикля: em 1998. Но со словом «dia» артикль обязателен: em + o dia = no dia 12.",
+    "tags": ["tempo", "em"]
+  },
+  {
+    "id": "prep-011",
+    "prompt": "Deixei as chaves ___ bolsa e o celular ___ bolso.",
+    "options": ["na … no", "em … em", "no … na", "na … em"],
+    "answer": 0,
+    "explanation": "Слияние с артиклем обязательно: em + a bolsa = na bolsa, em + o bolso = no bolso.",
+    "tags": ["contração", "em"]
+  },
+  {
+    "id": "prep-012",
+    "prompt": "Estou ___ ônibus e chego ___ dez minutos.",
+    "options": ["no … em", "em … em", "no … a", "de … em"],
+    "answer": 0,
+    "explanation": "Когда ты внутри транспорта — «no ônibus». Срок, за который что-то произойдёт, — «em»: em dez minutos. Сравни: «de ônibus» — способ передвижения.",
+    "tags": ["em", "tempo"]
+  },
+  {
+    "id": "prep-013",
+    "prompt": "Pensei muito ___ que você me disse ontem.",
+    "options": ["no", "em", "do", "pelo"],
+    "answer": 0,
+    "explanation": "Глагол требует «em»: pensar em. Перед «que» стоит артикль, поэтому em + o que = no que.",
+    "tags": ["regência", "contração"]
+  },
+  {
+    "id": "prep-014",
+    "prompt": "Ela acredita ___ força do trabalho em equipe.",
+    "options": ["na", "a", "em", "pela"],
+    "answer": 0,
+    "explanation": "Acreditar em — «верить во что-то». С артиклем: em + a força = na força.",
+    "tags": ["regência", "contração"]
+  },
+  {
+    "id": "prep-015",
+    "prompt": "O congresso vai acontecer ___ Recife, ___ Pernambuco.",
+    "options": ["em … em", "no … em", "em … no", "na … no"],
+    "answer": 0,
+    "explanation": "Города обычно без артикля: em Recife. Штат Pernambuco тоже идёт без артикля, в отличие от «na Bahia» или «no Rio Grande do Sul».",
+    "tags": ["em", "lugares"]
+  },
+  {
+    "id": "prep-016",
+    "prompt": "Ele entrou ___ sala sem bater ___ porta.",
+    "options": ["na … na", "em … em", "na … a", "no … na"],
+    "answer": 0,
+    "explanation": "Entrar em (не «entrar a»): entrou na sala. Bater na porta — устойчивое сочетание «стучать в дверь».",
+    "tags": ["regência", "em"]
+  },
+  {
+    "id": "prep-017",
+    "prompt": "Vi essa notícia ___ jornal e ___ internet.",
+    "options": ["no … na", "em … em", "no … em", "na … no"],
+    "answer": 0,
+    "explanation": "Источники информации берут «em» с артиклем: no jornal, na televisão, na internet, no rádio.",
+    "tags": ["em", "contração"]
+  },
+  {
+    "id": "prep-018",
+    "prompt": "Ele insiste ___ mesmo erro de sempre.",
+    "options": ["no", "em", "com", "pelo"],
+    "answer": 0,
+    "explanation": "Insistir em — «настаивать на». С артиклем: em + o mesmo erro = no mesmo erro.",
+    "tags": ["regência", "contração"]
+  },
+  {
+    "id": "prep-019",
+    "prompt": "Ela se formou ___ Direito ___ 2020.",
+    "options": ["em … em", "no … em", "em … no", "de … em"],
+    "answer": 0,
+    "explanation": "Специальность после formar-se идёт через «em»: formar-se em Direito, em Medicina. Год — тоже «em», без артикля: em 2020.",
+    "tags": ["regência", "tempo"]
+  },
+  {
+    "id": "prep-020",
+    "prompt": "Ele mora ___ Estados Unidos há cinco anos.",
+    "options": ["nos", "em", "no", "nas"],
+    "answer": 0,
+    "explanation": "Страны во множественном числе идут с артиклем os: em + os Estados Unidos = nos Estados Unidos. Сравни: nos Países Baixos, nas Filipinas.",
+    "tags": ["lugares", "contração"]
+  },
+  {
+    "id": "prep-021",
+    "prompt": "Nasci ___ Bahia, mas cresci ___ Minas Gerais.",
+    "options": ["na … em", "em … em", "na … na", "em … na"],
+    "answer": 0,
+    "explanation": "Штаты делятся на две группы: с артиклем (a Bahia → na Bahia, o Paraná → no Paraná) и без него (Minas Gerais, São Paulo, Pernambuco, Goiás).",
+    "tags": ["lugares", "em"]
+  },
+  {
+    "id": "prep-022",
+    "prompt": "Vou ___ médico amanhã de manhã.",
+    "options": ["ao", "à", "no", "de"],
+    "answer": 0,
+    "explanation": "Ir a — движение к цели: a + o médico = ao médico. Разговорное «vou no médico» распространено в Бразилии, но в письменной части его лучше избегать.",
+    "tags": ["a", "contração"]
+  },
+  {
+    "id": "prep-023",
+    "prompt": "Ela foi ___ festa com os amigos.",
+    "options": ["à", "a", "á", "na"],
+    "answer": 0,
+    "explanation": "a + a festa = à festa. Значок в кразе всегда обратный (à), написание «á» — ошибка.",
+    "tags": ["crase"]
+  },
+  {
+    "id": "prep-024",
+    "prompt": "Entreguei o trabalho ___ professora no prazo.",
+    "options": ["à", "a", "da", "pela"],
+    "answer": 0,
+    "explanation": "Entregar algo a alguém — адресат через «a». Слово женского рода с артиклем даёт кразе: a + a professora = à professora.",
+    "tags": ["crase", "regência"]
+  },
+  {
+    "id": "prep-025",
+    "prompt": "Estou ___ procura de um emprego novo.",
+    "options": ["à", "a", "na", "em"],
+    "answer": 0,
+    "explanation": "Устойчивые обороты женского рода пишутся с кразе: à procura de, à espera de, à disposição de, à beira de.",
+    "tags": ["crase", "locuções"]
+  },
+  {
+    "id": "prep-026",
+    "prompt": "Ela vai ___ pé para o trabalho todos os dias.",
+    "options": ["a", "à", "ao", "em"],
+    "answer": 0,
+    "explanation": "Перед словами мужского рода кразе невозможна: a pé, a cavalo, a lápis, a prazo.",
+    "tags": ["crase"]
+  },
+  {
+    "id": "prep-027",
+    "prompt": "___ partir de agora, vou estudar todos os dias.",
+    "options": ["A", "À", "Ao", "Para"],
+    "answer": 0,
+    "explanation": "«A partir de» пишется без кразе: дальше идёт предлог, а не существительное с артиклем. Так же без значка: a distância (когда нет определения), a fim de.",
+    "tags": ["crase", "locuções"]
+  },
+  {
+    "id": "prep-028",
+    "prompt": "Fomos ___ cinema e depois ___ pizzaria.",
+    "options": ["ao … à", "no … na", "ao … a", "a … à"],
+    "answer": 0,
+    "explanation": "Ir a + артикль: a + o cinema = ao cinema, a + a pizzaria = à pizzaria. Род существительного решает, будет ли кразе.",
+    "tags": ["crase", "contração"]
+  },
+  {
+    "id": "prep-029",
+    "prompt": "Este texto se refere ___ dados da pesquisa.",
+    "options": ["aos", "os", "nos", "pelos"],
+    "answer": 0,
+    "explanation": "Referir-se a — предлог обязателен: a + os dados = aos dados. Полезный оборот для письменной части.",
+    "tags": ["regência", "contração"]
+  },
+  {
+    "id": "prep-030",
+    "prompt": "Assisti ___ filme brasileiro premiado em Cannes.",
+    "options": ["ao", "o", "no", "do"],
+    "answer": 0,
+    "explanation": "В значении «смотреть» assistir требует предлог: assistir ao filme, à aula, ao jogo. Без предлога (assistir o doente) глагол значит «ухаживать».",
+    "tags": ["regência", "contração"]
+  },
+  {
+    "id": "prep-031",
+    "prompt": "Ele pediu desculpas ___ colegas de trabalho.",
+    "options": ["aos", "os", "dos", "nos"],
+    "answer": 0,
+    "explanation": "Pedir algo a alguém: a + os colegas = aos colegas.",
+    "tags": ["regência", "contração"]
+  },
+  {
+    "id": "prep-032",
+    "prompt": "Fique ___ vontade para perguntar o que quiser.",
+    "options": ["à", "a", "na", "com"],
+    "answer": 0,
+    "explanation": "«À vontade» — устойчивое наречное выражение с кразе, как «às pressas», «à toa», «às escondidas».",
+    "tags": ["crase", "locuções"]
+  },
+  {
+    "id": "prep-033",
+    "prompt": "___ vezes eu esqueço as regras de crase.",
+    "options": ["Às", "As", "Á", "A"],
+    "answer": 0,
+    "explanation": "«Às vezes» («иногда») всегда с кразе. Без значка «as vezes» — это просто «разы»: as vezes em que erramos.",
+    "tags": ["crase"]
+  },
+  {
+    "id": "prep-034",
+    "prompt": "O ônibus sai ___ oito ___ manhã.",
+    "options": ["às … da", "as … de", "às … de", "as … da"],
+    "answer": 0,
+    "explanation": "Часы — «a» с артиклем: às oito. Часть суток после точного времени вводится через «de» с артиклем: da manhã, da tarde, da noite.",
+    "tags": ["tempo", "crase"]
+  },
+  {
+    "id": "prep-035",
+    "prompt": "Depois das férias, ele voltou ___ trabalhar.",
+    "options": ["a", "à", "de", "em"],
+    "answer": 0,
+    "explanation": "Перед инфинитивом кразе не бывает никогда: voltar a trabalhar, começar a estudar, aprender a nadar.",
+    "tags": ["crase", "regência"]
+  },
+  {
+    "id": "prep-036",
+    "prompt": "Sou ___ Rússia, mas moro ___ Brasil.",
+    "options": ["da … no", "de … em", "da … em", "de … no"],
+    "answer": 0,
+    "explanation": "Обе страны идут с артиклем: de + a Rússia = da Rússia, em + o Brasil = no Brasil.",
+    "tags": ["de", "lugares"]
+  },
+  {
+    "id": "prep-037",
+    "prompt": "Ele é ___ Portugal e ela ___ Angola.",
+    "options": ["de … de", "do … da", "de … da", "do … de"],
+    "answer": 0,
+    "explanation": "Portugal, Angola, Moçambique, Cabo Verde и Israel идут без артикля, поэтому слияния нет. Сравни: do Brasil, da França, do Japão.",
+    "tags": ["de", "lugares"]
+  },
+  {
+    "id": "prep-038",
+    "prompt": "Vou ___ trabalho ___ metrô.",
+    "options": ["ao … de", "no … no", "ao … no", "para … em"],
+    "answer": 0,
+    "explanation": "Ir a + o trabalho = ao trabalho. Средство передвижения — «de»: de metrô, de carro, de ônibus, de avião (но a pé).",
+    "tags": ["de", "contração"]
+  },
+  {
+    "id": "prep-039",
+    "prompt": "Preciso ___ ajuda para terminar o relatório.",
+    "options": ["de", "a", "com", "por"],
+    "answer": 0,
+    "explanation": "Precisar de — предлог обязателен: preciso de ajuda, preciso de você, preciso de tempo.",
+    "tags": ["regência", "de"]
+  },
+  {
+    "id": "prep-040",
+    "prompt": "Gosto muito ___ viajar sozinha.",
+    "options": ["de", "a", "em", "por"],
+    "answer": 0,
+    "explanation": "Gostar de — «нравиться». Перед инфинитивом артикля нет, поэтому просто «de viajar».",
+    "tags": ["regência", "de"]
+  },
+  {
+    "id": "prep-041",
+    "prompt": "Ela se lembrou ___ senha só no fim da prova.",
+    "options": ["da", "a", "na", "pela"],
+    "answer": 0,
+    "explanation": "Возвратная форма требует предлог: lembrar-se de. С артиклем: de + a senha = da senha. Невозвратная форма идёт без предлога: lembrou a senha.",
+    "tags": ["regência", "contração"]
+  },
+  {
+    "id": "prep-042",
+    "prompt": "A casa é ___ madeira e o telhado, ___ barro.",
+    "options": ["de … de", "da … do", "de … do", "em … em"],
+    "answer": 0,
+    "explanation": "Материал передаётся через «de» без артикля: de madeira, de vidro, de algodão, de barro.",
+    "tags": ["de"]
+  },
+  {
+    "id": "prep-043",
+    "prompt": "Ele saiu ___ casa às sete ___ manhã.",
+    "options": ["de … da", "da … de", "de … de", "da … da"],
+    "answer": 0,
+    "explanation": "«Sair de casa» — без артикля, когда речь о своём доме. Появится определение — появится и артикль: saiu da casa dos pais.",
+    "tags": ["de", "tempo"]
+  },
+  {
+    "id": "prep-044",
+    "prompt": "Estamos falando ___ mesma coisa.",
+    "options": ["da", "a", "na", "pela"],
+    "answer": 0,
+    "explanation": "Falar de (или falar sobre) — тема разговора. С артиклем: de + a mesma coisa = da mesma coisa.",
+    "tags": ["regência", "contração"]
+  },
+  {
+    "id": "prep-045",
+    "prompt": "O preço ___ passagens subiu muito neste ano.",
+    "options": ["das", "de", "nas", "pelas"],
+    "answer": 0,
+    "explanation": "Принадлежность и отношение — «de»: de + as passagens = das passagens. Оставлять «de as» нельзя.",
+    "tags": ["contração", "de"]
+  },
+  {
+    "id": "prep-046",
+    "prompt": "Ela desistiu ___ curso no meio do semestre.",
+    "options": ["do", "o", "no", "ao"],
+    "answer": 0,
+    "explanation": "Desistir de — «бросить, отказаться». С артиклем: de + o curso = do curso.",
+    "tags": ["regência", "contração"]
+  },
+  {
+    "id": "prep-047",
+    "prompt": "A resposta depende ___ contexto.",
+    "options": ["do", "no", "ao", "pelo"],
+    "answer": 0,
+    "explanation": "Depender de: de + o contexto = do contexto. Сравни с русским «зависеть от».",
+    "tags": ["regência", "contração"]
+  },
+  {
+    "id": "prep-048",
+    "prompt": "Ele tem medo ___ altura desde criança.",
+    "options": ["de", "a", "com", "por"],
+    "answer": 0,
+    "explanation": "Существительные тоже требуют предлог: medo de, necessidade de, vontade de, capacidade de.",
+    "tags": ["regência", "de"]
+  },
+  {
+    "id": "prep-049",
+    "prompt": "Cuidamos ___ crianças durante as férias.",
+    "options": ["das", "as", "nas", "pelas"],
+    "answer": 0,
+    "explanation": "Cuidar de — «заботиться о». С артиклем: de + as crianças = das crianças.",
+    "tags": ["regência", "contração"]
+  },
+  {
+    "id": "prep-050",
+    "prompt": "Ele estuda muito ___ passar no exame.",
+    "options": ["para", "por", "pela", "a"],
+    "answer": 0,
+    "explanation": "Цель — «para»: estudar para passar. «Por» указывал бы причину, а не результат, к которому стремятся.",
+    "tags": ["para/por"]
+  },
+  {
+    "id": "prep-051",
+    "prompt": "O trem passa ___ centro da cidade.",
+    "options": ["pelo", "para o", "no", "ao"],
+    "answer": 0,
+    "explanation": "Маршрут, путь сквозь — «por»: por + o centro = pelo centro. «Para o centro» означало бы конечную точку.",
+    "tags": ["por", "contração"]
+  },
+  {
+    "id": "prep-052",
+    "prompt": "Ela foi elogiada ___ professora na frente da turma.",
+    "options": ["pela", "para a", "da", "à"],
+    "answer": 0,
+    "explanation": "В пассивной конструкции исполнитель вводится через «por»: por + a professora = pela professora.",
+    "tags": ["por", "contração"]
+  },
+  {
+    "id": "prep-053",
+    "prompt": "Vou ficar em Salvador ___ duas semanas.",
+    "options": ["por", "para", "há", "desde"],
+    "answer": 0,
+    "explanation": "Ограниченный срок — «por»: por duas semanas. «Há» относится к прошлому, «desde» требует точки отсчёта.",
+    "tags": ["tempo", "por"]
+  },
+  {
+    "id": "prep-054",
+    "prompt": "Este relatório é ___ segunda-feira.",
+    "options": ["para", "por", "em", "na"],
+    "answer": 0,
+    "explanation": "Дедлайн — «para»: o trabalho é para segunda. «Por segunda» звучало бы как «вместо понедельника».",
+    "tags": ["para/por", "tempo"]
+  },
+  {
+    "id": "prep-055",
+    "prompt": "Ele faltou ___ causa da chuva.",
+    "options": ["por", "para", "pela", "de"],
+    "answer": 0,
+    "explanation": "«Por causa de» — устойчивый оборот причины. Для цели используется «para» или «a fim de».",
+    "tags": ["por", "locuções"]
+  },
+  {
+    "id": "prep-056",
+    "prompt": "Mandei o documento ___ e-mail.",
+    "options": ["por", "para", "em", "no"],
+    "answer": 0,
+    "explanation": "Способ и средство передачи — «por»: por e-mail, por telefone, por escrito, pelos correios.",
+    "tags": ["por"]
+  },
+  {
+    "id": "prep-057",
+    "prompt": "___ mim, o texto já está pronto.",
+    "options": ["Para", "Por", "A", "Pela"],
+    "answer": 0,
+    "explanation": "Мнение вводится через «para mim»: «по-моему». «Por mim» значит «с моей стороны» или «вместо меня»: por mim, tudo bem.",
+    "tags": ["para/por"]
+  },
+  {
+    "id": "prep-058",
+    "prompt": "Passei ___ muitas dificuldades no começo.",
+    "options": ["por", "para", "em", "de"],
+    "answer": 0,
+    "explanation": "Passar por — «пережить, столкнуться с». Артикля нет, поэтому и слияния нет: por muitas dificuldades.",
+    "tags": ["regência", "por"]
+  },
+  {
+    "id": "prep-059",
+    "prompt": "O ônibus das seis sai ___ Curitiba.",
+    "options": ["para", "por", "a", "em"],
+    "answer": 0,
+    "explanation": "Пункт назначения при отправлении — «para»: sair para, partir para. «Por Curitiba» означало бы, что автобус проезжает через город.",
+    "tags": ["para/por", "lugares"]
+  },
+  {
+    "id": "prep-060",
+    "prompt": "Comprei este livro ___ trinta reais.",
+    "options": ["por", "para", "em", "a"],
+    "answer": 0,
+    "explanation": "Цена, обмен, стоимость — «por»: comprar por, vender por, pagar por.",
+    "tags": ["por"]
+  },
+  {
+    "id": "prep-061",
+    "prompt": "Ele é responsável ___ equipe de vendas.",
+    "options": ["pela", "para a", "da", "à"],
+    "answer": 0,
+    "explanation": "Прилагательное responsável требует «por»: por + a equipe = pela equipe.",
+    "tags": ["regência", "por"]
+  },
+  {
+    "id": "prep-062",
+    "prompt": "Ela se apaixonou ___ um colega de turma.",
+    "options": ["por", "para", "com", "de"],
+    "answer": 0,
+    "explanation": "Apaixonar-se por — «влюбиться в». Так же: interessar-se por, ser apaixonado por.",
+    "tags": ["regência", "por"]
+  },
+  {
+    "id": "prep-063",
+    "prompt": "Ela ligou ___ mim ontem ___ noite.",
+    "options": ["para … à", "para … na", "por … à", "a … à"],
+    "answer": 0,
+    "explanation": "Ligar para alguém — «позвонить кому-то». Часть суток — «à noite», «à tarde», но «de manhã».",
+    "tags": ["regência", "crase"]
+  },
+  {
+    "id": "prep-064",
+    "prompt": "O documento foi assinado ___ diretor.",
+    "options": ["pelo", "para o", "do", "ao"],
+    "answer": 0,
+    "explanation": "Пассив: исполнитель вводится через «por». por + o diretor = pelo diretor.",
+    "tags": ["por", "contração"]
+  },
+  {
+    "id": "prep-065",
+    "prompt": "Olhei ___ janela e vi que estava chovendo.",
+    "options": ["pela", "na", "da", "à"],
+    "answer": 0,
+    "explanation": "Взгляд сквозь что-то — «por»: por + a janela = pela janela. «Olhar para a janela» означало бы смотреть на само окно.",
+    "tags": ["por", "contração"]
+  },
+  {
+    "id": "prep-066",
+    "prompt": "Ele sonha ___ morar no exterior.",
+    "options": ["com", "de", "em", "para"],
+    "answer": 0,
+    "explanation": "Sonhar com — «мечтать о». Русское «о» здесь не превращается в «de».",
+    "tags": ["regência", "com"]
+  },
+  {
+    "id": "prep-067",
+    "prompt": "Não concordo ___ essa proposta.",
+    "options": ["com", "de", "a", "em"],
+    "answer": 0,
+    "explanation": "Concordar com — «соглашаться с». Противоположное discordar требует «de»: discordo dessa proposta.",
+    "tags": ["regência", "com"]
+  },
+  {
+    "id": "prep-068",
+    "prompt": "Ela se casou ___ um amigo de infância.",
+    "options": ["com", "a", "de", "por"],
+    "answer": 0,
+    "explanation": "Casar-se com — предлог «com», а не «a». Так же: parecer-se com, encontrar-se com.",
+    "tags": ["regência", "com"]
+  },
+  {
+    "id": "prep-069",
+    "prompt": "Ele se preocupa ___ o futuro dos filhos.",
+    "options": ["com", "de", "por", "para"],
+    "answer": 0,
+    "explanation": "Preocupar-se com — «беспокоиться о». Предлог «com» с артиклем не сливается: com o futuro.",
+    "tags": ["regência", "com"]
+  },
+  {
+    "id": "prep-070",
+    "prompt": "O livro fala ___ imigração japonesa no Brasil.",
+    "options": ["sobre a", "sob a", "por a", "para a"],
+    "answer": 0,
+    "explanation": "Тема — «sobre» (или «de»: fala da imigração). «Sob» значит «под»: sob a mesa, sob pressão.",
+    "tags": ["sobre/sob"]
+  },
+  {
+    "id": "prep-071",
+    "prompt": "Ele trabalhou ___ pressão a semana toda.",
+    "options": ["sob", "sobre", "com", "por"],
+    "answer": 0,
+    "explanation": "«Sob pressão» — «под давлением». Одна буква меняет смысл: sobre = «о, над», sob = «под».",
+    "tags": ["sobre/sob"]
+  },
+  {
+    "id": "prep-072",
+    "prompt": "O restaurante fica ___ o banco e a farmácia.",
+    "options": ["entre", "dentro de", "sob", "perante"],
+    "answer": 0,
+    "explanation": "Entre — «между». С местоимениями берёт ударные формы: entre mim e você (не «entre eu»).",
+    "tags": ["entre"]
+  },
+  {
+    "id": "prep-073",
+    "prompt": "A loja abre ___ segunda ___ sexta.",
+    "options": ["de … a", "da … à", "em … a", "de … em"],
+    "answer": 0,
+    "explanation": "Интервал — «de … a» без артиклей: de segunda a sexta, das oito às seis (там артикли есть, потому что речь о часах).",
+    "tags": ["tempo"]
+  },
+  {
+    "id": "prep-074",
+    "prompt": "Ele mora aqui ___ 2015.",
+    "options": ["desde", "há", "por", "em"],
+    "answer": 0,
+    "explanation": "«Desde» вводит точку отсчёта: desde 2015, desde ontem. «Há» вводит промежуток: há dez anos.",
+    "tags": ["tempo"]
+  },
+  {
+    "id": "prep-075",
+    "prompt": "Fiquei acordado ___ as três da manhã.",
+    "options": ["até", "a", "por", "desde"],
+    "answer": 0,
+    "explanation": "«Até» отмечает предел: até as três, até amanhã, até o fim. Кразе после «até» необязательна.",
+    "tags": ["tempo"]
+  },
+  {
+    "id": "prep-076",
+    "prompt": "___ a aula, ninguém fez perguntas.",
+    "options": ["Durante", "Enquanto", "Enquanto a", "Entre"],
+    "answer": 0,
+    "explanation": "Перед существительным нужен предлог «durante». «Enquanto» — союз, после него идёт глагол: enquanto a aula acontecia.",
+    "tags": ["tempo", "locuções"]
+  },
+  {
+    "id": "prep-077",
+    "prompt": "Ele saiu ___ dizer nada a ninguém.",
+    "options": ["sem", "com", "por", "de"],
+    "answer": 0,
+    "explanation": "«Sem» — «без»; перед инфинитивом ставится напрямую: sem dizer, sem falar, sem pensar.",
+    "tags": ["sem"]
+  },
+  {
+    "id": "prep-078",
+    "prompt": "___ a reunião, todos assinaram a ata.",
+    "options": ["Após", "Depois", "Atrás de", "Diante"],
+    "answer": 0,
+    "explanation": "«Após» — предлог и работает сам по себе. «Depois» требует «de»: depois da reunião. Формальнее звучит «após».",
+    "tags": ["tempo", "locuções"]
+  },
+  {
+    "id": "prep-079",
+    "prompt": "Não tenho nada ___ ele; só discordo da ideia.",
+    "options": ["contra", "sob", "perante", "entre"],
+    "answer": 0,
+    "explanation": "Contra — «против». Обратное значение даёт оборот «a favor de».",
+    "tags": ["contra"]
+  },
+  {
+    "id": "prep-080",
+    "prompt": "Ele obedeceu ___ ordens do chefe.",
+    "options": ["às", "as", "nas", "das"],
+    "answer": 0,
+    "explanation": "Obedecer a — предлог обязателен, хотя в русском «слушаться» идёт без него: a + as ordens = às ordens.",
+    "tags": ["regência", "crase"]
+  },
+  {
+    "id": "prep-081",
+    "prompt": "Ela respondeu ___ pergunta do entrevistador.",
+    "options": ["à", "a", "na", "pela"],
+    "answer": 0,
+    "explanation": "Responder a — «отвечать на». Женский род с артиклем даёт кразе: a + a pergunta = à pergunta.",
+    "tags": ["regência", "crase"]
+  },
+  {
+    "id": "prep-082",
+    "prompt": "Participei ___ debate sobre educação pública.",
+    "options": ["do", "no", "ao", "pelo"],
+    "answer": 0,
+    "explanation": "Participar de — «участвовать в». Русский предлог «в» здесь сбивает: de + o debate = do debate.",
+    "tags": ["regência", "contração"]
+  },
+  {
+    "id": "prep-083",
+    "prompt": "Sempre contei ___ o apoio da minha família.",
+    "options": ["com", "de", "em", "por"],
+    "answer": 0,
+    "explanation": "Contar com — «рассчитывать на». Без предлога contar значит «рассказывать» или «считать».",
+    "tags": ["regência", "com"]
+  },
+  {
+    "id": "prep-084",
+    "prompt": "Ele se dedica ___ pesquisa há dez anos.",
+    "options": ["à", "a", "na", "pela"],
+    "answer": 0,
+    "explanation": "Dedicar-se a: a + a pesquisa = à pesquisa. Так же: dedicar-se ao trabalho, aos estudos.",
+    "tags": ["regência", "crase"]
+  },
+  {
+    "id": "prep-085",
+    "prompt": "Reclamei ___ barulho com o síndico.",
+    "options": ["do", "o", "pelo", "ao"],
+    "answer": 0,
+    "explanation": "Reclamar de — «жаловаться на». С артиклем: de + o barulho = do barulho.",
+    "tags": ["regência", "contração"]
+  },
+  {
+    "id": "prep-086",
+    "prompt": "Ele duvidou ___ minha palavra.",
+    "options": ["da", "a", "na", "pela"],
+    "answer": 0,
+    "explanation": "Duvidar de — «сомневаться в». Артикль перед притяжательным сливается: de + a minha = da minha.",
+    "tags": ["regência", "contração"]
+  },
+  {
+    "id": "prep-087",
+    "prompt": "Ela se aproximou ___ palco devagar.",
+    "options": ["do", "ao", "no", "pelo"],
+    "answer": 0,
+    "explanation": "Aproximar-se de — «приблизиться к». Русское «к» не переводится через «a»: de + o palco = do palco.",
+    "tags": ["regência", "contração"]
+  },
+  {
+    "id": "prep-088",
+    "prompt": "Este café é diferente ___ que tomei ontem.",
+    "options": ["do", "ao", "que", "no"],
+    "answer": 0,
+    "explanation": "Diferente de: de + o que = do que. Сравни: igual a, semelhante a, parecido com.",
+    "tags": ["regência", "contração"]
+  },
+  {
+    "id": "prep-089",
+    "prompt": "O resultado foi semelhante ___ do ano passado.",
+    "options": ["ao", "do", "que o", "com o"],
+    "answer": 0,
+    "explanation": "Semelhante a: a + o = ao. То же управление у igual, anterior, posterior, favorável.",
+    "tags": ["regência", "contração"]
+  },
+  {
+    "id": "prep-090",
+    "prompt": "Ele é capaz ___ resolver isso sozinho.",
+    "options": ["de", "a", "em", "por"],
+    "answer": 0,
+    "explanation": "Capaz de — «способный». Так же: incapaz de, difícil de, fácil de.",
+    "tags": ["regência", "de"]
+  },
+  {
+    "id": "prep-091",
+    "prompt": "Estou disposta ___ ajudar no que for preciso.",
+    "options": ["a", "de", "para", "em"],
+    "answer": 0,
+    "explanation": "Disposto a — «готовый что-то сделать». Так же: pronto a (или pronto para), acostumado a.",
+    "tags": ["regência", "a"]
+  },
+  {
+    "id": "prep-092",
+    "prompt": "O texto trata ___ desigualdade social no Brasil.",
+    "options": ["da", "a", "na", "pela"],
+    "answer": 0,
+    "explanation": "Tratar de — «быть о чём-то»: o texto trata da desigualdade. Разговорное «tratar sobre» в письменной части лучше не использовать.",
+    "tags": ["regência", "contração"]
+  },
+  {
+    "id": "prep-093",
+    "prompt": "___ acordo com a pesquisa, o consumo caiu.",
+    "options": ["De", "Em", "A", "Por"],
+    "answer": 0,
+    "explanation": "«De acordo com» — ссылка на источник, частая формула письменной части. Синонимы: segundo, conforme.",
+    "tags": ["locuções", "escrita"]
+  },
+  {
+    "id": "prep-094",
+    "prompt": "___ relação ___ meio ambiente, o texto é otimista.",
+    "options": ["Em … ao", "Com … ao", "De … ao", "Em … do"],
+    "answer": 0,
+    "explanation": "«Em relação a» — «что касается». Дальше идёт слияние: a + o meio ambiente = ao meio ambiente.",
+    "tags": ["locuções", "escrita"]
+  },
+  {
+    "id": "prep-095",
+    "prompt": "O problema foi resolvido ___ meio de um acordo.",
+    "options": ["por", "em", "de", "a"],
+    "answer": 0,
+    "explanation": "«Por meio de» — способ. В формальном тексте он предпочтительнее, чем «através de», которое строго значит «сквозь».",
+    "tags": ["locuções", "escrita"]
+  },
+  {
+    "id": "prep-096",
+    "prompt": "___ de melhorar a nota, ela refez o texto.",
+    "options": ["A fim", "Afim", "Ao fim", "Por fim"],
+    "answer": 0,
+    "explanation": "«A fim de» (раздельно) — цель. Слитное «afim» значит «сходный»: ideias afins. «Por fim» — «наконец».",
+    "tags": ["locuções", "escrita"]
+  },
+  {
+    "id": "prep-097",
+    "prompt": "___ da chuva, o evento aconteceu normalmente.",
+    "options": ["Apesar", "Além", "Antes", "Diante"],
+    "answer": 0,
+    "explanation": "«Apesar de» — уступка, «несмотря на». Синоним для письменной части: «a despeito de».",
+    "tags": ["locuções", "escrita"]
+  },
+  {
+    "id": "prep-098",
+    "prompt": "___ de estudar, ele ainda trabalha meio período.",
+    "options": ["Além", "Apesar", "Antes", "Em vez"],
+    "answer": 0,
+    "explanation": "«Além de» — добавление, «кроме того что». «Em vez de» означало бы, что учёбы нет вовсе.",
+    "tags": ["locuções", "escrita"]
+  },
+  {
+    "id": "prep-099",
+    "prompt": "O voo atrasou ___ ao mau tempo.",
+    "options": ["devido", "apesar", "além", "em vez"],
+    "answer": 0,
+    "explanation": "«Devido a» — нейтральная причина: devido ao mau tempo. Для положительной причины есть «graças a».",
+    "tags": ["locuções", "escrita"]
+  },
+  {
+    "id": "prep-100",
+    "prompt": "Graças ___ apoio da família, ela conseguiu se formar.",
+    "options": ["ao", "o", "pelo", "do"],
+    "answer": 0,
+    "explanation": "«Graças a» — причина с положительным оттенком: a + o apoio = ao apoio. Перед женским родом будет кразе: graças à bolsa.",
+    "tags": ["locuções", "escrita"]
   }
 ]

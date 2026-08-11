@@ -78,16 +78,575 @@
     "tags": ["e-mail"]
   },
   {
-    "id": "txt-007",
-    "prompt": "Что отличает жанр «carta do leitor» от обычного письма?",
+    "id": "txt-008",
+    "prompt": "Записка соседу по этажу: просишь не ставить машину перед выездом из твоего гаража.\n\nКакой набор формул уместен?",
     "options": [
-      "Оно адресовано редакции, но написано в расчёте на читателей газеты",
-      "Оно всегда пишется от руки",
-      "В нём запрещено выражать личное мнение",
-      "Оно не может ссылаться на опубликованные материалы"
+      "Olá, vizinho! Tudo bem? Você poderia evitar estacionar em frente à minha garagem? Preciso sair muito cedo. Obrigada pela compreensão! — Ana, ap. 32",
+      "Prezado senhor, venho por meio desta notificá-lo de que o veículo de sua propriedade obstrui a saída da garagem. Aguardo providências no prazo legal.",
+      "Não toleraremos mais o desrespeito dos vizinhos que bloqueiam nossas garagens!",
+      "Ei, tira esse carro daí que eu preciso sair. Valeu."
     ],
     "answer": 0,
-    "explanation": "Carta do leitor формально адресована редакции, а фактически обращена к публике: поэтому в ней есть ссылка на публикацию, аргументы и позиция автора. На экзамене это частый жанр, и оценивается именно двойная адресация.",
-    "tags": ["carta do leitor"]
+    "explanation": "С соседом, которого знаешь только в лицо, работает дружелюбный полуформальный регистр: приветствие, просьба через «você poderia», причина, благодарность и подпись с номером квартиры. Второй вариант — юридическое уведомление, третий — манифест, четвёртый — грубость без обращения.",
+    "tags": ["bilhete", "vizinho"]
+  },
+  {
+    "id": "txt-009",
+    "prompt": "Оставляешь записку на двери соседа: ты расписался за его посылку.\n\nЧто написать?",
+    "options": [
+      "Vizinho, chegou uma encomenda sua e eu assinei o recebimento. Está comigo, no ap. 51. Pode buscar quando quiser!",
+      "Informamos que a correspondência destinada a Vossa Senhoria encontra-se sob nossa guarda no apartamento 51.",
+      "Recebi sua encomenda. Retire em até 24 horas, sob pena de devolução.",
+      "Oi, amor! Peguei sua encomenda, depois a gente se vê. Beijos!"
+    ],
+    "answer": 0,
+    "explanation": "Записка соседу короткая и услужливая: что произошло, где лежит посылка, когда можно забрать. Второй вариант — канцелярит, третий ставит соседу ультиматум, четвёртый — интимный регистр, неуместный с соседом.",
+    "tags": ["bilhete", "vizinho"]
+  },
+  {
+    "id": "txt-010",
+    "prompt": "Письмо в редакцию газеты дописано. Какая концовка соответствует жанру?",
+    "options": [
+      "Espero que o jornal continue abrindo espaço para esse debate.\nAtenciosamente,\nCarla Menezes, leitora — São Paulo (SP)",
+      "Um abraço e até a próxima edição, gente!",
+      "Exigimos a demissão imediata do repórter responsável!",
+      "Sem mais para o momento, subscrevo-me e aguardo deferimento."
+    ],
+    "answer": 0,
+    "explanation": "Carta do leitor заканчивается сдержанной фразой о самом обсуждении, формулой «Atenciosamente» и подписью с именем и городом — газета их публикует. «Aguardo deferimento» — из заявления в госорган, а требование уволить журналиста относится к жанру протеста.",
+    "tags": ["carta do leitor", "fecho"]
+  },
+  {
+    "id": "txt-011",
+    "prompt": "Собираешь подписи жильцов квартала за светофор у школы (abaixo-assinado).\n\nКак начать текст?",
+    "options": [
+      "Nós, abaixo assinados, moradores do bairro Vila Nova, solicitamos à Prefeitura a instalação de um semáforo em frente à Escola Municipal Castro Alves.",
+      "Oi, pessoal! Quem quiser semáforo na frente da escola assina aqui embaixo.",
+      "Prezado prefeito, gostaria de saber se há previsão de semáforo na região.",
+      "Foi instalado nesta semana um semáforo em frente à Escola Municipal Castro Alves."
+    ],
+    "answer": 0,
+    "explanation": "Abaixo-assinado открывается формулой «Nós, abaixo assinados», указывает, кто именно подписывается, называет адресата-власть и конкретное требование. Третий вариант — обычный запрос от одного человека, четвёртый — новостная заметка.",
+    "tags": ["abaixo-assinado"]
+  },
+  {
+    "id": "txt-012",
+    "prompt": "Приглашаешь друзей на барбекю у себя дома.\n\nКакой набор формул уместен?",
+    "options": [
+      "Bora comemorar? Churrasco lá em casa, sábado, a partir das 13h. Traz a família! Confirma presença comigo.",
+      "Temos a honra de convidar Vossa Senhoria para o evento que se realizará no próximo sábado, às 13h.",
+      "Comunicamos que haverá churrasco no sábado. A presença é obrigatória.",
+      "Venho por meio desta convidá-los para um churrasco, conforme dispõe o regulamento interno do condomínio."
+    ],
+    "answer": 0,
+    "explanation": "Дружеское приглашение — живой призыв, день, время, кого брать с собой и просьба подтвердить приход. Остальные варианты — официальное приглашение, служебное объявление и канцелярская отписка.",
+    "tags": ["convite"]
+  },
+  {
+    "id": "txt-013",
+    "prompt": "Официальное приглашение на открытие выставки в культурном центре.\n\nЧто выбрать?",
+    "options": [
+      "O Centro Cultural Ipiranga tem o prazer de convidar V. Sa. para a abertura da exposição «Cores do Cerrado», no dia 20 de agosto, às 19h.",
+      "Gente, vai ter exposição nova lá no centro cultural, apareçam!",
+      "Solicitamos o comparecimento obrigatório de todos os servidores à abertura da exposição.",
+      "A exposição «Cores do Cerrado» foi aberta ontem com a presença de autoridades."
+    ],
+    "answer": 0,
+    "explanation": "Официальное приглашение исходит от учреждения («O Centro Cultural… tem o prazer de convidar»), обращается к адресату на V. Sa. и даёт дату, время и повод. Третий вариант — приказ явиться, четвёртый — новость о прошедшем событии.",
+    "tags": ["convite", "formal"]
+  },
+  {
+    "id": "txt-014",
+    "prompt": "Письмо в компанию: холодильник сломался через месяц после покупки, сервис не отвечает.\n\nКак начать?",
+    "options": [
+      "Prezados senhores, adquiri em 3 de março, na loja da rua Sete, uma geladeira modelo Frost 400, que apresentou defeito em menos de trinta dias de uso.",
+      "Oi, gente, comprei uma geladeira de vocês e ela quebrou, que absurdo!",
+      "Nós, consumidores brasileiros, não aceitaremos mais o descaso das empresas!",
+      "Gostaria de saber quais modelos de geladeira vocês têm disponíveis."
+    ],
+    "answer": 0,
+    "explanation": "Письмо-претензия начинается с фактов: дата и место покупки, модель товара, суть неисправности. Эмоции и коллективные лозунги здесь только ослабляют текст, а четвёртый вариант вообще открывает другой разговор.",
+    "tags": ["carta de reclamação"]
+  },
+  {
+    "id": "txt-015",
+    "prompt": "То же письмо-претензия про холодильник. Как сформулировать требование в конце?",
+    "options": [
+      "Diante do exposto, solicito a substituição do produto ou a devolução do valor pago no prazo de dez dias úteis.",
+      "Então é isso, espero que vocês resolvam logo, tá?",
+      "Se não resolverem, vamos às ruas!",
+      "Agradeço desde já a atenção e coloco-me à disposição para novas compras."
+    ],
+    "answer": 0,
+    "explanation": "Претензия завершается связкой «Diante do exposto» и точным требованием с указанием срока — тогда её можно исполнить. Расплывчатая надежда, угроза протестом и благодарность без требования оставляют письмо без результата.",
+    "tags": ["carta de reclamação", "fecho"]
+  },
+  {
+    "id": "txt-016",
+    "prompt": "Письмо директору школы: благодаришь за поддержку вашего проекта чтения.\n\nКак начать?",
+    "options": [
+      "Prezada diretora, escrevo para agradecer o apoio da escola ao nosso projeto de leitura, que só foi possível graças à sua colaboração.",
+      "Diretora, obrigada por tudo, você é demais! Beijão!",
+      "Venho por meio desta requerer o apoio da escola ao projeto de leitura.",
+      "Lamentamos informar que o projeto de leitura foi encerrado."
+    ],
+    "answer": 0,
+    "explanation": "Благодарственное письмо сразу называет свою цель («escrevo para agradecer») и уточняет, за что именно. Второй вариант слишком фамильярен для директора, третий — просьба, а не благодарность, четвёртый — сообщение о закрытии проекта.",
+    "tags": ["carta de agradecimento"]
+  },
+  {
+    "id": "txt-017",
+    "prompt": "Сопроводительное письмо к резюме на вакансию администратора.\n\nЧто выбрать?",
+    "options": [
+      "Prezados, encaminho meu currículo para a vaga de recepcionista anunciada no site da empresa. Tenho três anos de experiência em atendimento ao público.",
+      "Oi! Vi a vaga de vocês e achei bem a minha cara, olha só meu currículo aí.",
+      "Nós, profissionais de atendimento, exigimos processos seletivos mais justos.",
+      "Informamos que a vaga de recepcionista já foi preenchida."
+    ],
+    "answer": 0,
+    "explanation": "Carta de apresentação называет вакансию, источник объявления и в одной фразе связывает опыт кандидата с должностью. Панибратский тон, коллективное требование и ответ работодателя жанру не соответствуют.",
+    "tags": ["carta de apresentação"]
+  },
+  {
+    "id": "txt-018",
+    "prompt": "E-mail коллеге из другого отдела: нужны данные о продажах к пятнице.\n\nКакой тон правильный?",
+    "options": [
+      "Oi, Marcos, tudo bem? Estou fechando o relatório do trimestre e preciso dos dados de vendas até sexta. Consegue me enviar? Obrigada!",
+      "Prezado senhor, venho por meio desta solicitar o envio dos dados de vendas, sob pena de responsabilização.",
+      "Marcos, manda os dados. Urgente.",
+      "Nós, funcionários do setor financeiro, vimos a público cobrar transparência nos dados de vendas."
+    ],
+    "answer": 0,
+    "explanation": "С коллегой уместен полуформальный рабочий регистр: приветствие, зачем нужны данные, срок, просьба и благодарность. Угроза ответственностью и приказ без обращения портят отношения, а последний вариант — публичное заявление.",
+    "tags": ["e-mail", "trabalho"]
+  },
+  {
+    "id": "txt-019",
+    "prompt": "Заявление в мэрию: просишь выдать справку о месте проживания.\n\nКакое начало соответствует жанру requerimento?",
+    "options": [
+      "Eu, Joana Ribeiro, portadora do RG nº 12.345.678, venho requerer a emissão de atestado de residência, para os devidos fins.",
+      "Oi, preciso de um atestado de residência, como é que eu faço?",
+      "Prezada prefeitura, será que vocês poderiam me mandar um atestado de residência?",
+      "Exigimos que a prefeitura emita atestados de residência para todos os moradores!"
+    ],
+    "answer": 0,
+    "explanation": "Requerimento открывается идентификацией заявителя (имя, номер документа), глаголом «requerer» и указанием цели. Разговорный вопрос и мягкое «será que vocês poderiam» в официальном заявлении не работают, а четвёртый вариант — требование от коллектива.",
+    "tags": ["requerimento"]
+  },
+  {
+    "id": "txt-020",
+    "prompt": "Статья-мнение (artigo de opinião) о запрете телефонов в школе.\n\nКак начать?",
+    "options": [
+      "A proibição do celular em sala de aula divide opiniões, mas há bons argumentos para defendê-la.",
+      "Oi, gente, vou falar aqui o que eu acho sobre celular na escola.",
+      "Nós, estudantes, não aceitaremos a proibição dos celulares!",
+      "A escola informa que o uso de celular está proibido a partir de segunda-feira."
+    ],
+    "answer": 0,
+    "explanation": "Artigo de opinião открывается формулировкой темы и позицией автора в безличном публицистическом тоне. Разговорное «vou falar o que eu acho» снижает жанр, третий вариант — манифест, четвёртый — объявление школы.",
+    "tags": ["artigo de opinião"]
+  },
+  {
+    "id": "txt-021",
+    "prompt": "Та же статья-мнение о телефонах в школе. Какая концовка соответствует жанру?",
+    "options": [
+      "É preciso, portanto, que escola e família construam juntas regras claras sobre o uso da tecnologia.",
+      "Bom, era isso que eu queria dizer. Tchau!",
+      "Atenciosamente,\nJoão Pedro, aluno do 9º ano.",
+      "Sem mais para o momento, aguardo deferimento."
+    ],
+    "answer": 0,
+    "explanation": "Статья-мнение завершается обобщением и предложением («É preciso, portanto, que…»), а не прощанием. Формулы «Atenciosamente» с подписью и «aguardo deferimento» принадлежат письму и заявлению, а не публицистике.",
+    "tags": ["artigo de opinião", "fecho"]
+  },
+  {
+    "id": "txt-022",
+    "prompt": "Заметка в школьную газету: команда победила на олимпиаде по математике.\n\nКак начать?",
+    "options": [
+      "A equipe do Colégio Santa Rita conquistou o primeiro lugar na Olimpíada de Matemática no último sábado, em Belo Horizonte.",
+      "Que orgulho da nossa equipe! Vocês são simplesmente os melhores!",
+      "Convidamos todos a torcer pela equipe na Olimpíada de Matemática.",
+      "Nós, alunos do Colégio Santa Rita, exigimos mais apoio às olimpíadas científicas."
+    ],
+    "answer": 0,
+    "explanation": "Первый абзац новости (lide) отвечает на вопросы кто, что, когда и где, без оценок и восклицаний. Второй вариант — поздравление, третий — приглашение, четвёртый — требование.",
+    "tags": ["notícia"]
+  },
+  {
+    "id": "txt-023",
+    "prompt": "Рецензия на фильм для блога.\n\nКакое начало соответствует жанру?",
+    "options": [
+      "Dirigido por Anna Muylaert, «Que Horas Ela Volta?» acompanha uma empregada doméstica que reencontra a filha em São Paulo.",
+      "Assisti a um filme ontem à noite e gostei bastante, recomendo!",
+      "Convidamos o público para a exibição do filme no cineclube da praça, às 20h.",
+      "Solicito autorização para exibir o filme na sala de vídeo da escola."
+    ],
+    "answer": 0,
+    "explanation": "Рецензия сначала опознаёт произведение — режиссёр, название, о чём оно, — и лишь потом переходит к оценке. Голая похвала без названия, анонс показа и заявление на разрешение — другие жанры.",
+    "tags": ["resenha"]
+  },
+  {
+    "id": "txt-024",
+    "prompt": "Рассказ о личном опыте (relato pessoal): как ты начал учить португальский.\n\nЧто выбрать?",
+    "options": [
+      "Comecei a estudar português em 2019, quando recebi uma proposta de trabalho no Brasil e tive apenas três meses para me preparar.",
+      "O português é a sexta língua mais falada do mundo, com mais de 250 milhões de falantes.",
+      "Recomendamos que os alunos estudem português diariamente, por pelo menos trinta minutos.",
+      "Venho por meio desta informar que estudo português desde 2019."
+    ],
+    "answer": 0,
+    "explanation": "Relato pessoal ведётся от первого лица в прошедшем времени и держится на конкретной ситуации: когда, почему, при каких обстоятельствах. Справка о языке, совет и официальное уведомление личным рассказом не являются.",
+    "tags": ["relato pessoal"]
+  },
+  {
+    "id": "txt-025",
+    "prompt": "Листовка с инструкцией: как сортировать мусор дома.\n\nКакие формулировки нужны?",
+    "options": [
+      "Separe o lixo seco do orgânico. Lave as embalagens antes de descartá-las. Guarde os vidros em uma caixa firme.",
+      "Eu separo o lixo seco do orgânico e lavo as embalagens todos os dias.",
+      "Seria interessante que as pessoas pensassem em separar o lixo em casa.",
+      "Exigimos coleta seletiva em todos os bairros da cidade!"
+    ],
+    "answer": 0,
+    "explanation": "Инструкция строится на императиве, обращённом к читателю (separe, lave, guarde), и разбивается на отдельные шаги. Рассказ о себе, размытое пожелание и требование к власти инструкцией не работают.",
+    "tags": ["instruções"]
+  },
+  {
+    "id": "txt-026",
+    "prompt": "Листовка кампании вакцинации в районе.\n\nКакой призыв уместен?",
+    "options": [
+      "Vacine-se! A sala de vacinação do posto do bairro atende de segunda a sexta, das 8h às 17h. Não esqueça a carteirinha.",
+      "Venho por meio desta informar a existência de campanha de vacinação no posto de saúde.",
+      "A cobertura vacinal caiu 12% no último ano, segundo dados do Ministério da Saúde.",
+      "Estou pensando em me vacinar esta semana, alguém vai comigo?"
+    ],
+    "answer": 0,
+    "explanation": "Агитационная листовка соединяет прямой призыв в императиве с практической информацией: где, когда, что взять с собой. Второй вариант — канцелярское уведомление, третий — фраза из отчёта, четвёртый — личное сообщение.",
+    "tags": ["folheto", "campanha"]
+  },
+  {
+    "id": "txt-027",
+    "prompt": "Объявление о сдаче квартиры на сайте объявлений.\n\nЧто выбрать?",
+    "options": [
+      "Alugo apartamento de 2 quartos no Centro, 60 m², com garagem. R$ 1.200 + condomínio. Tratar pelo telefone (11) 98888-7777.",
+      "Estou muito feliz porque finalmente vou alugar o meu apartamento do Centro!",
+      "Prezados senhores, venho por meio desta oferecer em locação um imóvel de minha propriedade.",
+      "Exigimos aluguéis mais justos no centro da cidade!"
+    ],
+    "answer": 0,
+    "explanation": "Классифайд сжат до фактов: что сдаётся, где, площадь, цена, контакт. Эмоция, канцелярское письмо и лозунг в объявлении не нужны — читатель ищет данные.",
+    "tags": ["anúncio classificado"]
+  },
+  {
+    "id": "txt-028",
+    "prompt": "Пост районной библиотеки в соцсети: с августа работает и по субботам.\n\nЧто выбрать?",
+    "options": [
+      "Novidade! A partir de agosto, a biblioteca também abre aos sábados, das 9h às 13h. Passe por aqui e leve seus livros!",
+      "Comunicamos aos usuários que, a partir do mês de agosto, o horário de funcionamento da biblioteca sofrerá alteração, conforme deliberação da diretoria.",
+      "Alguém sabe se a biblioteca vai abrir aos sábados a partir de agosto?",
+      "Nós, usuários da biblioteca, exigimos atendimento aos sábados!"
+    ],
+    "answer": 0,
+    "explanation": "Пост учреждения в соцсети короткий и дружелюбный: новость, конкретные часы и приглашение зайти. Второй вариант — канцелярит для приказа, третий — вопрос читателя, четвёртый — требование пользователей.",
+    "tags": ["rede social"]
+  },
+  {
+    "id": "txt-029",
+    "prompt": "Сообщение в родительском чате: напомнить о завтрашнем собрании.\n\nЧто написать?",
+    "options": [
+      "Boa noite a todos! Lembrando que a reunião de pais é amanhã, às 19h, na sala 12. Até lá!",
+      "Prezados responsáveis, venho por meio desta convocá-los para reunião, sob pena de advertência.",
+      "Reunião amanhã.",
+      "Nós, pais e responsáveis, exigimos reuniões em horários acessíveis!"
+    ],
+    "answer": 0,
+    "explanation": "Сообщение в чате вежливое, но полное: приветствие, напоминание, время и место, короткое прощание. Канцелярская угроза здесь неуместна, «Reunião amanhã» не отвечает на вопросы «когда и где», а последний вариант — коллективное требование.",
+    "tags": ["mensagem", "grupo"]
+  },
+  {
+    "id": "txt-030",
+    "prompt": "Речь от имени класса на выпускном вечере.\n\nКак начать?",
+    "options": [
+      "Boa noite a todos. Em nome da turma de 2026, agradeço às famílias e aos professores que nos trouxeram até aqui.",
+      "Oi, gente, então, eu vou falar rapidinho aqui, tá?",
+      "Venho por meio desta agradecer aos professores pela formação recebida.",
+      "A formatura da turma de 2026 reuniu 120 alunos no ginásio da escola."
+    ],
+    "answer": 0,
+    "explanation": "Речь — устный жанр: сначала приветствие зала, потом указание, от чьего имени говорит выступающий, потом благодарности. «Venho por meio desta» — формула письма, а последний вариант — новостная заметка о самом празднике.",
+    "tags": ["discurso"]
+  },
+  {
+    "id": "txt-031",
+    "prompt": "Письмо мэру о нехватке автобусов в вашем районе.\n\nКакое обращение и первая фраза правильны?",
+    "options": [
+      "Excelentíssimo Senhor Prefeito, na condição de moradora do bairro São José, dirijo-me a V. Exa. para relatar a carência de linhas de ônibus na região.",
+      "Oi, prefeito, o ônibus aqui no bairro está uma vergonha.",
+      "Prezado prefeito, tudo bem com o senhor? Como vai a família?",
+      "O prefeito anunciou ontem a criação de novas linhas de ônibus na zona sul."
+    ],
+    "answer": 0,
+    "explanation": "К должностному лицу обращаются «Excelentíssimo Senhor Prefeito» и на V. Exa.; автор сразу представляется и называет предмет обращения. Разговорная жалоба и светские вопросы о семье в таком письме неуместны, четвёртый вариант — новость.",
+    "tags": ["carta formal", "autoridade"]
+  },
+  {
+    "id": "txt-032",
+    "prompt": "Внутреннее сообщение сотрудникам о переезде офиса.\n\nЧто выбрать?",
+    "options": [
+      "COMUNICADO INTERNO\nInformamos que, a partir de 1º de setembro, o escritório funcionará na rua Alves, 200. Dúvidas com o setor administrativo.",
+      "Galera, a gente vai mudar de escritório em setembro, fiquem espertos!",
+      "Excelentíssimo senhor, comunico a mudança de endereço da empresa.",
+      "Exigimos que a mudança de escritório seja discutida com os funcionários!"
+    ],
+    "answer": 0,
+    "explanation": "Комьюнике имеет заголовок, безличную формулу «Informamos que», дату, новый адрес и указание, куда идти с вопросами. Разговорный тон, обращение к одному высокому лицу и требование сотрудников — другие жанры.",
+    "tags": ["comunicado"]
+  },
+  {
+    "id": "txt-033",
+    "prompt": "Протокол собрания жильцов дома (ata).\n\nКак он начинается?",
+    "options": [
+      "Aos quinze dias do mês de junho de 2026, às 19h, reuniram-se os condôminos do Edifício Aurora no salão de festas para tratar da reforma da fachada.",
+      "Ontem à noite a gente se reuniu para falar da reforma da fachada.",
+      "Convocamos todos os condôminos para uma reunião sobre a reforma da fachada.",
+      "Não aceitaremos mais o adiamento da reforma da fachada!"
+    ],
+    "answer": 0,
+    "explanation": "Ata открывается устойчивой формулой даты «Aos quinze dias do mês de…», перечисляет, кто собрался, где и зачем, и фиксирует происходившее в прошедшем времени. Третий вариант — созыв собрания, то есть текст, который пишут до него.",
+    "tags": ["ata"]
+  },
+  {
+    "id": "txt-034",
+    "prompt": "Отчёт о проведённом мастер-классе. Как написать заключительную часть?",
+    "options": [
+      "Conclui-se que a oficina atingiu os objetivos previstos e recomenda-se sua repetição no próximo semestre.",
+      "Enfim, deu tudo certo e foi muito legal, vamos fazer de novo!",
+      "Exigimos que a oficina seja repetida no próximo semestre!",
+      "Um beijo a todos que participaram da nossa oficina."
+    ],
+    "answer": 0,
+    "explanation": "Отчёт пользуется безличными конструкциями «conclui-se», «recomenda-se»: вывод подаётся как следствие данных, а не как личное впечатление. Требование и прощание с поцелуями относятся к манифесту и личному письму.",
+    "tags": ["relatório", "fecho"]
+  },
+  {
+    "id": "txt-035",
+    "prompt": "Письмо подруге, которая переехала в другой город.\n\nКак начать?",
+    "options": [
+      "Querida Bia, tudo bem por aí? Faz meses que não nos falamos e tenho muita novidade para contar.",
+      "Prezada senhora, venho por meio desta relatar os acontecimentos recentes de minha vida.",
+      "Informamos que houve mudanças na rotina da remetente nos últimos meses.",
+      "Nós, amigas de infância, exigimos mais notícias suas!"
+    ],
+    "answer": 0,
+    "explanation": "Личное письмо начинается с «Querida + имя», вопроса о жизни адресата и анонса новостей. Канцелярские формулы и безличное «Informamos» между подругами звучат пародией.",
+    "tags": ["carta pessoal"]
+  },
+  {
+    "id": "txt-036",
+    "prompt": "Чем закончить письмо близкой подруге?",
+    "options": [
+      "Escreve quando puder, tá? Saudades e um beijo grande,\nMarina",
+      "Atenciosamente,\nMarina Souza",
+      "Sem mais para o momento, subscrevo-me.",
+      "Contamos com a sua adesão à nossa causa!"
+    ],
+    "answer": 0,
+    "explanation": "Дружеское письмо закрывается просьбой ответить, словом «saudades» и поцелуем — вместе с именем без фамилии. «Atenciosamente» и «subscrevo-me» — формулы официального письма, а последний вариант завершает манифест.",
+    "tags": ["carta pessoal", "fecho"]
+  },
+  {
+    "id": "txt-037",
+    "prompt": "Школа отвечает на критику в соцсетях официальным разъяснением (nota de esclarecimento).\n\nКак оно начинается?",
+    "options": [
+      "A direção da Escola Monteiro vem a público esclarecer que o episódio ocorrido na última semana já foi apurado e que as medidas cabíveis foram adotadas.",
+      "A gente queria dizer que não foi bem isso que andaram falando por aí.",
+      "Exigimos que os pais parem de criticar a escola nas redes sociais!",
+      "Prezado pai, venho esclarecer o episódio ocorrido com o seu filho na semana passada."
+    ],
+    "answer": 0,
+    "explanation": "Nota de esclarecimento написана от имени учреждения в третьем лице («A direção… vem a público esclarecer») и обращена ко всей публике сразу. Четвёртый вариант — личное письмо одному родителю, а не публичное разъяснение.",
+    "tags": ["nota de esclarecimento"]
+  },
+  {
+    "id": "txt-038",
+    "prompt": "Хроника (crônica) для газеты о сценке в автобусе.\n\nКакое начало соответствует жанру?",
+    "options": [
+      "Era quase seis da tarde quando o ônibus parou e uma senhora subiu carregando um bolo inteiro nas mãos.",
+      "O transporte público da cidade levou 1,2 milhão de passageiros em maio, segundo a prefeitura.",
+      "Exigimos mais ônibus na linha 402 nos horários de pico!",
+      "Prezado leitor, venho por meio desta narrar um episódio ocorrido no ônibus."
+    ],
+    "answer": 0,
+    "explanation": "Хроника — короткая литературная зарисовка из повседневности: время, сцена, живая деталь, повествовательный тон. Статистика принадлежит новости, требование — манифесту, а канцелярская формула ломает саму интонацию жанра.",
+    "tags": ["crônica"]
+  },
+  {
+    "id": "txt-039",
+    "prompt": "Редакционная статья газеты (editorial) о нехватке школ в городе.\n\nКакой голос правильный?",
+    "options": [
+      "Este jornal defende que a ampliação da rede escolar seja tratada como prioridade orçamentária do município.",
+      "Eu acho que a prefeitura tinha que construir mais escolas, sinceramente.",
+      "Nós, moradores do bairro, exigimos uma escola aqui!",
+      "A prefeitura anunciou a construção de duas escolas até 2027."
+    ],
+    "answer": 0,
+    "explanation": "Editorial выражает позицию издания, а не отдельного автора: «Este jornal defende que…». Личное «eu acho» подходит статье-мнению, коллективное «nós, moradores» — манифесту, а последний вариант просто сообщает факт.",
+    "tags": ["editorial"]
+  },
+  {
+    "id": "txt-040",
+    "prompt": "Рекомендательное письмо бывшему коллеге.\n\nЧто выбрать?",
+    "options": [
+      "Trabalhei com Paulo Andrade durante quatro anos e posso atestar sua pontualidade e seu cuidado no atendimento ao público.",
+      "O Paulo é gente boa demais, pode contratar sem medo!",
+      "Venho por meio desta requerer a contratação do senhor Paulo Andrade.",
+      "Nós, colegas de Paulo, exigimos a sua recontratação!"
+    ],
+    "answer": 0,
+    "explanation": "Рекомендация объясняет, откуда автор знает человека и сколько времени, а затем называет конкретные качества — это и делает её убедительной. Оценка «gente boa» ничем не подкреплена, а требовать чьего-то найма в этом жанре нельзя.",
+    "tags": ["carta de recomendação"]
+  },
+  {
+    "id": "txt-041",
+    "prompt": "Открытка родным из поездки в Салвадор.\n\nЧто написать?",
+    "options": [
+      "Queridos, Salvador é ainda mais bonita do que nas fotos! Amanhã vamos ao Pelourinho. Saudades e um beijo,\nLéo e Ana",
+      "Prezados senhores, informamos que chegamos a Salvador conforme o previsto.",
+      "Salvador recebeu 1,5 milhão de turistas no primeiro semestre deste ano.",
+      "Solicito autorização para permanecer em Salvador por mais três dias."
+    ],
+    "answer": 0,
+    "explanation": "Открытка очень короткая и тёплая: обращение, впечатление, планы на завтра, прощание с подписью. Канцелярский отчёт, статистика и заявление о продлении поездки — тексты из совсем других ситуаций.",
+    "tags": ["cartão-postal"]
+  },
+  {
+    "id": "txt-042",
+    "prompt": "Записка учительнице, которую сын передаст в школе: объясняешь его вчерашний пропуск.\n\nЧто выбрать?",
+    "options": [
+      "Prezada professora, meu filho faltou à aula de ontem porque estava com febre. Coloco-me à disposição.\nObrigada, Rita Alves, mãe do Pedro",
+      "Oi, prof! O Pedro faltou porque estava doentinho, beleza?",
+      "Venho por meio desta justificar a ausência do menor, nos termos do regimento escolar, requerendo o abono da falta.",
+      "Exigimos que a escola reveja o seu sistema de faltas!"
+    ],
+    "answer": 0,
+    "explanation": "Записка учителю — полуформальная: вежливое обращение, причина пропуска, готовность помочь и подпись с указанием, кем автор приходится ученику. Фамильярное «beleza?» и юридический язык «nos termos do regimento» одинаково выпадают из жанра.",
+    "tags": ["bilhete", "escola"]
+  },
+  {
+    "id": "txt-043",
+    "prompt": "Уходишь с работы и пишешь общее письмо коллегам.\n\nЧто выбрать?",
+    "options": [
+      "Pessoal, hoje é meu último dia na equipe. Agradeço muito a convivência destes cinco anos e espero encontrar vocês por aí. Meu contato continua o mesmo.",
+      "Comunicamos o desligamento da funcionária Ana Lima a partir desta data.",
+      "Prezados, venho por meio desta requerer o meu desligamento da empresa.",
+      "Não aceitaremos mais as condições de trabalho impostas por esta empresa!"
+    ],
+    "answer": 0,
+    "explanation": "Прощальное письмо коллегам говорит от первого лица: что уходишь, благодарность за годы вместе, как остаться на связи. Второй вариант — кадровое уведомление о тебе, третий — заявление об увольнении, четвёртый — протест.",
+    "tags": ["e-mail", "despedida"]
+  },
+  {
+    "id": "txt-044",
+    "prompt": "Краткое изложение (resumo) прочитанной статьи для занятия.\n\nКак начать?",
+    "options": [
+      "O artigo de Marta Lopes discute o impacto do trabalho remoto na vida das famílias brasileiras.",
+      "Eu li um artigo muito interessante sobre trabalho remoto e concordo com a autora.",
+      "Marta Lopes deveria ter pesquisado melhor antes de escrever sobre trabalho remoto.",
+      "Convidamos Marta Lopes para debater o trabalho remoto na nossa escola."
+    ],
+    "answer": 0,
+    "explanation": "Resumo передаёт содержание чужого текста: кто автор, о чём статья, — и обходится без оценки. Согласие, критика и приглашение автора относятся соответственно к отзыву, рецензии и приглашению.",
+    "tags": ["resumo"]
+  },
+  {
+    "id": "txt-045",
+    "prompt": "Рекламный текст курса португальского для листовки.\n\nЧто выбрать?",
+    "options": [
+      "Fale português com confiança em seis meses! Turmas pequenas, professores nativos e aulas aos sábados. Matrículas abertas.",
+      "O curso de português tem 120 horas e é ministrado por quatro professores contratados em 2024.",
+      "Venho por meio desta oferecer um curso de português a Vossa Senhoria.",
+      "Nós, estudantes de português, exigimos cursos mais baratos!"
+    ],
+    "answer": 0,
+    "explanation": "Реклама обещает читателю результат, перечисляет преимущества и заканчивается призывом к действию. Второй вариант — сухая справка из отчёта, третий — коммерческое письмо, четвёртый — требование.",
+    "tags": ["texto publicitário"]
+  },
+  {
+    "id": "txt-046",
+    "prompt": "Письмо в языковую школу с просьбой о стипендии.\n\nКак начать?",
+    "options": [
+      "Prezada coordenação, sou aluno do curso noturno e venho solicitar uma bolsa de estudos, uma vez que perdi meu emprego em abril.",
+      "Oi, gente, estou sem grana, dá para vocês me darem uma bolsa?",
+      "Exigimos bolsas de estudo para todos os alunos do curso noturno!",
+      "Informamos que as inscrições para bolsas estão abertas até 30 de maio."
+    ],
+    "answer": 0,
+    "explanation": "Просьба о стипендии называет адресата, представляет автора, формулирует саму просьбу и её основание («uma vez que…»). Разговорный тон снижает шансы, а третий и четвёртый варианты — требование группы и объявление от самой школы.",
+    "tags": ["carta de solicitação"]
+  },
+  {
+    "id": "txt-047",
+    "prompt": "Созыв общего собрания собственников (convocação) на доске в подъезде.\n\nЧто выбрать?",
+    "options": [
+      "CONVOCAÇÃO\nFicam convocados os condôminos para a assembleia geral do dia 10/09, às 20h, no salão de festas, com a seguinte pauta: prestação de contas.",
+      "Galera, vamos nos reunir dia 10 para ver as contas do prédio, apareçam!",
+      "Nós, condôminos, exigimos a prestação de contas do síndico!",
+      "A assembleia do último dia 10 aprovou as contas do condomínio."
+    ],
+    "answer": 0,
+    "explanation": "Созыв собрания оформляется заголовком, безличной формулой «Ficam convocados», датой, временем, местом и повесткой. Дружеское сообщение не имеет юридической силы, третий вариант — требование, четвёртый — сообщение о прошедшем собрании.",
+    "tags": ["convocação"]
+  },
+  {
+    "id": "txt-048",
+    "prompt": "Неделю назад отправил рабочее письмо, ответа нет. Пишешь вежливое напоминание.\n\nЧто выбрать?",
+    "options": [
+      "Prezada Camila, bom dia. Retomo o e-mail enviado em 3 de junho sobre o orçamento do evento. Você teria alguma previsão de resposta?",
+      "Camila, mandei esse e-mail semana passada e até agora nada. Continuo esperando.",
+      "Venho por meio desta notificá-la do descumprimento do prazo de resposta.",
+      "Não aceitaremos mais a demora no envio dos orçamentos!"
+    ],
+    "answer": 0,
+    "explanation": "Напоминание ссылается на дату прошлого письма и его тему, а вопрос о сроке задаётся мягко («Você teria alguma previsão…»). Упрёк, юридическое уведомление и лозунг превращают рабочую переписку в конфликт.",
+    "tags": ["e-mail", "cobrança"]
+  },
+  {
+    "id": "txt-049",
+    "prompt": "Анонс программы районного фестиваля на сайте.\n\nЧто выбрать?",
+    "options": [
+      "FESTIVAL DE INVERNO — PROGRAMAÇÃO\nSexta, 19h: show de samba na praça.\nSábado, 15h: oficina de dança (vagas limitadas).\nEntrada gratuita.",
+      "Foi lindo o festival de inverno deste ano, todo mundo dançou até tarde na praça.",
+      "Solicito autorização para realizar um festival na praça do bairro.",
+      "Exigimos mais eventos culturais gratuitos no nosso bairro!"
+    ],
+    "answer": 0,
+    "explanation": "Программа события — заголовок и список по дням и часам с практическими условиями (места ограничены, вход свободный). Второй вариант рассказывает о прошедшем фестивале, третий — заявление на разрешение, четвёртый — требование.",
+    "tags": ["programação", "divulgação"]
+  },
+  {
+    "id": "txt-050",
+    "prompt": "Записка соседям: извиняешься за шум от ремонта в квартире.\n\nЧто выбрать?",
+    "options": [
+      "Vizinhos, peço desculpas pelo barulho da reforma desta semana. A obra termina na sexta-feira. Obrigado pela paciência! — ap. 74",
+      "Comunicamos que haverá obras no edifício até a próxima sexta-feira.",
+      "Venho por meio desta apresentar minhas escusas pelos ruídos provenientes da reforma em curso.",
+      "Não tenho culpa pelo barulho: reforma é direito de todo condômino."
+    ],
+    "answer": 0,
+    "explanation": "Извинение соседям прямое и короткое: «peço desculpas», за что именно, когда неудобство закончится, благодарность за терпение и номер квартиры. Безличное объявление не извиняется, «apresentar minhas escusas» звучит как документ, а последний вариант оправдывается вместо извинения.",
+    "tags": ["bilhete", "desculpas"]
+  },
+  {
+    "id": "txt-051",
+    "prompt": "Пост в личном блоге о поездке в Ору-Прету.\n\nКакое начало соответствует жанру?",
+    "options": [
+      "Cheguei a Ouro Preto num sábado de neblina e passei o dia subindo ladeiras — foi cansativo, mas cada igreja no caminho valeu o esforço.",
+      "Ouro Preto, em Minas Gerais, foi declarada Patrimônio Mundial pela UNESCO em 1980.",
+      "Comunicamos que a viagem a Ouro Preto ocorreu conforme o roteiro previsto.",
+      "Solicito informações sobre hospedagem em Ouro Preto para o próximo feriado."
+    ],
+    "answer": 0,
+    "explanation": "Блог о путешествии ведётся от первого лица и держится на личном впечатлении и деталях (туман, подъёмы, церкви). Энциклопедическая справка, отчёт и запрос информации рассказом о поездке не являются.",
+    "tags": ["blog", "relato de viagem"]
   }
 ]
