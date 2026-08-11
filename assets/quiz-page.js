@@ -222,10 +222,16 @@ async function start() {
 start();
 
 // Клавиатура на ноутбуке: цифра выбирает вариант, Enter или пробел листает дальше.
+// Если фокус уже стоит на ссылке или кнопке (например, на ссылке «назад» в topbar,
+// на самой #next или на варианте ответа), не перехватываем клавишу — пусть браузер
+// обработает её нативно для того элемента, на котором реально стоит фокус.
 document.addEventListener('keydown', (event) => {
   if (event.metaKey || event.ctrlKey || event.altKey) return;
 
   if (event.key === 'Enter' || event.key === ' ') {
+    const focusedControl = event.target.closest ? event.target.closest('a, button') : null;
+    if (focusedControl && focusedControl.id !== 'next') return;
+
     const next = document.getElementById('next');
     if (next) {
       event.preventDefault();
