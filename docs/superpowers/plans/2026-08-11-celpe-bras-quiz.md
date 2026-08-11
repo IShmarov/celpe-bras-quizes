@@ -1117,7 +1117,7 @@ git add assets/data.js assets/quiz-page.js assets/style.css quiz.html && git com
 - Modify: `assets/style.css`
 
 **Interfaces:**
-- Consumes: `session.correctCount`, `session.wrongIds`, `session.isLast` из Task 3; функцию `createTopbar(sectionTitle, counterText?)`, классы `.button`, `.actions` из Task 4.
+- Consumes: `session.total`, `session.correctCount`, `session.wrongIds`, `session.isLast` из Task 3; функцию `createTopbar(sectionTitle, counterText?)`, классы `.button`, `.button--ghost`, `.actions`, `.muted` из Task 4.
 - Produces: функция `renderResult(session, sectionTitle)` внутри `quiz-page.js`; исходные вопросы она берёт из модульной переменной `allQuestions`. Наружу ничего нового не экспортируется.
 
 - [ ] **Шаг 1: Добавить стили результата в конец `assets/style.css`** (перед блоком `@media (prefers-reduced-motion: reduce)`)
