@@ -615,7 +615,7 @@ git add assets/engine.js tests && git commit -m "Add quiz logic with tests"
 - Produces:
   - `assets/data.js`: класс `DataError extends Error`, `loadSections(): Promise<Section[]>`, `loadSection(sectionId): Promise<{section, questions}>`
   - `quiz.html` по адресу `quiz.html?s=<sectionId>`
-  - CSS-классы, на которые опирается Task 5 и Task 6: `.page`, `.card`, `.option`, `.button`, `.muted`
+  - CSS-классы, на которые опираются Task 5 и Task 7: `.page`, `.topbar`, `.option`, `.button`, `.button--ghost`, `.actions`, `.muted`, `.sr-only`. Классы главной страницы (`.card` и соседние) заводит Task 6 — здесь их нет.
 
 Экран результата в этой задаче ещё не делается: после последнего ответа кнопка «дальше» просто не появляется. Его добавляет Task 5.
 
