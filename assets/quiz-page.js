@@ -206,10 +206,12 @@ async function start() {
     allQuestions = questions;
 
     // При ?wrong=1 берём только вопросы с последним неверным ответом.
-    // Если таких не осталось, честнее прогнать раздел целиком, чем показать пустой экран.
+    // Если после фильтрации не осталось ни одного (список пуст, либо все его id
+    // больше не существуют в разделе), честнее прогнать раздел целиком, чем
+    // показать пустой экран.
     const wrongIds = params.get('wrong') === '1' ? wrongQuestionIds(currentSectionId) : [];
-    const selected =
-      wrongIds.length > 0 ? questions.filter((question) => wrongIds.includes(question.id)) : questions;
+    const filtered = questions.filter((question) => wrongIds.includes(question.id));
+    const selected = filtered.length > 0 ? filtered : questions;
 
     renderQuestion(createSession(prepareQuestions(selected)), section.title);
   } catch (error) {

@@ -1419,6 +1419,14 @@ async function loadQuestionIds(section) {
   return questions.map((question) => question.id);
 }
 
+// Раздел «имеет данные», если по нему есть хоть какая-то освоенность
+// или сохранённые ошибки — именно от этого зависит, показывать ли сброс,
+// а не от процента освоения, который у одних сплошных ошибок равен нулю.
+function sectionHasProgress(sectionId, questionIds) {
+  if (!storageAvailable) return false;
+  return masteryPercent(sectionId, questionIds) > 0 || wrongQuestionIds(sectionId).length > 0;
+}
+
 function renderCard(section, questionIds) {
   const card = document.createElement('div');
   card.className = 'card';
@@ -1442,7 +1450,11 @@ function renderCard(section, questionIds) {
     : `${questionIds.length} вопросов`;
   meta.append(stats);
 
-  if (storageAvailable && percent > 0) {
+  // Ошибки живут в localStorage, поэтому повтор доступен и в новый заход,
+  // а не только сразу после прохождения.
+  const wrongIds = storageAvailable ? wrongQuestionIds(section.id) : [];
+
+  if (sectionHasProgress(section.id, questionIds)) {
     const reset = document.createElement('button');
     reset.type = 'button';
     reset.className = 'button button--ghost card__reset';
@@ -1457,9 +1469,6 @@ function renderCard(section, questionIds) {
 
   card.append(link, description, meta);
 
-  // Ошибки живут в localStorage, поэтому повтор доступен и в новый заход,
-  // а не только сразу после прохождения.
-  const wrongIds = storageAvailable ? wrongQuestionIds(section.id) : [];
   if (wrongIds.length > 0) {
     const replay = document.createElement('a');
     replay.className = 'button button--ghost card__replay';
@@ -1468,6 +1477,28 @@ function renderCard(section, questionIds) {
     card.append(replay);
   }
 
+  return card;
+}
+
+// Раздел, чей файл не загрузился: карточка есть, но без ссылки (открывать
+// нечего) и без статистики — она всё равно неизвестна.
+function renderFailedCard(section) {
+  const card = document.createElement('div');
+  card.className = 'card';
+
+  const title = document.createElement('div');
+  title.className = 'card__link';
+  title.textContent = section.title;
+
+  const description = document.createElement('div');
+  description.className = 'muted';
+  description.textContent = section.description;
+
+  const error = document.createElement('div');
+  error.className = 'muted';
+  error.textContent = 'Не удалось загрузить вопросы';
+
+  card.append(title, description, error);
   return card;
 }
 
@@ -1499,15 +1530,22 @@ function renderFooter(hasProgress) {
 async function render() {
   try {
     const sections = await loadSections();
-    const questionIdsBySection = await Promise.all(sections.map(loadQuestionIds));
+
+    // Каждый раздел грузится независимо: один битый JSON не должен уносить
+    // с собой карточки остальных разделов.
+    const results = await Promise.allSettled(sections.map(loadQuestionIds));
 
     container.replaceChildren(
-      ...sections.map((section, index) => renderCard(section, questionIdsBySection[index])),
+      ...sections.map((section, index) => {
+        const result = results[index];
+        return result.status === 'fulfilled' ? renderCard(section, result.value) : renderFailedCard(section);
+      }),
     );
 
-    const hasProgress = sections.some(
-      (section, index) => masteryPercent(section.id, questionIdsBySection[index]) > 0,
-    );
+    const hasProgress = sections.some((section, index) => {
+      const result = results[index];
+      return result.status === 'fulfilled' && sectionHasProgress(section.id, result.value);
+    });
     renderFooter(hasProgress);
   } catch (error) {
     container.replaceChildren();
@@ -1546,10 +1584,12 @@ async function start() {
     allQuestions = questions;
 
     // При ?wrong=1 берём только вопросы с последним неверным ответом.
-    // Если таких не осталось, честнее прогнать раздел целиком, чем показать пустой экран.
+    // Если после фильтрации не осталось ни одного (список пуст, либо все его id
+    // больше не существуют в разделе), честнее прогнать раздел целиком, чем
+    // показать пустой экран.
     const wrongIds = params.get('wrong') === '1' ? wrongQuestionIds(currentSectionId) : [];
-    const selected =
-      wrongIds.length > 0 ? questions.filter((question) => wrongIds.includes(question.id)) : questions;
+    const filtered = questions.filter((question) => wrongIds.includes(question.id));
+    const selected = filtered.length > 0 ? filtered : questions;
 
     renderQuestion(createSession(prepareQuestions(selected)), section.title);
   } catch (error) {
