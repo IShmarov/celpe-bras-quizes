@@ -1,6 +1,6 @@
 import { loadSection, DataError } from './data.js';
 import { prepareQuestions, createSession } from './engine.js';
-import { recordAnswer } from './storage.js';
+import { recordAnswer, wrongQuestionIds } from './storage.js';
 
 const app = document.getElementById('app');
 
@@ -193,7 +193,8 @@ let currentSectionId = '';
 let allQuestions = [];
 
 async function start() {
-  currentSectionId = new URLSearchParams(location.search).get('s') ?? '';
+  const params = new URLSearchParams(location.search);
+  currentSectionId = params.get('s') ?? '';
   if (currentSectionId === '') {
     showError('Не указан раздел. Открой викторину с главной страницы.');
     return;
@@ -203,7 +204,14 @@ async function start() {
     const { section, questions } = await loadSection(currentSectionId);
     document.title = `${section.title} — Celpe-Bras`;
     allQuestions = questions;
-    renderQuestion(createSession(prepareQuestions(questions)), section.title);
+
+    // При ?wrong=1 берём только вопросы с последним неверным ответом.
+    // Если таких не осталось, честнее прогнать раздел целиком, чем показать пустой экран.
+    const wrongIds = params.get('wrong') === '1' ? wrongQuestionIds(currentSectionId) : [];
+    const selected =
+      wrongIds.length > 0 ? questions.filter((question) => wrongIds.includes(question.id)) : questions;
+
+    renderQuestion(createSession(prepareQuestions(selected)), section.title);
   } catch (error) {
     showError(error instanceof DataError ? error.message : `Неожиданная ошибка: ${error.message}`);
   }
