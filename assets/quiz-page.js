@@ -220,3 +220,25 @@ async function start() {
 }
 
 start();
+
+// Клавиатура на ноутбуке: цифра выбирает вариант, Enter или пробел листает дальше.
+document.addEventListener('keydown', (event) => {
+  if (event.metaKey || event.ctrlKey || event.altKey) return;
+
+  if (event.key === 'Enter' || event.key === ' ') {
+    const next = document.getElementById('next');
+    if (next) {
+      event.preventDefault();
+      next.click();
+    }
+    return;
+  }
+
+  if (event.key >= '1' && event.key <= '9') {
+    const option = app.querySelector(`.option[data-index="${Number(event.key) - 1}"]`);
+    if (option && !option.disabled) {
+      event.preventDefault();
+      option.click();
+    }
+  }
+});
