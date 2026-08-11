@@ -36,9 +36,14 @@ function saveStats(sectionId, stats) {
   }
 }
 
+// Повреждённая (не-объектная) запись заменяется новой, а не используется как есть.
+function normalizeEntry(value) {
+  return value !== null && typeof value === 'object' ? value : { correct: 0, wrong: 0, last: null };
+}
+
 export function recordAnswer(sectionId, questionId, isCorrect) {
   const stats = loadStats(sectionId);
-  const entry = stats[questionId] ?? { correct: 0, wrong: 0, last: null };
+  const entry = normalizeEntry(stats[questionId]);
   if (isCorrect) entry.correct += 1;
   else entry.wrong += 1;
   entry.last = isCorrect ? 'correct' : 'wrong';
