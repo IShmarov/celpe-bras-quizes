@@ -1,0 +1,79 @@
+// Статистика ответов в localStorage. Ключ раздела: celpe:<sectionId>
+const PREFIX = 'celpe:';
+
+function probeStorage() {
+  try {
+    const probe = `${PREFIX}__probe`;
+    localStorage.setItem(probe, '1');
+    localStorage.removeItem(probe);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+export const storageAvailable = probeStorage();
+
+const keyOf = (sectionId) => PREFIX + sectionId;
+
+function loadStats(sectionId) {
+  if (!storageAvailable) return {};
+  try {
+    const raw = localStorage.getItem(keyOf(sectionId));
+    const parsed = raw === null ? null : JSON.parse(raw);
+    return parsed !== null && typeof parsed === 'object' ? parsed : {};
+  } catch {
+    return {};
+  }
+}
+
+function saveStats(sectionId, stats) {
+  if (!storageAvailable) return;
+  try {
+    localStorage.setItem(keyOf(sectionId), JSON.stringify(stats));
+  } catch {
+    // Переполненное или недоступное хранилище не должно ломать прохождение.
+  }
+}
+
+export function recordAnswer(sectionId, questionId, isCorrect) {
+  const stats = loadStats(sectionId);
+  const entry = stats[questionId] ?? { correct: 0, wrong: 0, last: null };
+  if (isCorrect) entry.correct += 1;
+  else entry.wrong += 1;
+  entry.last = isCorrect ? 'correct' : 'wrong';
+  stats[questionId] = entry;
+  saveStats(sectionId, stats);
+}
+
+export function masteryPercent(sectionId, questionIds) {
+  if (questionIds.length === 0) return 0;
+  const stats = loadStats(sectionId);
+  const mastered = questionIds.filter((id) => stats[id]?.last === 'correct').length;
+  return Math.round((mastered / questionIds.length) * 100);
+}
+
+export function wrongQuestionIds(sectionId) {
+  const stats = loadStats(sectionId);
+  return Object.keys(stats).filter((id) => stats[id]?.last === 'wrong');
+}
+
+export function resetSection(sectionId) {
+  if (!storageAvailable) return;
+  try {
+    localStorage.removeItem(keyOf(sectionId));
+  } catch {
+    // Нечего делать: сбросить нельзя, но и падать незачем.
+  }
+}
+
+export function resetAll() {
+  if (!storageAvailable) return;
+  try {
+    for (const key of Object.keys(localStorage)) {
+      if (key.startsWith(PREFIX)) localStorage.removeItem(key);
+    }
+  } catch {
+    // См. выше.
+  }
+}
