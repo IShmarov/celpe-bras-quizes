@@ -82,8 +82,6 @@ function handleAnswer(session, sectionTitle, optionIndex) {
   const verdict = session.answer(optionIndex);
   if (verdict === null) return;
 
-  recordAnswer(currentSectionId, questionId, verdict.isCorrect);
-
   const buttons = [...app.querySelectorAll('.option')];
   buttons.forEach((button) => {
     button.disabled = true;
@@ -95,6 +93,7 @@ function handleAnswer(session, sectionTitle, optionIndex) {
   const explanation = document.createElement('p');
   explanation.className = 'explanation';
   explanation.textContent = verdict.explanation;
+  explanation.tabIndex = -1;
 
   const actions = document.createElement('div');
   actions.className = 'actions';
@@ -113,6 +112,9 @@ function handleAnswer(session, sectionTitle, optionIndex) {
   }
 
   app.append(explanation, actions);
+  explanation.focus();
+
+  recordAnswer(currentSectionId, questionId, verdict.isCorrect);
 }
 
 function markOption(button, kind) {
