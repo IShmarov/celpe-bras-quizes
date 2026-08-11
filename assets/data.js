@@ -13,7 +13,7 @@ export async function loadJson(path) {
   } catch (cause) {
     if (location.protocol === 'file:') {
       throw new DataError(
-        'Страница открыта как файл, а браузер запрещает читать данные с file://. ' +
+        'Страница открыта как файл. Браузер запрещает читать данные с file://. ' +
           'Запусти «npx serve» или «python -m http.server 3000» в папке проекта и открой http://localhost:3000',
       );
     }
