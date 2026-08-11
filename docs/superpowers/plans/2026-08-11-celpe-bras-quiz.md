@@ -929,22 +929,45 @@ const app = document.getElementById('app');
 
 function showError(message) {
   app.replaceChildren();
+
   const box = document.createElement('div');
   box.className = 'error';
   box.textContent = message;
-  const back = document.createElement('p');
-  back.innerHTML = '<a href="index.html">На главную</a>';
-  app.append(box, back);
+
+  const paragraph = document.createElement('p');
+  const link = document.createElement('a');
+  link.href = 'index.html';
+  link.textContent = 'На главную';
+  paragraph.append(link);
+
+  app.append(box, paragraph);
+}
+
+// Верхняя панель одинакова на экране вопроса и на экране результата,
+// отличается только наличием счётчика.
+function createTopbar(sectionTitle, counterText = '') {
+  const topbar = document.createElement('div');
+  topbar.className = 'topbar';
+
+  const back = document.createElement('a');
+  back.href = 'index.html';
+  back.textContent = `← ${sectionTitle}`;
+  topbar.append(back);
+
+  if (counterText !== '') {
+    const counter = document.createElement('span');
+    counter.className = 'muted';
+    counter.textContent = counterText;
+    topbar.append(counter);
+  }
+
+  return topbar;
 }
 
 function renderQuestion(session, sectionTitle) {
   app.replaceChildren();
 
-  const topbar = document.createElement('div');
-  topbar.className = 'topbar';
-  topbar.innerHTML =
-    `<a href="index.html">← ${sectionTitle}</a>` +
-    `<span class="muted">${session.position} / ${session.total}</span>`;
+  const topbar = createTopbar(sectionTitle, `${session.position} / ${session.total}`);
 
   const progress = document.createElement('div');
   progress.className = 'progress';
@@ -1087,7 +1110,7 @@ git add assets/data.js assets/quiz-page.js assets/style.css quiz.html && git com
 - Modify: `assets/style.css`
 
 **Interfaces:**
-- Consumes: `session.correctCount`, `session.wrongIds`, `session.isLast` из Task 3; `.button`, `.actions` из Task 4.
+- Consumes: `session.correctCount`, `session.wrongIds`, `session.isLast` из Task 3; функцию `createTopbar(sectionTitle, counterText?)`, классы `.button`, `.actions` из Task 4.
 - Produces: функция `renderResult(session, sectionTitle)` внутри `quiz-page.js`; исходные вопросы она берёт из модульной переменной `allQuestions`. Наружу ничего нового не экспортируется.
 
 - [ ] **Шаг 1: Добавить стили результата в конец `assets/style.css`** (перед блоком `@media (prefers-reduced-motion: reduce)`)
@@ -1190,9 +1213,7 @@ let allQuestions = [];
 function renderResult(session, sectionTitle) {
   app.replaceChildren();
 
-  const topbar = document.createElement('div');
-  topbar.className = 'topbar';
-  topbar.innerHTML = `<a href="index.html">← ${sectionTitle}</a>`;
+  const topbar = createTopbar(sectionTitle);
 
   const score = document.createElement('p');
   score.className = 'score';
