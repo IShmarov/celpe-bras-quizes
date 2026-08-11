@@ -1,0 +1,8 @@
+[
+  {
+    "id": "artigos",
+    "title": "Артикли",
+    "description": "Род, сложные случаи, страны и города",
+    "file": "artigos.json"
+  }
+]

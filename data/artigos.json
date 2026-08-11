@@ -1,0 +1,66 @@
+[
+  {
+    "id": "art-001",
+    "prompt": "___ Brasil é um país enorme.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "Названия стран обычно идут с определённым артиклем: o Brasil, o Japão, a França, a Rússia.",
+    "tags": ["países"]
+  },
+  {
+    "id": "art-002",
+    "prompt": "Моя подруга живёт в Португалии. Как это сказать?",
+    "options": ["Minha amiga mora em Portugal.", "Minha amiga mora no Portugal.", "Minha amiga mora na Portugal.", "Minha amiga mora ao Portugal."],
+    "answer": 0,
+    "explanation": "Portugal — исключение, оно идёт без артикля. Так же ведут себя Angola, Moçambique, Israel, Cabo Verde. Отсюда «em Portugal», а не «no Portugal».",
+    "tags": ["países", "исключения"]
+  },
+  {
+    "id": "art-003",
+    "prompt": "___ Estados Unidos ficam na América do Norte.",
+    "options": ["Os", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "Страны с названием во множественном числе берут артикль множественного числа: os Estados Unidos, os Países Baixos, as Filipinas.",
+    "tags": ["países"]
+  },
+  {
+    "id": "art-004",
+    "prompt": "___ problema é mais sério do que parece.",
+    "options": ["O", "A", "Os", "—"],
+    "answer": 0,
+    "explanation": "Слова греческого происхождения на -ma мужского рода, хотя и кончаются на -a: o problema, o tema, o sistema, o programa, o clima.",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-005",
+    "prompt": "___ viagem foi longa, mas valeu a pena.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "Существительные на -agem женского рода: a viagem, a paisagem, a coragem, a mensagem.",
+    "tags": ["род"]
+  },
+  {
+    "id": "art-006",
+    "prompt": "___ mão direita está machucada.",
+    "options": ["A", "O", "As", "—"],
+    "answer": 0,
+    "explanation": "Большинство слов на -ão мужского рода (o pão, o coração, o irmão), но a mão — исключение. Всё на -ção и -são женского рода: a informação, a estação, a decisão.",
+    "tags": ["род", "исключения"]
+  },
+  {
+    "id": "art-007",
+    "prompt": "Ele foi ___ Rio de Janeiro no verão passado.",
+    "options": ["ao", "a", "em", "no"],
+    "answer": 0,
+    "explanation": "Rio de Janeiro — один из городов, которые употребляются с артиклем (o Rio, o Porto, a Bahia). Предлог a сливается с ним в «ao Rio».",
+    "tags": ["города"]
+  },
+  {
+    "id": "art-008",
+    "prompt": "Ela mora ___ São Paulo há dez anos.",
+    "options": ["em", "no", "na", "ao"],
+    "answer": 0,
+    "explanation": "Большинство городов идут без артикля: em São Paulo, em Lisboa, em Brasília. Сравни с городами-исключениями: no Rio, no Porto.",
+    "tags": ["города"]
+  }
+]
