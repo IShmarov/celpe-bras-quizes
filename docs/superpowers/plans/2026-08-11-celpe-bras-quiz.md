@@ -505,7 +505,7 @@ test('повторный ответ на тот же вопрос игнорир
 
 - [ ] **Шаг 2: Запустить тесты и убедиться, что они падают**
 
-Run: `node --test tests/`
+Run: `node --test`
 Expected: FAIL — `Cannot find module .../assets/engine.js`
 
 - [ ] **Шаг 3: Написать `assets/engine.js`**
@@ -591,7 +591,7 @@ export function createSession(questions) {
 
 - [ ] **Шаг 4: Запустить тесты и убедиться, что они проходят**
 
-Run: `node --test tests/`
+Run: `node --test`
 Expected: `# pass 5`, `# fail 0`
 
 - [ ] **Шаг 5: Коммит**
@@ -2099,7 +2099,7 @@ node tools/validate.mjs
 ```
 
 ```bash
-node --test tests/
+node --test
 ```
 
 Валидатор проверяет вопросы: уникальность `id`, наличие объяснения,
@@ -2157,7 +2157,7 @@ node --test tests/
 Run: `node tools/validate.mjs`
 Expected: `Данные в порядке: разделов 5.`
 
-Run: `node --test tests/`
+Run: `node --test`
 Expected: `# fail 0`
 
 - [ ] **Шаг 4: Коммит**
