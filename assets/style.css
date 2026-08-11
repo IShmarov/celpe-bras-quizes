@@ -218,6 +218,30 @@ h1 {
   background: var(--wrong-bg);
 }
 
+.score {
+  font-size: clamp(2rem, 1.5rem + 3vw, 3rem);
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 0 0.5rem;
+}
+
+.result-list {
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.result-list li {
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--wrong);
+  border-radius: var(--radius);
+  white-space: pre-line;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

@@ -98,18 +98,20 @@ function handleAnswer(session, sectionTitle, optionIndex) {
   const actions = document.createElement('div');
   actions.className = 'actions';
 
-  if (!session.isLast) {
-    const next = document.createElement('button');
-    next.type = 'button';
-    next.className = 'button';
-    next.id = 'next';
-    next.textContent = 'Дальше';
-    next.addEventListener('click', () => {
-      session.next();
-      renderQuestion(session, sectionTitle);
-    });
-    actions.append(next);
-  }
+  const next = document.createElement('button');
+  next.type = 'button';
+  next.className = 'button';
+  next.id = 'next';
+  next.textContent = session.isLast ? 'Результат' : 'Дальше';
+  next.addEventListener('click', () => {
+    if (session.isLast) {
+      renderResult(session, sectionTitle);
+      return;
+    }
+    session.next();
+    renderQuestion(session, sectionTitle);
+  });
+  actions.append(next);
 
   app.append(explanation, actions);
   explanation.focus();
@@ -129,7 +131,66 @@ function markOption(button, kind) {
   button.append(mark);
 }
 
+function renderResult(session, sectionTitle) {
+  app.replaceChildren();
+
+  const topbar = createTopbar(sectionTitle);
+
+  const score = document.createElement('p');
+  score.className = 'score';
+  score.textContent = `${session.correctCount} / ${session.total}`;
+
+  const summary = document.createElement('p');
+  summary.className = 'muted';
+  const wrongIds = session.wrongIds;
+  summary.textContent =
+    wrongIds.length === 0
+      ? 'Ни одной ошибки.'
+      : `Ошибок: ${wrongIds.length}. Вот они:`;
+
+  app.append(topbar, score, summary);
+
+  if (wrongIds.length > 0) {
+    const list = document.createElement('ul');
+    list.className = 'result-list';
+    for (const id of wrongIds) {
+      const question = allQuestions.find((item) => item.id === id);
+      const li = document.createElement('li');
+      li.textContent = question.prompt;
+      list.append(li);
+    }
+    app.append(list);
+  }
+
+  const actions = document.createElement('div');
+  actions.className = 'actions';
+
+  if (wrongIds.length > 0) {
+    const again = document.createElement('button');
+    again.type = 'button';
+    again.className = 'button';
+    again.textContent = 'Повторить ошибки';
+    again.addEventListener('click', () => {
+      const onlyWrong = allQuestions.filter((question) => wrongIds.includes(question.id));
+      renderQuestion(createSession(prepareQuestions(onlyWrong)), sectionTitle);
+    });
+    actions.append(again);
+  }
+
+  const restart = document.createElement('button');
+  restart.type = 'button';
+  restart.className = 'button button--ghost';
+  restart.textContent = 'Пройти раздел заново';
+  restart.addEventListener('click', () => {
+    renderQuestion(createSession(prepareQuestions(allQuestions)), sectionTitle);
+  });
+  actions.append(restart);
+
+  app.append(actions);
+}
+
 let currentSectionId = '';
+let allQuestions = [];
 
 async function start() {
   currentSectionId = new URLSearchParams(location.search).get('s') ?? '';
@@ -141,6 +202,7 @@ async function start() {
   try {
     const { section, questions } = await loadSection(currentSectionId);
     document.title = `${section.title} — Celpe-Bras`;
+    allQuestions = questions;
     renderQuestion(createSession(prepareQuestions(questions)), section.title);
   } catch (error) {
     showError(error instanceof DataError ? error.message : `Неожиданная ошибка: ${error.message}`);
