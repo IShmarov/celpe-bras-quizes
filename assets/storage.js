@@ -72,6 +72,19 @@ export function resetSection(sectionId) {
   }
 }
 
+// В отличие от сканирования уже загруженных разделов на странице, эта
+// функция смотрит прямо в localStorage — поэтому видит и статистику
+// разделов, чей файл вопросов сейчас недоступен, и отражает именно то,
+// что реально сотрёт resetAll().
+export function hasAnyProgress() {
+  if (!storageAvailable) return false;
+  try {
+    return Object.keys(localStorage).some((key) => key.startsWith(PREFIX));
+  } catch {
+    return false;
+  }
+}
+
 export function resetAll() {
   if (!storageAvailable) return;
   try {

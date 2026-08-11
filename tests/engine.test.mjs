@@ -17,6 +17,15 @@ test('shuffle не меняет исходный массив и сохраня�
   assert.deepEqual(source, [1, 2, 3, 4]);
   assert.equal(result.length, 4);
   assert.deepEqual([...result].sort(), [1, 2, 3, 4]);
+
+  // Числовой массив мог бы случайно пройти проверку, даже перепутав порядок
+  // с составом (например, если бы shuffle тасовало индексы, а не элементы).
+  // Строки этого не прощают: сравниваем именно тексты вариантов.
+  const texts = ['café', 'avô', 'sofá', 'irmão'];
+  const shuffledTexts = shuffle(texts, alwaysZero);
+  assert.deepEqual(texts, ['café', 'avô', 'sofá', 'irmão']);
+  assert.equal(shuffledTexts.length, texts.length);
+  assert.deepEqual([...shuffledTexts].sort(), [...texts].sort());
 });
 
 test('prepareQuestions помечает правильный вариант, а не запоминает индекс', () => {
@@ -69,4 +78,27 @@ test('повторный ответ на тот же вопрос игнорир
   session.answer(correctIndex);
   assert.equal(session.answer(correctIndex), null);
   assert.equal(session.correctCount, 1);
+});
+
+// Реальный сценарий: ровно один вопрос был отвечен неверно, пользователь
+// нажимает «Повторить ошибки» — сессия стартует с total === 1.
+test('сессия из одного вопроса: total и isLast верны сразу, next() возвращает false', () => {
+  const prepared = prepareQuestions([RAW[0]], alwaysZero);
+  const session = createSession(prepared);
+
+  assert.equal(session.total, 1);
+  assert.equal(session.position, 1);
+  assert.equal(session.isAnswered, false);
+  assert.equal(session.isLast, true);
+
+  const correctIndex = session.current.options.findIndex((option) => option.correct);
+  const verdict = session.answer(correctIndex);
+  assert.equal(verdict.isCorrect, true);
+  assert.equal(verdict.correctIndex, correctIndex);
+  assert.equal(session.isAnswered, true);
+  assert.equal(session.correctCount, 1);
+
+  assert.equal(session.next(), false);
+  assert.equal(session.position, 1);
+  assert.equal(session.isLast, true);
 });

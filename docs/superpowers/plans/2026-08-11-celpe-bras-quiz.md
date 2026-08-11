@@ -211,6 +211,7 @@ for (const section of sections) {
   }
 
   const questionIds = new Set();
+  const promptOwners = new Map();
 
   questions.forEach((question, index) => {
     const at = `${section.file}[${index}] ${question.id ?? '(без id)'}`;
@@ -220,6 +221,12 @@ for (const section of sections) {
     else questionIds.add(question.id);
 
     if (typeof question.prompt !== 'string' || question.prompt.trim() === '') fail(at, 'пустой prompt');
+    else {
+      const promptKey = question.prompt.trim();
+      const owner = question.id ?? `[${index}]`;
+      if (promptOwners.has(promptKey)) promptOwners.get(promptKey).push(owner);
+      else promptOwners.set(promptKey, [owner]);
+    }
     if (typeof question.explanation !== 'string' || question.explanation.trim() === '') fail(at, 'пустой explanation');
 
     if (!Array.isArray(question.options) || question.options.length < 2) {
@@ -239,6 +246,15 @@ for (const section of sections) {
       fail(at, 'tags должен быть массивом строк');
     }
   });
+
+  // Дубли prompt не ловятся дублями id: на экране результата вопросы
+  // перечисляются по тексту prompt, и два вопроса с одинаковым текстом
+  // неразличимы в списке ошибок, даже если у них разные id.
+  for (const [prompt, owners] of promptOwners) {
+    if (owners.length > 1) {
+      fail(`sections.json → ${section.id ?? '(без id)'}`, `дублирующийся prompt у вопросов ${owners.join(', ')}: «${prompt}»`);
+    }
+  }
 }
 
 if (errors.length > 0) {
@@ -284,6 +300,7 @@ git add .gitignore data tools && git commit -m "Add data format, first section a
   - `recordAnswer(sectionId: string, questionId: string, isCorrect: boolean): void`
   - `masteryPercent(sectionId: string, questionIds: string[]): number` — целое 0..100
   - `wrongQuestionIds(sectionId: string): string[]`
+  - `hasAnyProgress(): boolean` — правда, если в localStorage есть хоть один ключ `celpe:*`; добавлена постфактум (финальный обзор), чтобы кнопка «Сбросить весь прогресс» на главной отражала именно то, что сотрёт `resetAll()`, а не только разделы, чей JSON успешно загрузился
   - `resetSection(sectionId: string): void`
   - `resetAll(): void`
 
@@ -363,6 +380,19 @@ export function resetSection(sectionId) {
     localStorage.removeItem(keyOf(sectionId));
   } catch {
     // Нечего делать: сбросить нельзя, но и падать незачем.
+  }
+}
+
+// В отличие от сканирования уже загруженных разделов на странице, эта
+// функция смотрит прямо в localStorage — поэтому видит и статистику
+// разделов, чей файл вопросов сейчас недоступен, и отражает именно то,
+// что реально сотрёт resetAll().
+export function hasAnyProgress() {
+  if (!storageAvailable) return false;
+  try {
+    return Object.keys(localStorage).some((key) => key.startsWith(PREFIX));
+  } catch {
+    return false;
   }
 }
 
@@ -448,6 +478,15 @@ test('shuffle не меняет исходный массив и сохраня�
   assert.deepEqual(source, [1, 2, 3, 4]);
   assert.equal(result.length, 4);
   assert.deepEqual([...result].sort(), [1, 2, 3, 4]);
+
+  // Числовой массив мог бы случайно пройти проверку, даже перепутав порядок
+  // с составом (например, если бы shuffle тасовало индексы, а не элементы).
+  // Строки этого не прощают: сравниваем именно тексты вариантов.
+  const texts = ['café', 'avô', 'sofá', 'irmão'];
+  const shuffledTexts = shuffle(texts, alwaysZero);
+  assert.deepEqual(texts, ['café', 'avô', 'sofá', 'irmão']);
+  assert.equal(shuffledTexts.length, texts.length);
+  assert.deepEqual([...shuffledTexts].sort(), [...texts].sort());
 });
 
 test('prepareQuestions помечает правильный вариант, а не запоминает индекс', () => {
@@ -500,6 +539,30 @@ test('повторный ответ на тот же вопрос игнорир
   session.answer(correctIndex);
   assert.equal(session.answer(correctIndex), null);
   assert.equal(session.correctCount, 1);
+});
+
+// Реальный сценарий: ровно один вопрос был отвечен неверно, пользователь
+// нажимает «Повторить ошибки» — сессия стартует с total === 1. Добавлен
+// постфактум (финальный обзор): до этого случай был не покрыт тестами.
+test('сессия из одного вопроса: total и isLast верны сразу, next() возвращает false', () => {
+  const prepared = prepareQuestions([RAW[0]], alwaysZero);
+  const session = createSession(prepared);
+
+  assert.equal(session.total, 1);
+  assert.equal(session.position, 1);
+  assert.equal(session.isAnswered, false);
+  assert.equal(session.isLast, true);
+
+  const correctIndex = session.current.options.findIndex((option) => option.correct);
+  const verdict = session.answer(correctIndex);
+  assert.equal(verdict.isCorrect, true);
+  assert.equal(verdict.correctIndex, correctIndex);
+  assert.equal(session.isAnswered, true);
+  assert.equal(session.correctCount, 1);
+
+  assert.equal(session.next(), false);
+  assert.equal(session.position, 1);
+  assert.equal(session.isLast, true);
 });
 ```
 
@@ -592,7 +655,7 @@ export function createSession(questions) {
 - [ ] **Шаг 4: Запустить тесты и убедиться, что они проходят**
 
 Run: `node --test`
-Expected: `# pass 5`, `# fail 0`
+Expected: `# pass 6`, `# fail 0`
 
 - [ ] **Шаг 5: Коммит**
 
@@ -625,7 +688,14 @@ git add assets/engine.js tests && git commit -m "Add quiz logic with tests"
 // Загрузка JSON с человеческими сообщениями об ошибках.
 export class DataError extends Error {}
 
-async function loadJson(path) {
+// Обычно до этой ветки дело не доходит: страница с file:// не может
+// загрузить модульный <script>, поэтому классический инлайн-скрипт в
+// index.html/quiz.html показывает сообщение раньше, чем этот модуль вообще
+// начнёт выполняться. Ветка остаётся на случай более снисходительных
+// браузеров, которые всё-таки запустят модуль с file://.
+// Экспортирован: index-page.js переиспользует его напрямую, а не
+// заново реализует fetch + response.json() + обработку ошибок.
+export async function loadJson(path) {
   let response;
   try {
     response = await fetch(path);
@@ -633,7 +703,7 @@ async function loadJson(path) {
     if (location.protocol === 'file:') {
       throw new DataError(
         'Страница открыта как файл, а браузер запрещает читать данные с file://. ' +
-          'Запусти «npx serve» в папке проекта и открой http://localhost:3000',
+          'Запусти «npx serve» или «python -m http.server 3000» в папке проекта и открой http://localhost:3000',
       );
     }
     throw new DataError(`Не удалось загрузить ${path}: ${cause.message}`);
@@ -685,10 +755,41 @@ export async function loadSection(sectionId) {
     <main class="page" id="app">
       <p class="muted">Загрузка…</p>
     </main>
+    <script>
+      (function () {
+        if (location.protocol !== 'file:') return;
+
+        function showFileProtocolNotice() {
+          var main = document.querySelector('main');
+          if (!main) return;
+
+          main.textContent = '';
+          var notice = document.createElement('p');
+          notice.className = 'error';
+          notice.textContent =
+            'Страница открыта как файл. Браузер запрещает читать данные с file://. ' +
+            'Запусти «npx serve» или «python -m http.server 3000» в папке проекта и открой http://localhost:3000';
+          main.append(notice);
+        }
+
+        if (document.querySelector('main')) {
+          showFileProtocolNotice();
+        } else {
+          document.addEventListener('DOMContentLoaded', showFileProtocolNotice);
+        }
+      })();
+    </script>
     <script type="module" src="assets/quiz-page.js"></script>
   </body>
 </html>
 ```
+
+`<script type="module">` не выполняется вовсе, когда документ открыт с `file://`
+(непрозрачное происхождение, CORS блокирует загрузку самого модуля), поэтому
+`fetch` внутри `data.js` до этой страницы никогда не доходит — пользователь
+просто вечно видит «Загрузка…». Классический (не модульный) инлайн-скрипт
+выше запускается и с `file://`, поэтому именно он показывает сообщение с
+обоими вариантами локального сервера. Тот же скрипт добавлен и в `index.html`.
 
 - [ ] **Шаг 3: Создать `assets/style.css`**
 
@@ -984,6 +1085,11 @@ function renderQuestion(session, sectionTitle) {
   const prompt = document.createElement('h1');
   prompt.className = 'prompt';
   prompt.textContent = session.current.prompt;
+  // Программно фокусируемый, хотя обычно не интерактивный: renderQuestion
+  // заменяет всё поддерево, и без этого фокус падает на <body>, поэтому
+  // ни скринридер не объявляет новый вопрос, ни клавиатурный пользователь
+  // не остаётся в разумном месте табуляции.
+  prompt.tabIndex = -1;
 
   const options = document.createElement('div');
   options.className = 'options';
@@ -1003,6 +1109,7 @@ function renderQuestion(session, sectionTitle) {
   });
 
   app.append(topbar, progress, prompt, options);
+  prompt.focus();
 }
 
 function handleAnswer(session, sectionTitle, optionIndex) {
@@ -1392,30 +1499,61 @@ git add assets/quiz-page.js assets/style.css && git commit -m "Add result screen
       </div>
       <div class="footer" id="footer"></div>
     </main>
+    <script>
+      (function () {
+        if (location.protocol !== 'file:') return;
+
+        function showFileProtocolNotice() {
+          var main = document.querySelector('main');
+          if (!main) return;
+
+          main.textContent = '';
+          var notice = document.createElement('p');
+          notice.className = 'error';
+          notice.textContent =
+            'Страница открыта как файл. Браузер запрещает читать данные с file://. ' +
+            'Запусти «npx serve» или «python -m http.server 3000» в папке проекта и открой http://localhost:3000';
+          main.append(notice);
+        }
+
+        if (document.querySelector('main')) {
+          showFileProtocolNotice();
+        } else {
+          document.addEventListener('DOMContentLoaded', showFileProtocolNotice);
+        }
+      })();
+    </script>
     <script type="module" src="assets/index-page.js"></script>
   </body>
 </html>
 ```
 
+Тот же классический инлайн-скрипт, что и в `quiz.html` — он выполняется даже
+с `file://`, где модульный `<script>` вообще не загрузится.
+
 - [ ] **Шаг 3: Создать `assets/index-page.js`**
 
 ```js
-import { loadSections, DataError } from './data.js';
+import { loadSections, loadJson, DataError } from './data.js';
 import {
   masteryPercent,
   wrongQuestionIds,
   resetSection,
   resetAll,
+  hasAnyProgress,
   storageAvailable,
 } from './storage.js';
 
 const container = document.getElementById('sections');
 const footer = document.getElementById('footer');
 
+// Делегирует сеть и разбор JSON общему loadJson из data.js — здесь остаётся
+// только то, что специфично для этой страницы: список id вопросов раздела.
 async function loadQuestionIds(section) {
-  const response = await fetch(`data/${section.file}`);
-  if (!response.ok) throw new DataError(`Не удалось загрузить data/${section.file}: HTTP ${response.status}`);
-  const questions = await response.json();
+  const questions = await loadJson(`data/${section.file}`);
+  if (!Array.isArray(questions)) {
+    throw new DataError(`Файл data/${section.file} повреждён: ожидался массив вопросов`);
+  }
   return questions.map((question) => question.id);
 }
 
@@ -1451,8 +1589,12 @@ function renderCard(section, questionIds) {
   meta.append(stats);
 
   // Ошибки живут в localStorage, поэтому повтор доступен и в новый заход,
-  // а не только сразу после прохождения.
-  const wrongIds = storageAvailable ? wrongQuestionIds(section.id) : [];
+  // а не только сразу после прохождения. Фильтруем по questionIds раздела:
+  // если id когда-нибудь пропадёт из JSON, счётчик не должен обещать больше,
+  // чем реально запустится на странице викторины.
+  const wrongIds = storageAvailable
+    ? wrongQuestionIds(section.id).filter((id) => questionIds.includes(id))
+    : [];
 
   if (sectionHasProgress(section.id, questionIds)) {
     const reset = document.createElement('button');
@@ -1542,11 +1684,10 @@ async function render() {
       }),
     );
 
-    const hasProgress = sections.some((section, index) => {
-      const result = results[index];
-      return result.status === 'fulfilled' && sectionHasProgress(section.id, result.value);
-    });
-    renderFooter(hasProgress);
+    // Не сканируем только успешно загруженные разделы: если у раздела,
+    // чей файл сейчас не читается, в localStorage всё ещё лежит статистика,
+    // resetAll() всё равно её сотрёт — значит, и кнопка должна быть видна.
+    renderFooter(hasAnyProgress());
   } catch (error) {
     container.replaceChildren();
     const box = document.createElement('div');
@@ -1857,7 +1998,7 @@ git add assets/quiz-page.js assets/style.css && git commit -m "Add keyboard cont
     "prompt": "Vou viajar ___ Portugal ___ agosto.",
     "options": ["para … em", "a … no", "para … no", "em … em"],
     "answer": 0,
-    "explanation": "Поездка с намерением задержаться — «para». Portugal идёт без артикля, поэтому слияния нет. Месяцы всегда с «em»: em agosto, em janeiro.",
+    "explanation": "«Viajar para» указывает направление поездки: viajar para Portugal, а не «em Portugal» (это значило бы «путешествовать по Португалии»). Portugal идёт без артикля, поэтому слияния с предлогом не происходит. Второй предлог — всегда «em» с месяцами: em agosto, em janeiro, поэтому варианты с «no» после месяца отпадают.",
     "tags": ["para", "em"]
   },
   {
@@ -1914,7 +2055,7 @@ git add assets/quiz-page.js assets/style.css && git commit -m "Add keyboard cont
   },
   {
     "id": "ac-003",
-    "prompt": "Какое слово написано верно?",
+    "prompt": "Слово с ударением на предпоследний слог (paroxítona) — какой вариант написан верно?",
     "options": ["fácil", "facil", "facíl", "fâcil"],
     "answer": 0,
     "explanation": "Слова с ударением на предпоследний слог (paroxítonas), оканчивающиеся на -l, -r, -n, -x, -i, -us, требуют знака: fácil, açúcar, tórax, táxi.",
@@ -1964,7 +2105,7 @@ git add assets/quiz-page.js assets/style.css && git commit -m "Add keyboard cont
   },
   {
     "id": "ac-008",
-    "prompt": "Какое слово написано верно?",
+    "prompt": "Слово с ударением на третий слог от конца (proparoxítona) — какой вариант написан верно?",
     "options": ["próximo", "proximo", "proxímo", "prôximo"],
     "answer": 0,
     "explanation": "Слова с ударением на третий слог от конца (proparoxítonas) получают знак всегда, без исключений: próximo, médico, sábado, número.",
@@ -1972,6 +2113,13 @@ git add assets/quiz-page.js assets/style.css && git commit -m "Add keyboard cont
   }
 ]
 ```
+
+`ac-003` и `ac-008` изначально делили один и тот же prompt «Какое слово
+написано верно?» — на экране результата, где ошибки перечисляются по тексту
+вопроса, они были неотличимы друг от друга. Prompt каждого теперь называет
+свою категорию (paroxítona / proparoxítona), не выдавая сам ответ.
+`tools/validate.mjs` с тех пор проверяет и это: дублирующийся prompt внутри
+файла раздела — ошибка валидации, называющая оба id.
 
 - [ ] **Шаг 4: Создать `data/conectivos.json`**
 
@@ -2127,18 +2275,31 @@ git add data && git commit -m "Add remaining four sections"
 предлоги, акценты, вводные конструкции.
 
 Статический сайт без сборки и без зависимостей. Node нужен только для
-проверок и локального сервера.
+проверок и (по желанию) локального сервера — после публикации на GitHub
+Pages он не нужен вообще.
 
 ## Локальный запуск
+
+Открывать `index.html` двойным кликом нельзя: браузер запрещает читать JSON
+с `file://`. `<script type="module">` при этом вообще не запускается — у
+документа `file://` непрозрачное происхождение, и CORS блокирует загрузку
+модуля ещё до того, как он успеет что-то сделать. Поэтому сообщение об этом
+показывает отдельный, обычный (не модульный) инлайн-скрипт в начале `<body>`
+каждой страницы — он выполняется даже с `file://`. Нужен локальный сервер —
+подойдёт любой из двух вариантов ниже, они равнозначны.
 
 ```bash
 npx serve
 ```
 
-Затем открыть http://localhost:3000
+или, если нет доступа в сеть (`npx serve` при первом запуске скачивает
+пакет, а `python` уже есть на этой машине):
 
-Открывать файлы двойным кликом нельзя: браузер запрещает читать JSON
-с `file://`, и страница покажет об этом сообщение.
+```bash
+python -m http.server 3000
+```
+
+Оба варианта отдают корень проекта, затем открыть http://localhost:3000
 
 ## Проверки
 

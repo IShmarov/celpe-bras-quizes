@@ -10,6 +10,30 @@
     <main class="page" id="app">
       <p class="muted">Загрузка…</p>
     </main>
+    <script>
+      (function () {
+        if (location.protocol !== 'file:') return;
+
+        function showFileProtocolNotice() {
+          var main = document.querySelector('main');
+          if (!main) return;
+
+          main.textContent = '';
+          var notice = document.createElement('p');
+          notice.className = 'error';
+          notice.textContent =
+            'Страница открыта как файл. Браузер запрещает читать данные с file://. ' +
+            'Запусти «npx serve» или «python -m http.server 3000» в папке проекта и открой http://localhost:3000';
+          main.append(notice);
+        }
+
+        if (document.querySelector('main')) {
+          showFileProtocolNotice();
+        } else {
+          document.addEventListener('DOMContentLoaded', showFileProtocolNotice);
+        }
+      })();
+    </script>
     <script type="module" src="assets/quiz-page.js"></script>
   </body>
 </html>

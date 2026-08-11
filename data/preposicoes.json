@@ -36,7 +36,7 @@
     "prompt": "Vou viajar ___ Portugal ___ agosto.",
     "options": ["para … em", "a … no", "para … no", "em … em"],
     "answer": 0,
-    "explanation": "Поездка с намерением задержаться — «para». Portugal идёт без артикля, поэтому слияния нет. Месяцы всегда с «em»: em agosto, em janeiro.",
+    "explanation": "«Viajar para» указывает направление поездки: viajar para Portugal, а не «em Portugal» (это значило бы «путешествовать по Португалии»). Portugal идёт без артикля, поэтому слияния с предлогом не происходит. Второй предлог — всегда «em» с месяцами: em agosto, em janeiro, поэтому варианты с «no» после месяца отпадают.",
     "tags": ["para", "em"]
   },
   {

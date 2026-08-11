@@ -1,19 +1,23 @@
-import { loadSections, DataError } from './data.js';
+import { loadSections, loadJson, DataError } from './data.js';
 import {
   masteryPercent,
   wrongQuestionIds,
   resetSection,
   resetAll,
+  hasAnyProgress,
   storageAvailable,
 } from './storage.js';
 
 const container = document.getElementById('sections');
 const footer = document.getElementById('footer');
 
+// Делегирует сеть и разбор JSON общему loadJson из data.js — здесь остаётся
+// только то, что специфично для этой страницы: список id вопросов раздела.
 async function loadQuestionIds(section) {
-  const response = await fetch(`data/${section.file}`);
-  if (!response.ok) throw new DataError(`Не удалось загрузить data/${section.file}: HTTP ${response.status}`);
-  const questions = await response.json();
+  const questions = await loadJson(`data/${section.file}`);
+  if (!Array.isArray(questions)) {
+    throw new DataError(`Файл data/${section.file} повреждён: ожидался массив вопросов`);
+  }
   return questions.map((question) => question.id);
 }
 
@@ -49,8 +53,12 @@ function renderCard(section, questionIds) {
   meta.append(stats);
 
   // Ошибки живут в localStorage, поэтому повтор доступен и в новый заход,
-  // а не только сразу после прохождения.
-  const wrongIds = storageAvailable ? wrongQuestionIds(section.id) : [];
+  // а не только сразу после прохождения. Фильтруем по questionIds раздела:
+  // если id когда-нибудь пропадёт из JSON, счётчик не должен обещать больше,
+  // чем реально запустится на странице викторины.
+  const wrongIds = storageAvailable
+    ? wrongQuestionIds(section.id).filter((id) => questionIds.includes(id))
+    : [];
 
   if (sectionHasProgress(section.id, questionIds)) {
     const reset = document.createElement('button');
@@ -140,11 +148,10 @@ async function render() {
       }),
     );
 
-    const hasProgress = sections.some((section, index) => {
-      const result = results[index];
-      return result.status === 'fulfilled' && sectionHasProgress(section.id, result.value);
-    });
-    renderFooter(hasProgress);
+    // Не сканируем только успешно загруженные разделы: если у раздела,
+    // чей файл сейчас не читается, в localStorage всё ещё лежит статистика,
+    // resetAll() всё равно её сотрёт — значит, и кнопка должна быть видна.
+    renderFooter(hasAnyProgress());
   } catch (error) {
     container.replaceChildren();
     const box = document.createElement('div');

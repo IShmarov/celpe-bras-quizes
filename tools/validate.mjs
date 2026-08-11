@@ -52,6 +52,7 @@ for (const section of sections) {
   }
 
   const questionIds = new Set();
+  const promptOwners = new Map();
 
   questions.forEach((question, index) => {
     const at = `${section.file}[${index}] ${question.id ?? '(без id)'}`;
@@ -61,6 +62,12 @@ for (const section of sections) {
     else questionIds.add(question.id);
 
     if (typeof question.prompt !== 'string' || question.prompt.trim() === '') fail(at, 'пустой prompt');
+    else {
+      const promptKey = question.prompt.trim();
+      const owner = question.id ?? `[${index}]`;
+      if (promptOwners.has(promptKey)) promptOwners.get(promptKey).push(owner);
+      else promptOwners.set(promptKey, [owner]);
+    }
     if (typeof question.explanation !== 'string' || question.explanation.trim() === '') fail(at, 'пустой explanation');
 
     if (!Array.isArray(question.options) || question.options.length < 2) {
@@ -80,6 +87,12 @@ for (const section of sections) {
       fail(at, 'tags должен быть массивом строк');
     }
   });
+
+  for (const [prompt, owners] of promptOwners) {
+    if (owners.length > 1) {
+      fail(`sections.json → ${section.id ?? '(без id)'}`, `дублирующийся prompt у вопросов ${owners.join(', ')}: «${prompt}»`);
+    }
+  }
 }
 
 if (errors.length > 0) {

@@ -1,7 +1,12 @@
 // Загрузка JSON с человеческими сообщениями об ошибках.
 export class DataError extends Error {}
 
-async function loadJson(path) {
+// Обычно до этой ветки дело не доходит: страница с file:// не может
+// загрузить модульный <script>, поэтому классический инлайн-скрипт в
+// index.html/quiz.html показывает сообщение раньше, чем этот модуль вообще
+// начнёт выполняться. Ветка остаётся на случай более снисходительных
+// браузеров, которые всё-таки запустят модуль с file://.
+export async function loadJson(path) {
   let response;
   try {
     response = await fetch(path);
@@ -9,7 +14,7 @@ async function loadJson(path) {
     if (location.protocol === 'file:') {
       throw new DataError(
         'Страница открыта как файл, а браузер запрещает читать данные с file://. ' +
-          'Запусти «npx serve» в папке проекта и открой http://localhost:3000',
+          'Запусти «npx serve» или «python -m http.server 3000» в папке проекта и открой http://localhost:3000',
       );
     }
     throw new DataError(`Не удалось загрузить ${path}: ${cause.message}`);

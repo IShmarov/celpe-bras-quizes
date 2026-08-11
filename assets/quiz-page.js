@@ -56,6 +56,11 @@ function renderQuestion(session, sectionTitle) {
   const prompt = document.createElement('h1');
   prompt.className = 'prompt';
   prompt.textContent = session.current.prompt;
+  // Программно фокусируемый, хотя обычно не интерактивный: renderQuestion
+  // заменяет всё поддерево, и без этого фокус падает на <body>, поэтому
+  // ни скринридер не объявляет новый вопрос, ни клавиатурный пользователь
+  // не остаётся в разумном месте табуляции.
+  prompt.tabIndex = -1;
 
   const options = document.createElement('div');
   options.className = 'options';
@@ -75,6 +80,7 @@ function renderQuestion(session, sectionTitle) {
   });
 
   app.append(topbar, progress, prompt, options);
+  prompt.focus();
 }
 
 function handleAnswer(session, sectionTitle, optionIndex) {

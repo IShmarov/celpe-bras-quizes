@@ -22,7 +22,7 @@
   },
   {
     "id": "ac-003",
-    "prompt": "Какое слово написано верно?",
+    "prompt": "Слово с ударением на предпоследний слог (paroxítona) — какой вариант написан верно?",
     "options": ["fácil", "facil", "facíl", "fâcil"],
     "answer": 0,
     "explanation": "Слова с ударением на предпоследний слог (paroxítonas), оканчивающиеся на -l, -r, -n, -x, -i, -us, требуют знака: fácil, açúcar, tórax, táxi.",
@@ -72,7 +72,7 @@
   },
   {
     "id": "ac-008",
-    "prompt": "Какое слово написано верно?",
+    "prompt": "Слово с ударением на третий слог от конца (proparoxítona) — какой вариант написан верно?",
     "options": ["próximo", "proximo", "proxímo", "prôximo"],
     "answer": 0,
     "explanation": "Слова с ударением на третий слог от конца (proparoxítonas) получают знак всегда, без исключений: próximo, médico, sábado, número.",
