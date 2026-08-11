@@ -1,0 +1,58 @@
+[
+  {
+    "id": "con-001",
+    "prompt": "Начинаешь аргументацию в письме. Какая связка открывает первый довод?",
+    "options": ["Em primeiro lugar,", "Portanto,", "Em suma,", "No entanto,"],
+    "answer": 0,
+    "explanation": "«Em primeiro lugar» открывает перечисление доводов. «Portanto» вводит вывод, «Em suma» — итог, «No entanto» — возражение.",
+    "tags": ["ordem"]
+  },
+  {
+    "id": "con-002",
+    "prompt": "Добавляешь ещё один довод в поддержку той же мысли.",
+    "options": ["Além disso,", "Por outro lado,", "Ou seja,", "Apesar disso,"],
+    "answer": 0,
+    "explanation": "«Além disso» присоединяет однородный довод. Синонимы: «Ademais», «Ainda mais». «Por outro lado» вводит противопоставление.",
+    "tags": ["adição"]
+  },
+  {
+    "id": "con-003",
+    "prompt": "Вводишь возражение, признавая правоту оппонента частично.",
+    "options": ["No entanto,", "Portanto,", "Em primeiro lugar,", "Por exemplo,"],
+    "answer": 0,
+    "explanation": "«No entanto» — сдержанное «однако». Того же ряда: «Contudo», «Entretanto», «Todavia». В письменной части экзамена они звучат уместнее разговорного «mas».",
+    "tags": ["oposição"]
+  },
+  {
+    "id": "con-004",
+    "prompt": "Вводишь следствие из сказанного.",
+    "options": ["Portanto,", "Além disso,", "Por exemplo,", "Em primeiro lugar,"],
+    "answer": 0,
+    "explanation": "«Portanto» вводит вывод из аргумента. Рядом: «Assim», «Logo», «Por conseguinte», «Dessa forma».",
+    "tags": ["conclusão"]
+  },
+  {
+    "id": "con-005",
+    "prompt": "Завершаешь текст, собирая сказанное воедино.",
+    "options": ["Em suma,", "Em primeiro lugar,", "Por outro lado,", "Ou seja,"],
+    "answer": 0,
+    "explanation": "«Em suma» подводит итог всему тексту. Синонимы: «Em resumo», «Por fim», «Concluindo». Не путать с «Ou seja», которое переформулирует одну мысль, а не итожит текст.",
+    "tags": ["conclusão"]
+  },
+  {
+    "id": "con-006",
+    "prompt": "Переформулируешь мысль понятнее, не добавляя нового.",
+    "options": ["Ou seja,", "Além disso,", "Portanto,", "No entanto,"],
+    "answer": 0,
+    "explanation": "«Ou seja» и «isto é» вводят пояснение того же самого другими словами. Новый довод они не вводят — для этого есть «Além disso».",
+    "tags": ["explicação"]
+  },
+  {
+    "id": "con-007",
+    "prompt": "Приводишь конкретный случай в подтверждение довода.",
+    "options": ["Por exemplo,", "Em suma,", "Apesar disso,", "Em primeiro lugar,"],
+    "answer": 0,
+    "explanation": "«Por exemplo» вводит иллюстрацию. Рядом: «A título de exemplo», «Como no caso de».",
+    "tags": ["exemplo"]
+  }
+]

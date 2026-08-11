@@ -1,0 +1,66 @@
+[
+  {
+    "id": "prep-001",
+    "prompt": "Moro ___ São Paulo, mas nasci ___ Rio.",
+    "options": ["em … no", "no … em", "na … no", "em … em"],
+    "answer": 0,
+    "explanation": "Города без артикля берут «em» (em São Paulo), города с артиклем дают слияние: em + o Rio = no Rio.",
+    "tags": ["em"]
+  },
+  {
+    "id": "prep-002",
+    "prompt": "Este presente é ___ minha mãe.",
+    "options": ["para", "por", "pela", "pelo"],
+    "answer": 0,
+    "explanation": "«Para» указывает адресата и цель: подарок предназначен маме. «Por» отвечает за причину, обмен и способ.",
+    "tags": ["para/por"]
+  },
+  {
+    "id": "prep-003",
+    "prompt": "Обменяла машину на велосипед: «Troquei o carro ___ uma bicicleta.»",
+    "options": ["por", "para", "pela", "em"],
+    "answer": 0,
+    "explanation": "Обмен и замена — всегда «por»: trocar algo por algo, pagar dez reais por um livro.",
+    "tags": ["para/por"]
+  },
+  {
+    "id": "prep-004",
+    "prompt": "Passei ___ ponte e cheguei ___ centro.",
+    "options": ["pela … ao", "para … no", "pela … no", "por … ao"],
+    "answer": 0,
+    "explanation": "Движение сквозь или вдоль — «por»: por + a ponte = pela ponte. Прибытие — «chegar a»: a + o centro = ao centro. Обрати внимание, что в португальском «chegar em» распространено в разговорной речи Бразилии, но на письме безопаснее «chegar a».",
+    "tags": ["por", "contração"]
+  },
+  {
+    "id": "prep-005",
+    "prompt": "Vou viajar ___ Portugal ___ agosto.",
+    "options": ["para … em", "a … no", "para … no", "em … em"],
+    "answer": 0,
+    "explanation": "Поездка с намерением задержаться — «para». Portugal идёт без артикля, поэтому слияния нет. Месяцы всегда с «em»: em agosto, em janeiro.",
+    "tags": ["para", "em"]
+  },
+  {
+    "id": "prep-006",
+    "prompt": "O livro está ___ mesa, ao lado ___ janela.",
+    "options": ["na … da", "em … de", "na … de", "no … da"],
+    "answer": 0,
+    "explanation": "Слияния обязательны: em + a mesa = na mesa, de + a janela = da janela. Оставлять «em a» или «de a» нельзя.",
+    "tags": ["contração"]
+  },
+  {
+    "id": "prep-007",
+    "prompt": "Estudo português ___ dois anos.",
+    "options": ["há", "por", "para", "desde"],
+    "answer": 0,
+    "explanation": "Длительность до настоящего момента передаётся через «há»: há dois anos. «Desde» требует точки отсчёта: desde 2023.",
+    "tags": ["tempo"]
+  },
+  {
+    "id": "prep-008",
+    "prompt": "Obrigada ___ ajuda!",
+    "options": ["pela", "para", "por a", "pelo"],
+    "answer": 0,
+    "explanation": "Благодарность — «por»: por + a ajuda = pela ajuda. Форма «por a» не существует, слияние обязательно.",
+    "tags": ["contração", "por"]
+  }
+]

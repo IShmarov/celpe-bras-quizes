@@ -1,8 +1,32 @@
 [
   {
+    "id": "tipos-de-texto",
+    "title": "Виды текстов",
+    "description": "Какие формулы к какому жанру относятся",
+    "file": "tipos-de-texto.json"
+  },
+  {
     "id": "artigos",
     "title": "Артикли",
     "description": "Род, сложные случаи, страны и города",
     "file": "artigos.json"
+  },
+  {
+    "id": "preposicoes",
+    "title": "Предлоги",
+    "description": "em, para, por и слитные формы",
+    "file": "preposicoes.json"
+  },
+  {
+    "id": "acentos",
+    "title": "Акценты",
+    "description": "Где ставятся палки, домики и загогулины",
+    "file": "acentos.json"
+  },
+  {
+    "id": "conectivos",
+    "title": "Вводные конструкции",
+    "description": "Связки для письменной части",
+    "file": "conectivos.json"
   }
 ]

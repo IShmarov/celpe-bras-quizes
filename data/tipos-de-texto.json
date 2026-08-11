@@ -1,0 +1,93 @@
+[
+  {
+    "id": "txt-001",
+    "prompt": "Записка друзьям, с которыми снимаешь квартиру: просишь купить хлеб.\n\nКакой набор формул уместен?",
+    "options": [
+      "Oi, gente! Alguém pode trazer pão hoje? Valeu!",
+      "Prezados senhores, venho por meio desta solicitar a aquisição de pão. Atenciosamente.",
+      "É inadmissível que ainda não haja pão nesta casa. Exigimos providências imediatas.",
+      "Ilustríssimo colega, cumpre-me informar que o pão se esgotou."
+    ],
+    "answer": 0,
+    "explanation": "Записка близким людям — неформальный регистр: обращение «Oi, gente», прямая просьба, короткое прощание «Valeu». Остальные варианты взяты из официального письма, манифеста и делового документа.",
+    "tags": ["bilhete"]
+  },
+  {
+    "id": "txt-002",
+    "prompt": "Письмо в редакцию газеты: не согласна со статьёй о транспорте.\n\nКак начать?",
+    "options": [
+      "Prezado Editor, li com atenção a reportagem publicada em 12 de maio e gostaria de apresentar outro ponto de vista.",
+      "Oi! Vi sua matéria e discordo total, viu?",
+      "Nós, moradores da zona leste, exigimos transporte digno!",
+      "Querido amigo, faz tempo que não nos falamos."
+    ],
+    "answer": 0,
+    "explanation": "Письмо в редакцию — формальное обращение к незнакомому адресату: «Prezado Editor», ссылка на конкретную публикацию с датой, сдержанное несогласие. Третий вариант — манифест, он звучит требованием, а не письмом.",
+    "tags": ["carta do leitor"]
+  },
+  {
+    "id": "txt-003",
+    "prompt": "Какая концовка подходит формальному письму в организацию?",
+    "options": [
+      "Atenciosamente,\nMaria Silva",
+      "Beijos, Maria",
+      "Falou, até mais!",
+      "Contamos com a adesão de todos!"
+    ],
+    "answer": 0,
+    "explanation": "«Atenciosamente» — стандартное завершение формального письма, наравне с «Cordialmente». «Beijos» и «Falou» — для близких, а «Contamos com a adesão de todos» завершает призыв или манифест.",
+    "tags": ["carta formal", "fecho"]
+  },
+  {
+    "id": "txt-004",
+    "prompt": "Манифест жильцов дома против сноса детской площадки.\n\nКакое начало соответствует жанру?",
+    "options": [
+      "Nós, moradores do Edifício Aurora, vimos a público manifestar nossa indignação com a demolição do parquinho.",
+      "Prezado síndico, gostaria de saber se haverá demolição.",
+      "Oi, pessoal, alguém sabe o que vai acontecer com o parquinho?",
+      "Segue anexo o orçamento da demolição."
+    ],
+    "answer": 0,
+    "explanation": "Манифест говорит от лица коллектива («Nós, moradores…»), обращён к публике, а не к одному адресату, и прямо называет чувство и требование. Остальные варианты — запрос, сообщение в чат и деловая переписка.",
+    "tags": ["manifesto"]
+  },
+  {
+    "id": "txt-005",
+    "prompt": "Объявление на доске в подъезде о собрании жильцов.\n\nЧто выбрать?",
+    "options": [
+      "AVISO AOS MORADORES\nReunião no dia 15/06, às 19h, no salão de festas.\nParticipação de todos é importante.",
+      "Amigos, sinto muito a falta de vocês e queria conversar sobre a nossa vida.",
+      "Venho por meio desta solicitar autorização para realizar uma reunião.",
+      "Não aceitaremos mais o descaso da administração!"
+    ],
+    "answer": 0,
+    "explanation": "Объявление безлично и функционально: заголовок, дата, время, место, короткий призыв. Оно не обращается к конкретному человеку и не выражает эмоций.",
+    "tags": ["aviso"]
+  },
+  {
+    "id": "txt-006",
+    "prompt": "Электронное письмо преподавателю с просьбой перенести экзамен.\n\nКакой тон правильный?",
+    "options": [
+      "Prezada professora, boa tarde. Gostaria de saber se seria possível remarcar a prova, pois estarei viajando a trabalho.",
+      "Oi prof, não vou poder fazer a prova, remarca aí pra mim.",
+      "Exigimos a remarcação imediata da avaliação!",
+      "Prezada professora, venho por meio desta impetrar recurso administrativo."
+    ],
+    "answer": 0,
+    "explanation": "С преподавателем принят вежливый полуформальный регистр: обращение, приветствие, просьба через «seria possível» и объяснение причины. Не панибратство, но и не канцелярит вроде «impetrar recurso».",
+    "tags": ["e-mail"]
+  },
+  {
+    "id": "txt-007",
+    "prompt": "Что отличает жанр «carta do leitor» от обычного письма?",
+    "options": [
+      "Оно адресовано редакции, но написано в расчёте на читателей газеты",
+      "Оно всегда пишется от руки",
+      "В нём запрещено выражать личное мнение",
+      "Оно не может ссылаться на опубликованные материалы"
+    ],
+    "answer": 0,
+    "explanation": "Carta do leitor формально адресована редакции, а фактически обращена к публике: поэтому в ней есть ссылка на публикацию, аргументы и позиция автора. На экзамене это частый жанр, и оценивается именно двойная адресация.",
+    "tags": ["carta do leitor"]
+  }
+]
