@@ -1,0 +1,802 @@
+[
+  {
+    "id": "ac2-001",
+    "prompt": "Как правильно пишется предлог со значением «до, вплоть до»?",
+    "options": ["até", "ate", "atê", "áte"],
+    "answer": 0,
+    "explanation": "Oxítona на -e требует палки: até, café, jacaré. Без знака ate — это форма глагола atar («завяжите»).",
+    "tags": ["oxítona"]
+  },
+  {
+    "id": "ac2-002",
+    "prompt": "Как правильно пишется слово со значением «домино»?",
+    "options": ["dominó", "domino", "dominô", "dôminó"],
+    "answer": 0,
+    "explanation": "Oxítona на -o с открытым звуком: палка, а не домик. Без знака domino — это «я властвую» (dominar).",
+    "tags": ["oxítona"]
+  },
+  {
+    "id": "ac2-003",
+    "prompt": "Как правильно пишется слово со значением «крокодил, кайман»?",
+    "options": ["jacaré", "jacare", "jacarê", "jácare"],
+    "answer": 0,
+    "explanation": "Oxítona на -e с открытым звуком: ja-ca-RÉ. Знак стоит на последнем слоге, потому что именно он ударный.",
+    "tags": ["oxítona"]
+  },
+  {
+    "id": "ac2-004",
+    "prompt": "Как правильно пишется слово со значением «младенец» в бразильской норме?",
+    "options": ["bebê", "bebe", "bebé", "bêbe"],
+    "answer": 0,
+    "explanation": "В Бразилии — bebê с домиком (закрытый звук), в Португалии — bebé. Без знака bebe означает «он пьёт».",
+    "tags": ["oxítona"]
+  },
+  {
+    "id": "ac2-005",
+    "prompt": "Как правильно пишется слово со значением «робот»?",
+    "options": ["robô", "robo", "robó", "rôbo"],
+    "answer": 0,
+    "explanation": "Oxítona на -o с закрытым звуком, поэтому домик: robô, avô, vovô. Множественное — robôs.",
+    "tags": ["oxítona"]
+  },
+  {
+    "id": "ac2-006",
+    "prompt": "Как правильно пишется слово со значением «метро (транспорт)»?",
+    "options": ["metrô", "metro", "metró", "mêtro"],
+    "answer": 0,
+    "explanation": "Знак различает слова: o metrô — метро, o metro — метр. Домик потому, что звук закрытый.",
+    "tags": ["oxítona"]
+  },
+  {
+    "id": "ac2-007",
+    "prompt": "Как правильно пишется название бразильского напитка и плода — «гуарана»?",
+    "options": ["guaraná", "guarana", "guaranã", "guárana"],
+    "answer": 0,
+    "explanation": "Oxítona на -a: gua-ra-NÁ. Тильда здесь неуместна — звук не носовой, нужна именно палка.",
+    "tags": ["oxítona"]
+  },
+  {
+    "id": "ac2-008",
+    "prompt": "Как правильно пишется наречие со значением «только, лишь»?",
+    "options": ["só", "so", "sô", "sò"],
+    "answer": 0,
+    "explanation": "Односложные ударные слова на -a, -e, -o получают знак: só, pá, pé, pó. Обратный знак (grave) в португальском бывает только у crase.",
+    "tags": ["monossílabo"]
+  },
+  {
+    "id": "ac2-009",
+    "prompt": "Как правильно пишется местоимение со значением «мы»?",
+    "options": ["nós", "nos", "nôs", "nóz"],
+    "answer": 0,
+    "explanation": "Знак различает слова: nós — мы, nos — нам/нас (безударное местоимение). Односложное ударное слово на -os требует палки.",
+    "tags": ["monossílabo", "acento diferencial"]
+  },
+  {
+    "id": "ac2-010",
+    "prompt": "Как правильно пишется числительное «три»?",
+    "options": ["três", "tres", "trés", "trêz"],
+    "answer": 0,
+    "explanation": "Односложное ударное слово на -es с закрытым звуком: домик, как в mês. Конечная буква именно s, а не z.",
+    "tags": ["monossílabo"]
+  },
+  {
+    "id": "ac2-011",
+    "prompt": "Как правильно пишется предлог со значением «после»?",
+    "options": ["após", "apos", "apôs", "ápos"],
+    "answer": 0,
+    "explanation": "Oxítona на -os с открытым звуком: a-PÓS. Полезная связка письменной части: após a reforma, logo após.",
+    "tags": ["oxítona"]
+  },
+  {
+    "id": "ac2-012",
+    "prompt": "Как правильно пишется слово со значением «китайский язык»?",
+    "options": ["chinês", "chines", "chinés", "xinês"],
+    "answer": 0,
+    "explanation": "Названия языков на -ês пишутся с домиком: chinês, japonês, holandês. Звук [ʃ] здесь передаётся через ch, а не через x.",
+    "tags": ["oxítona"]
+  },
+  {
+    "id": "ac2-013",
+    "prompt": "Как правильно пишется слово со значением «склад»?",
+    "options": ["armazém", "armazem", "armazêm", "ármazem"],
+    "answer": 0,
+    "explanation": "Oxítonas на -em получают палку: armazém, também, ninguém. Множественное — armazéns, знак сохраняется.",
+    "tags": ["oxítona"]
+  },
+  {
+    "id": "ac2-014",
+    "prompt": "Как правильно пишется форма со значением «он содержит» (от conter)?",
+    "options": ["contém", "contem", "contêm", "cóntem"],
+    "answer": 0,
+    "explanation": "Единственное число — ele contém (палка), множественное — eles contêm (домик). Так же ведут себя mantém/mantêm и obtém/obtêm.",
+    "tags": ["oxítona", "acento diferencial"]
+  },
+  {
+    "id": "ac2-015",
+    "prompt": "Как правильно пишется прилагательное со значением «ловкий, проворный»?",
+    "options": ["ágil", "agil", "agíl", "âgil"],
+    "answer": 0,
+    "explanation": "Paroxítona на -l требует знака, и он стоит на ударном предпоследнем слоге: Á-gil. Так же fácil, útil, hábil.",
+    "tags": ["paroxítona"]
+  },
+  {
+    "id": "ac2-016",
+    "prompt": "Как правильно пишется слово со значением «чувствительный»?",
+    "options": ["sensível", "sensivel", "sensivél", "sênsivel"],
+    "answer": 0,
+    "explanation": "Ряд на -vel пишется одинаково: sensível, possível, incrível, responsável. Множественное — sensíveis.",
+    "tags": ["paroxítona"]
+  },
+  {
+    "id": "ac2-017",
+    "prompt": "Как правильно пишется слово со значением «репортёр»?",
+    "options": ["repórter", "reporter", "reportér", "repôrter"],
+    "answer": 0,
+    "explanation": "Paroxítona на -r: re-PÓR-ter. Во множественном repórteres знак остаётся, но уже по другому правилу — там слово становится proparoxítona.",
+    "tags": ["paroxítona"]
+  },
+  {
+    "id": "ac2-018",
+    "prompt": "Как правильно пишется слово со значением «рак (болезнь)» в бразильской норме?",
+    "options": ["câncer", "cancer", "cáncer", "cancêr"],
+    "answer": 0,
+    "explanation": "Paroxítona на -r с закрытым носовым звуком перед n, поэтому домик: câncer. В Португалии то же понятие — cancro.",
+    "tags": ["paroxítona"]
+  },
+  {
+    "id": "ac2-019",
+    "prompt": "Как правильно пишется слово со значением «доллар»?",
+    "options": ["dólar", "dolar", "dolár", "dôlar"],
+    "answer": 0,
+    "explanation": "Paroxítona на -r: DÓ-lar. Слово частое в текстах об экономике: a alta do dólar. Множественное — dólares.",
+    "tags": ["paroxítona"]
+  },
+  {
+    "id": "ac2-020",
+    "prompt": "Как правильно пишется слово со значением «консул»?",
+    "options": ["cônsul", "consul", "cónsul", "consúl"],
+    "answer": 0,
+    "explanation": "Paroxítona на -l с закрытым звуком перед n, поэтому домик: CÔN-sul. Множественное — cônsules.",
+    "tags": ["paroxítona"]
+  },
+  {
+    "id": "ac2-021",
+    "prompt": "Как правильно пишется слово со значением «туннель»?",
+    "options": ["túnel", "tunel", "tunél", "tûnel"],
+    "answer": 0,
+    "explanation": "Paroxítona на -l: TÚ-nel. Множественное — túneis, знак остаётся уже по правилу дифтонга.",
+    "tags": ["paroxítona"]
+  },
+  {
+    "id": "ac2-022",
+    "prompt": "Как правильно пишется слово со значением «феникс» в бразильской норме?",
+    "options": ["fênix", "fenix", "fénix", "fenîx"],
+    "answer": 0,
+    "explanation": "Paroxítonas на -x получают знак: fênix, tórax, látex. В Бразилии перед носовым — домик (fênix), в Португалии — палка (fénix).",
+    "tags": ["paroxítona"]
+  },
+  {
+    "id": "ac2-023",
+    "prompt": "Как правильно пишется слово со значением «бицепс»?",
+    "options": ["bíceps", "biceps", "bicéps", "bîceps"],
+    "answer": 0,
+    "explanation": "Paroxítonas на -ps тоже получают знак: bíceps, fórceps. Форма одинакова в единственном и множественном числе.",
+    "tags": ["paroxítona"]
+  },
+  {
+    "id": "ac2-024",
+    "prompt": "Как правильно пишется слово со значением «живот, брюшная полость» в бразильской норме?",
+    "options": ["abdômen", "abdomen", "abdómen", "abdomên"],
+    "answer": 0,
+    "explanation": "Paroxítonas на -n получают знак: abdômen, hífen, pólen. Бразильский вариант с домиком, португальский — abdómen.",
+    "tags": ["paroxítona"]
+  },
+  {
+    "id": "ac2-025",
+    "prompt": "Как правильно пишется слово со значением «орган (тела или учреждение)»?",
+    "options": ["órgão", "orgão", "órgao", "orgao"],
+    "answer": 0,
+    "explanation": "Нужны сразу два знака: тильда над носовым -ão и палка над ударным Ó. Ударение здесь на первом слоге (ÓR-gão), а такие paroxítonas на -ão знак получают: órgão, órfão, bênção. Сравните с sótão — там тоже paroxítona, поэтому и там знак есть, а вот oxítona irmão обходится одной тильдой.",
+    "tags": ["paroxítona", "til"]
+  },
+  {
+    "id": "ac2-026",
+    "prompt": "Как правильно пишется слово со значением «сирота»?",
+    "options": ["órfão", "orfão", "órfao", "orfâo"],
+    "answer": 0,
+    "explanation": "Paroxítona на -ão: ударение на первом слоге, поэтому знак нужен вдобавок к тильде. Женский род — órfã, множественное — órfãos.",
+    "tags": ["paroxítona", "til"]
+  },
+  {
+    "id": "ac2-027",
+    "prompt": "Как правильно пишется слово со значением «благословение»?",
+    "options": ["bênção", "benção", "bênçao", "bençao"],
+    "answer": 0,
+    "explanation": "Одна из самых частых ошибок: пишут benção, а нужно bênção — ударение на первом слоге, поэтому домик обязателен. Множественное — bênçãos.",
+    "tags": ["paroxítona", "til", "cedilha"]
+  },
+  {
+    "id": "ac2-028",
+    "prompt": "Как правильно пишется слово со значением «магнит» в бразильской норме?",
+    "options": ["ímã", "ima", "imã", "íma"],
+    "answer": 0,
+    "explanation": "Тильда даёт носовой звук, а палка показывает ударение на первом слоге: Í-mã. Нужны оба знака. В Португалии слово выглядит иначе — íman.",
+    "tags": ["paroxítona", "til"]
+  },
+  {
+    "id": "ac2-029",
+    "prompt": "Как правильно пишется слово со значением «жюри, суд присяжных»?",
+    "options": ["júri", "juri", "jurí", "jûri"],
+    "answer": 0,
+    "explanation": "Paroxítonas на -i получают знак: júri, táxi, beribéri. Ударение на предпоследний слог: JÚ-ri.",
+    "tags": ["paroxítona"]
+  },
+  {
+    "id": "ac2-030",
+    "prompt": "Как правильно пишется слово со значением «бесплатно, даром»?",
+    "options": ["grátis", "gratis", "gratís", "grâtis"],
+    "answer": 0,
+    "explanation": "Paroxítona на -is требует знака: GRÁ-tis, как lápis и tênis. Форма не меняется: entrada grátis, ingressos grátis.",
+    "tags": ["paroxítona"]
+  },
+  {
+    "id": "ac2-031",
+    "prompt": "Как правильно пишется слово со значением «статистика»?",
+    "options": ["estatística", "estatistica", "estatistíca", "estátistica"],
+    "answer": 0,
+    "explanation": "Proparoxítona: es-ta-TÍS-ti-ca. Ударение на третий слог от конца — знак обязателен. Слово нужно для описания графиков и таблиц.",
+    "tags": ["proparoxítona"]
+  },
+  {
+    "id": "ac2-032",
+    "prompt": "Как правильно пишется слово со значением «страница»?",
+    "options": ["página", "pagina", "pagína", "pâgina"],
+    "answer": 0,
+    "explanation": "Proparoxítona: PÁ-gi-na. Без знака pagina — это форма глагола paginar («он нумерует страницы»).",
+    "tags": ["proparoxítona"]
+  },
+  {
+    "id": "ac2-033",
+    "prompt": "Как правильно пишется прилагательное со значением «критический»?",
+    "options": ["crítico", "critico", "critíco", "crîtico"],
+    "answer": 0,
+    "explanation": "Proparoxítona: CRÍ-ti-co. Без знака critico — это «я критикую». Знак различает прилагательное и глагол.",
+    "tags": ["proparoxítona"]
+  },
+  {
+    "id": "ac2-034",
+    "prompt": "Как правильно пишется слово со значением «республика»?",
+    "options": ["república", "republica", "republíca", "repûblica"],
+    "answer": 0,
+    "explanation": "Proparoxítona: re-PÚ-bli-ca. Пригодится в текстах об институтах: a República Federativa do Brasil.",
+    "tags": ["proparoxítona"]
+  },
+  {
+    "id": "ac2-035",
+    "prompt": "Как правильно пишется слово со значением «дорожное движение, трафик» в бразильской норме?",
+    "options": ["trânsito", "transito", "tránsito", "transíto"],
+    "answer": 0,
+    "explanation": "Proparoxítona с носовым звуком перед n, поэтому домик: TRÂN-si-to. Тема городских текстов: o trânsito da cidade, acidente de trânsito.",
+    "tags": ["proparoxítona"]
+  },
+  {
+    "id": "ac2-036",
+    "prompt": "Как правильно пишется слово со значением «дерево»?",
+    "options": ["árvore", "arvore", "arvóre", "ârvore"],
+    "answer": 0,
+    "explanation": "Proparoxítona: ÁR-vo-re. Знак стоит на первом слоге, третьем от конца.",
+    "tags": ["proparoxítona"]
+  },
+  {
+    "id": "ac2-037",
+    "prompt": "Как правильно пишется слово со значением «машина, механизм»?",
+    "options": ["máquina", "maquina", "maquína", "mâquina"],
+    "answer": 0,
+    "explanation": "Proparoxítona: MÁ-qui-na. Сочетание qu перед i читается как [k], а знак стоит на ударном A.",
+    "tags": ["proparoxítona"]
+  },
+  {
+    "id": "ac2-038",
+    "prompt": "Как правильно пишется прилагательное со значением «научный»?",
+    "options": ["científico", "cientifico", "cientifíco", "ciêntifico"],
+    "answer": 0,
+    "explanation": "Proparoxítona: ci-en-TÍ-fi-co. Частое в академических текстах сочетание: pesquisa científica, artigo científico.",
+    "tags": ["proparoxítona"]
+  },
+  {
+    "id": "ac2-039",
+    "prompt": "Как правильно пишется слово со значением «фабрика, завод»?",
+    "options": ["fábrica", "fabrica", "fabríca", "fâbrica"],
+    "answer": 0,
+    "explanation": "Proparoxítona: FÁ-bri-ca. Без знака fabrica — это «он производит» (fabricar).",
+    "tags": ["proparoxítona"]
+  },
+  {
+    "id": "ac2-040",
+    "prompt": "Как правильно пишется слово со значением «гость, постоялец»?",
+    "options": ["hóspede", "hospede", "hospéde", "hôspede"],
+    "answer": 0,
+    "explanation": "Proparoxítona: HÓS-pe-de. Начальное h не читается, но пишется. Отсюда же hospedagem, hospedar-se.",
+    "tags": ["proparoxítona"]
+  },
+  {
+    "id": "ac2-041",
+    "prompt": "Как правильно пишется слово со значением «эпоха»?",
+    "options": ["época", "epoca", "epóca", "êpoca"],
+    "answer": 0,
+    "explanation": "Proparoxítona: É-po-ca. Полезная связка для описания времени: naquela época, em época de crise.",
+    "tags": ["proparoxítona"]
+  },
+  {
+    "id": "ac2-042",
+    "prompt": "Как правильно пишется слово со значением «жертва (пострадавший)»?",
+    "options": ["vítima", "vitima", "vitíma", "vîtima"],
+    "answer": 0,
+    "explanation": "Proparoxítona: VÍ-ti-ma. Слово из новостных текстов: as vítimas do acidente. Род всегда женский, даже про мужчину: a vítima.",
+    "tags": ["proparoxítona"]
+  },
+  {
+    "id": "ac2-043",
+    "prompt": "Как правильно пишется слово со значением «век, столетие»?",
+    "options": ["século", "seculo", "secúlo", "sêculo"],
+    "answer": 0,
+    "explanation": "Proparoxítona: SÉ-cu-lo. Нужно для дат и описаний динамики: no século XX, ao longo do século.",
+    "tags": ["proparoxítona"]
+  },
+  {
+    "id": "ac2-044",
+    "prompt": "Как правильно пишется слово со значением «серия, сериал»?",
+    "options": ["série", "serie", "seríe", "sêrie"],
+    "answer": 0,
+    "explanation": "Paroxítona, оканчивающаяся на дифтонг -ie, получает знак: SÉ-rie. Тот же ряд: espécie, superfície, série.",
+    "tags": ["ditongo"]
+  },
+  {
+    "id": "ac2-045",
+    "prompt": "Как правильно пишется слово со значением «новость»?",
+    "options": ["notícia", "noticia", "noticía", "notîcia"],
+    "answer": 0,
+    "explanation": "Paroxítona на дифтонг -ia: no-TÍ-cia. Без знака noticia — форма глагола noticiar.",
+    "tags": ["ditongo"]
+  },
+  {
+    "id": "ac2-046",
+    "prompt": "Как правильно пишется слово со значением «опыт, переживание»?",
+    "options": ["experiência", "experiencia", "experiéncia", "expêriencia"],
+    "answer": 0,
+    "explanation": "Paroxítona на дифтонг -ia с носовым звуком перед n, поэтому домик: ex-pe-ri-ÊN-cia. Тот же ряд: ciência, consciência, paciência.",
+    "tags": ["ditongo"]
+  },
+  {
+    "id": "ac2-047",
+    "prompt": "Как правильно пишется слово со значением «важность, значимость»?",
+    "options": ["importância", "importancia", "importáncia", "impórtancia"],
+    "answer": 0,
+    "explanation": "Paroxítona на дифтонг -ia, звук перед n закрытый — домик: im-por-TÂN-cia. Так же: distância, tolerância, abundância.",
+    "tags": ["ditongo"]
+  },
+  {
+    "id": "ac2-048",
+    "prompt": "Как правильно пишется слово со значением «расстояние»?",
+    "options": ["distância", "distancia", "distáncia", "dístancia"],
+    "answer": 0,
+    "explanation": "Paroxítona на дифтонг с домиком: dis-TÂN-cia. Полезно для описания графиков и карт: a distância entre as cidades.",
+    "tags": ["ditongo"]
+  },
+  {
+    "id": "ac2-049",
+    "prompt": "Как правильно пишется слово со значением «наука»?",
+    "options": ["ciência", "ciencia", "ciéncia", "ciencía"],
+    "answer": 0,
+    "explanation": "Paroxítona на дифтонг -ia: ci-ÊN-cia. Перед n звук закрытый, поэтому домик, а не палка.",
+    "tags": ["ditongo"]
+  },
+  {
+    "id": "ac2-050",
+    "prompt": "Как правильно пишется существительное со значением «дело, бизнес»?",
+    "options": ["negócio", "negocio", "negocío", "negôcio"],
+    "answer": 0,
+    "explanation": "Paroxítona на дифтонг -io: ne-GÓ-cio. Без знака negocio — это «я веду переговоры» (negociar).",
+    "tags": ["ditongo"]
+  },
+  {
+    "id": "ac2-051",
+    "prompt": "Как правильно пишется наречие со значением «там, туда»?",
+    "options": ["aí", "ai", "aî", "ái"],
+    "answer": 0,
+    "explanation": "Ударный I в зиянии образует отдельный слог: a-Í. Без знака ai — это междометие «ай». Знак различает слова.",
+    "tags": ["hiato"]
+  },
+  {
+    "id": "ac2-052",
+    "prompt": "Как правильно пишется слово со значением «сундук»?",
+    "options": ["baú", "bau", "baû", "báu"],
+    "answer": 0,
+    "explanation": "Ударный U в зиянии: ba-Ú. Такой I или U всегда получает палку, домик здесь невозможен.",
+    "tags": ["hiato"]
+  },
+  {
+    "id": "ac2-053",
+    "prompt": "Как правильно пишется слово со значением «судьи» (множественное число)?",
+    "options": ["juízes", "juizes", "juizés", "juîzes"],
+    "answer": 0,
+    "explanation": "Во множественном числе ударный I оказывается в зиянии и получает знак: ju-Í-zes. В единственном juiz знака нет — там I стоит перед -z в том же слоге.",
+    "tags": ["hiato"]
+  },
+  {
+    "id": "ac2-054",
+    "prompt": "Как правильно пишется слово со значением «искра»?",
+    "options": ["faísca", "faisca", "faîsca", "fáisca"],
+    "answer": 0,
+    "explanation": "Ударный I в зиянии после a: fa-ÍS-ca. Тот же случай, что saída и raízes.",
+    "tags": ["hiato"]
+  },
+  {
+    "id": "ac2-055",
+    "prompt": "Как правильно пишется слово со значением «вдова»?",
+    "options": ["viúva", "viuva", "viûva", "víuva"],
+    "answer": 0,
+    "explanation": "Ударный U в зиянии: vi-Ú-va. Мужской род — viúvo, знак сохраняется.",
+    "tags": ["hiato"]
+  },
+  {
+    "id": "ac2-056",
+    "prompt": "Как правильно пишется слово со значением «героиня»?",
+    "options": ["heroína", "heroina", "heróina", "heroîna"],
+    "answer": 0,
+    "explanation": "Ударный I в зиянии после o: he-ro-Í-na. Знак стоит на I, а не на предыдущем o — сравните с herói, где ударение на дифтонге.",
+    "tags": ["hiato"]
+  },
+  {
+    "id": "ac2-057",
+    "prompt": "Как правильно пишется слово со значением «кофеин»?",
+    "options": ["cafeína", "cafeina", "caféina", "cafeîna"],
+    "answer": 0,
+    "explanation": "Ударный I в зиянии: ca-fe-Í-na. Знак переезжает на I, хотя в слове café он стоял на e.",
+    "tags": ["hiato"]
+  },
+  {
+    "id": "ac2-058",
+    "prompt": "Как правильно пишется слово со значением «сэндвич» в бразильской норме?",
+    "options": ["sanduíche", "sanduiche", "sanduîche", "sánduiche"],
+    "answer": 0,
+    "explanation": "Ударный I в зиянии: san-du-Í-che. В Португалии слово пишется иначе — sandes.",
+    "tags": ["hiato"]
+  },
+  {
+    "id": "ac2-059",
+    "prompt": "Как правильно пишется слово со значением «самолёт»?",
+    "options": ["avião", "aviao", "aviâo", "avion"],
+    "answer": 0,
+    "explanation": "Тильда обозначает носовой звук: a-vi-ÃO. Множественное — aviões. Без тильды сочетание -ao читалось бы как два обычных гласных.",
+    "tags": ["til"]
+  },
+  {
+    "id": "ac2-060",
+    "prompt": "Как правильно пишется слово со значением «хлеб»?",
+    "options": ["pão", "pao", "pâo", "pan"],
+    "answer": 0,
+    "explanation": "Носовой дифтонг -ão пишется с тильдой: pão, множественное pães. Домик здесь невозможен — он не обозначает носовой звук.",
+    "tags": ["til"]
+  },
+  {
+    "id": "ac2-061",
+    "prompt": "Как правильно пишется слово со значением «немецкий язык, немец»?",
+    "options": ["alemão", "alemao", "alemâo", "aleman"],
+    "answer": 0,
+    "explanation": "Тильда обязательна: alemão. Множественное — alemães, женский род — alemã.",
+    "tags": ["til"]
+  },
+  {
+    "id": "ac2-062",
+    "prompt": "Как правильно пишется множественное число слова cão («собака»)?",
+    "options": ["cães", "caes", "cãis", "cânes"],
+    "answer": 0,
+    "explanation": "Часть слов на -ão даёт множественное на -ães: cão — cães, pão — pães, alemão — alemães. Другие дают -ões (opinião — opiniões) или -ãos (irmão — irmãos).",
+    "tags": ["til"]
+  },
+  {
+    "id": "ac2-063",
+    "prompt": "Как правильно пишется слово со значением «станция, время года»?",
+    "options": ["estação", "estacão", "estaçao", "estassão"],
+    "answer": 0,
+    "explanation": "Суффикс -ção требует и седиля, и тильды: estação de metrô, estação chuvosa. Множественное — estações.",
+    "tags": ["til", "cedilha"]
+  },
+  {
+    "id": "ac2-064",
+    "prompt": "Как правильно пишется множественное число слова lição («урок»)?",
+    "options": ["lições", "licões", "liçoes", "lisões"],
+    "answer": 0,
+    "explanation": "Слова на -ção во множественном дают -ções: lição — lições, informação — informações. Тильда переезжает на o, а седиль остаётся.",
+    "tags": ["til", "cedilha"]
+  },
+  {
+    "id": "ac2-065",
+    "prompt": "Как правильно пишется слово со значением «причина, разум»?",
+    "options": ["razão", "razao", "rasão", "razâo"],
+    "answer": 0,
+    "explanation": "Тильда над носовым -ão, а звук [z] между гласными передаётся буквой z: razão, em razão de, ter razão.",
+    "tags": ["til"]
+  },
+  {
+    "id": "ac2-066",
+    "prompt": "Как правильно пишется форма со значением «он кладёт, он ставит» (от pôr)?",
+    "options": ["põe", "poe", "pôe", "póe"],
+    "answer": 0,
+    "explanation": "Тильда ставится и над o: ele põe, eles põem. Инфинитив при этом пишется с домиком — pôr.",
+    "tags": ["til"]
+  },
+  {
+    "id": "ac2-067",
+    "prompt": "Как правильно пишется слово со значением «площадь (городская)»?",
+    "options": ["praça", "praca", "prassa", "prasa"],
+    "answer": 0,
+    "explanation": "Ç перед a даёт [s]: praça, na praça central. Без седиля c перед a читалась бы как [k].",
+    "tags": ["cedilha"]
+  },
+  {
+    "id": "ac2-068",
+    "prompt": "Как правильно пишется слово со значением «сила»?",
+    "options": ["força", "forca", "forsa", "fôrça"],
+    "answer": 0,
+    "explanation": "Седиль различает слова: a força — сила, a forca — виселица. Знак ударения тут не нужен — paroxítona на -a.",
+    "tags": ["cedilha"]
+  },
+  {
+    "id": "ac2-069",
+    "prompt": "Как правильно пишется слово со значением «голова»?",
+    "options": ["cabeça", "cabeca", "cabessa", "cábeça"],
+    "answer": 0,
+    "explanation": "Ç перед a: ca-BE-ça. Сочетание ss здесь невозможно — между гласными в этом слове пишется именно ç.",
+    "tags": ["cedilha"]
+  },
+  {
+    "id": "ac2-070",
+    "prompt": "Как правильно пишется слово со значением «цена»?",
+    "options": ["preço", "preco", "presso", "prêço"],
+    "answer": 0,
+    "explanation": "Ç перед o: preço, preços, a alta dos preços. Знак ударения не требуется — paroxítona на -o.",
+    "tags": ["cedilha"]
+  },
+  {
+    "id": "ac2-071",
+    "prompt": "Как правильно пишется название месяца «март»?",
+    "options": ["março", "marco", "marso", "márço"],
+    "answer": 0,
+    "explanation": "Седиль различает слова: março — март, marco — веха, рубеж. Названия месяцев пишутся со строчной буквы: em março.",
+    "tags": ["cedilha"]
+  },
+  {
+    "id": "ac2-072",
+    "prompt": "Как правильно пишется название бразильской ягоды «асаи»?",
+    "options": ["açaí", "acaí", "açai", "assaí"],
+    "answer": 0,
+    "explanation": "Два знака сразу: седиль перед a и палка над ударным I в зиянии (a-ça-Í). Пропуск любого из них — ошибка.",
+    "tags": ["cedilha", "hiato"]
+  },
+  {
+    "id": "ac2-073",
+    "prompt": "Как правильно пишется слово со значением «усилие»?",
+    "options": ["esforço", "esforco", "esforsso", "êsforço"],
+    "answer": 0,
+    "explanation": "Ç перед o после согласной r: esforço, reforço, almoço. Сочетание ss после согласной невозможно.",
+    "tags": ["cedilha"]
+  },
+  {
+    "id": "ac2-074",
+    "prompt": "Как правильно пишется слово со значением «девушка»?",
+    "options": ["moça", "moca", "mossa", "môça"],
+    "answer": 0,
+    "explanation": "Ç перед a даёт [s]: a moça, o moço. Знак ударения не нужен — paroxítona на -a.",
+    "tags": ["cedilha"]
+  },
+  {
+    "id": "ac2-075",
+    "prompt": "Как правильно пишется множественное число слова hotel («гостиница»)?",
+    "options": ["hotéis", "hoteis", "hotêis", "hóteis"],
+    "answer": 0,
+    "explanation": "Открытый дифтонг -éis под ударением на последнем слоге получает палку: hotéis, papéis, anéis. В единственном hotel знака нет.",
+    "tags": ["ditongo aberto"]
+  },
+  {
+    "id": "ac2-076",
+    "prompt": "Как правильно пишется слово со значением «простыни»?",
+    "options": ["lençóis", "lencóis", "lençois", "lençôis"],
+    "answer": 0,
+    "explanation": "Здесь два знака: седиль перед o и палка над открытым дифтонгом -óis. В единственном числе — lençol, без знака ударения.",
+    "tags": ["ditongo aberto", "cedilha"]
+  },
+  {
+    "id": "ac2-077",
+    "prompt": "Как правильно пишется слово со значением «фары, маяки»?",
+    "options": ["faróis", "farois", "farôis", "faroís"],
+    "answer": 0,
+    "explanation": "Открытый дифтонг -óis на последнем слоге: fa-RÓIS. Единственное — farol, без знака.",
+    "tags": ["ditongo aberto"]
+  },
+  {
+    "id": "ac2-078",
+    "prompt": "Как правильно пишется форма со значением «болит» (от doer)?",
+    "options": ["dói", "doi", "dôi", "doí"],
+    "answer": 0,
+    "explanation": "Односложное слово с открытым дифтонгом -ói получает палку: dói, sói, mói. Пример: dói a cabeça.",
+    "tags": ["ditongo aberto"]
+  },
+  {
+    "id": "ac2-079",
+    "prompt": "Как правильно пишется форма со значением «он строит» (от construir)?",
+    "options": ["constrói", "constroi", "construi", "constrôi"],
+    "answer": 0,
+    "explanation": "Открытый дифтонг -ói под ударением на последнем слоге: cons-TRÓI. Так же destrói, reconstrói.",
+    "tags": ["ditongo aberto"]
+  },
+  {
+    "id": "ac2-080",
+    "prompt": "Как правильно пишется слово со значением «испанцы»?",
+    "options": ["espanhóis", "espanhois", "espanhôis", "espánhois"],
+    "answer": 0,
+    "explanation": "Множественное от espanhol: открытый дифтонг -óis получает палку. Тот же образец: farol — faróis, lençol — lençóis.",
+    "tags": ["ditongo aberto"]
+  },
+  {
+    "id": "ac2-081",
+    "prompt": "Как правильно пишется слово со значением «обвиняемый, подсудимый»?",
+    "options": ["réu", "reu", "rêu", "réo"],
+    "answer": 0,
+    "explanation": "Односложное слово с открытым дифтонгом -éu: réu, женский род ré. Слово из юридических и новостных текстов.",
+    "tags": ["ditongo aberto"]
+  },
+  {
+    "id": "ac2-082",
+    "prompt": "Как правильно пишется слово со значением «спокойный»?",
+    "options": ["tranquilo", "tranqüilo", "trankilo", "tranquílo"],
+    "answer": 0,
+    "explanation": "Реформа 2009 года отменила трему (две точки над u): tranquilo, frequente, linguiça. U при этом по-прежнему читается.",
+    "tags": ["reforma 2009"]
+  },
+  {
+    "id": "ac2-083",
+    "prompt": "Как правильно пишется слово со значением «колбаска, лингвиса»?",
+    "options": ["linguiça", "lingüiça", "linguisa", "linguíça"],
+    "answer": 0,
+    "explanation": "Трема отменена реформой 2009 года, но седиль осталась: linguiça. До реформы писали lingüiça.",
+    "tags": ["reforma 2009", "cedilha"]
+  },
+  {
+    "id": "ac2-084",
+    "prompt": "Как правильно пишется числительное «пятьдесят»?",
+    "options": ["cinquenta", "cinqüenta", "sinquenta", "cinquénta"],
+    "answer": 0,
+    "explanation": "После реформы 2009 года — без тремы: cinquenta, quinquênio, frequência. Начальное c перед i читается как [s], буква s здесь неуместна.",
+    "tags": ["reforma 2009"]
+  },
+  {
+    "id": "ac2-085",
+    "prompt": "Как правильно пишется форма со значением «он останавливается» (от parar)?",
+    "options": ["para", "pára", "pàra", "parâ"],
+    "answer": 0,
+    "explanation": "Реформа 2009 года убрала различительный знак: теперь и предлог, и глагол пишутся para. Смысл различает контекст: o ônibus para aqui.",
+    "tags": ["reforma 2009", "acento diferencial"]
+  },
+  {
+    "id": "ac2-086",
+    "prompt": "Как правильно пишется существительное со значением «волос, шерсть»?",
+    "options": ["pelo", "pêlo", "pélo", "pello"],
+    "answer": 0,
+    "explanation": "Реформа 2009 года сняла домик: было pêlo, стало pelo. Теперь это слово пишется так же, как слияние por + o.",
+    "tags": ["reforma 2009", "acento diferencial"]
+  },
+  {
+    "id": "ac2-087",
+    "prompt": "Как правильно пишется слово со значением «буй, поплавок»?",
+    "options": ["boia", "bóia", "boía", "bôia"],
+    "answer": 0,
+    "explanation": "Реформа 2009 года убрала знак у paroxítonas с дифтонгом -oi: boia, jiboia, joia. Старое написание bóia теперь ошибка.",
+    "tags": ["reforma 2009"]
+  },
+  {
+    "id": "ac2-088",
+    "prompt": "Как правильно пишется слово со значением «паранойя»?",
+    "options": ["paranoia", "paranóia", "paranoía", "paranôia"],
+    "answer": 0,
+    "explanation": "Тот же случай, что и boia: paroxítona с дифтонгом -oi после реформы 2009 года пишется без знака. Сравните: herói — знак остался, там ударение на последнем слоге.",
+    "tags": ["reforma 2009"]
+  },
+  {
+    "id": "ac2-089",
+    "prompt": "Как правильно оформить слияние предлога a с местоимением aquele?",
+    "options": ["àquele", "aquele", "áquele", "ãquele"],
+    "answer": 0,
+    "explanation": "Crase бывает не только с артиклем: a + aquele = àquele, a + aquela = àquela, a + aquilo = àquilo. Пример: refiro-me àquele texto.",
+    "tags": ["crase"]
+  },
+  {
+    "id": "ac2-090",
+    "prompt": "Как правильно пишется выражение со значением «вручную, от руки»?",
+    "options": ["à mão", "a mão", "á mão", "ã mão"],
+    "answer": 0,
+    "explanation": "Устойчивые обстоятельства образа действия женского рода идут с crase: à mão, à toa, às pressas, à vontade.",
+    "tags": ["crase"]
+  },
+  {
+    "id": "ac2-091",
+    "prompt": "Как правильно пишется форма со значением «он даёт» (от dar)?",
+    "options": ["dá", "da", "dâ", "dà"],
+    "answer": 0,
+    "explanation": "Ele dá — глагол со знаком, da — слияние de + a («из, от»). Односложное ударное слово на -a требует палки.",
+    "tags": ["monossílabo", "acento diferencial"]
+  },
+  {
+    "id": "ac2-092",
+    "prompt": "Как правильно пишется существительное со значением «причина» (o ___ da crise)?",
+    "options": ["porquê", "porque", "por que", "porqué"],
+    "answer": 0,
+    "explanation": "Существительное o porquê («причина») пишется слитно и со знаком: não sei o porquê. Союз porque («потому что») — слитно и без знака.",
+    "tags": ["acento diferencial"]
+  },
+  {
+    "id": "ac2-093",
+    "prompt": "Как правильно пишется форма со значением «они поддерживают, сохраняют» (от manter)?",
+    "options": ["mantêm", "mantem", "mantém", "manteem"],
+    "answer": 0,
+    "explanation": "Ele mantém — единственное число (палка), eles mantêm — множественное (домик). Тот же образец: tem — têm, contém — contêm.",
+    "tags": ["acento diferencial"]
+  },
+  {
+    "id": "ac2-094",
+    "prompt": "Как правильно пишется форма глагола ser со значением «он есть, это»?",
+    "options": ["é", "e", "ê", "è"],
+    "answer": 0,
+    "explanation": "Знак различает слова: é — «есть» (глагол), e — «и» (союз). Односложное ударное слово на -e с открытым звуком получает палку.",
+    "tags": ["monossílabo", "acento diferencial"]
+  },
+  {
+    "id": "ac2-095",
+    "prompt": "Как правильно пишется слово со значением «больница»?",
+    "options": ["hospital", "hospitál", "hóspital", "hospitàl"],
+    "answer": 0,
+    "explanation": "Oxítonas на -l знака не получают: hospital, papel, azul, animal. Правило работает только для oxítonas на -a, -e, -o, -em, -ens.",
+    "tags": ["sem acento"]
+  },
+  {
+    "id": "ac2-096",
+    "prompt": "Как правильно пишется слово со значением «компьютер»?",
+    "options": ["computador", "computadór", "compútador", "computadôr"],
+    "answer": 0,
+    "explanation": "Oxítonas на -r знака не требуют: computador, professor, falar. Сравните с paroxítonas на -r, где знак обязателен: dólar, líder.",
+    "tags": ["sem acento"]
+  },
+  {
+    "id": "ac2-097",
+    "prompt": "Как правильно пишется слово со значением «судья» (единственное число)?",
+    "options": ["juiz", "juíz", "júiz", "juîz"],
+    "answer": 0,
+    "explanation": "Ударный I в зиянии не получает знака, если за ним в том же слоге идёт -l, -m, -n, -r или -z: juiz, raiz, ruim. Во множественном juízes знак появляется.",
+    "tags": ["sem acento", "hiato"]
+  },
+  {
+    "id": "ac2-098",
+    "prompt": "Как правильно пишется слово со значением «бесплатный, безвозмездный»?",
+    "options": ["gratuito", "gratuíto", "gratúito", "gratuitô"],
+    "answer": 0,
+    "explanation": "Частая ошибка: сочетание -ui здесь дифтонг, а не зияние, и ударение падает на него — gra-TUI-to. Знак не нужен ни на письме, ни в произношении.",
+    "tags": ["sem acento"]
+  },
+  {
+    "id": "ac2-099",
+    "prompt": "Как правильно пишется слово со значением «рекорд»?",
+    "options": ["recorde", "récorde", "recórde", "recordê"],
+    "answer": 0,
+    "explanation": "Ударение падает на предпоследний слог (re-COR-de), а paroxítonas на -e знака не получают. Пример: bater um recorde.",
+    "tags": ["sem acento"]
+  },
+  {
+    "id": "ac2-100",
+    "prompt": "Как правильно пишется прилагательное со значением «плохой, скверный»?",
+    "options": ["ruim", "ruím", "rúim", "ruîm"],
+    "answer": 0,
+    "explanation": "Ударение на последнем слоге (ru-IM), но перед -m знак не ставится — то же правило, что и у juiz. Пример: um filme ruim.",
+    "tags": ["sem acento"]
+  }
+]

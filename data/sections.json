@@ -24,6 +24,12 @@
     "file": "acentos.json"
   },
   {
+    "id": "acentos-2",
+    "title": "Акценты 2",
+    "description": "Второй заход: слова, которых не было в первом наборе",
+    "file": "acentos-2.json"
+  },
+  {
     "id": "conectivos",
     "title": "Вводные конструкции",
     "description": "Связки для письменной части",
